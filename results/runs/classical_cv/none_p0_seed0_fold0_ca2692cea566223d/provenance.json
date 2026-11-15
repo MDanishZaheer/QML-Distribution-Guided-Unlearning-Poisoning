@@ -1,0 +1,30 @@
+{
+  "code_fingerprint": "fd8278e2090d5a8e810d94316f9f5e5008697f90be196f8250597986c607832a",
+  "environment": {
+    "aer_devices": [
+      "CPU"
+    ],
+    "nvidia_gpu": "NVIDIA GeForce RTX 3060 Laptop GPU, 6144 MiB, 610.88",
+    "packages": {
+      "joblib": "1.6.0",
+      "matplotlib": "3.11.1",
+      "numpy": "2.5.2",
+      "pandas": "3.1.0",
+      "qiskit": "2.5.1",
+      "qiskit-aer": "0.17.2",
+      "qiskit-ibm-runtime": "0.48.0",
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1"
+    },
+    "platform": "Windows-11-10.0.26300-SP0",
+    "python": "3.12.14"
+  },
+  "fold_fingerprints": [
+    "80e5e6e1027dfaa4bc3239a9f1e5f9cae2ca9c1eb58cdef63ba4c0eb1796ebb0",
+    "e4a36968edcac3d04b10be08cd5382f20200745acd4861a87fef268d04919176",
+    "9a3512f22ee14c72fc1678c3a037137f493ee1abbd00b41bc77751731b66ce27",
+    "a7e135334abdf2e38e070f91c225bf8040e589b8e9e946192e73b092fa3f9003",
+    "41e860d25a2cdc361e583700a861bfce6cf8c431d828371a856ab7ea87f3d496"
+  ],
+  "stage": "classical_cv"
+}

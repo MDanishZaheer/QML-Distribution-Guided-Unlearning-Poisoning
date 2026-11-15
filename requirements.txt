@@ -1,0 +1,15 @@
+# Versions verified in the local QML conda environment (Python 3.12).
+qiskit==2.5.1
+qiskit-aer==0.17.2
+numpy==2.5.2
+scipy==1.18.1
+scikit-learn==1.9.1
+pandas==3.1.0
+matplotlib==3.11.1
+joblib==1.6.0
+ipykernel==6.29.5
+pylatexenc==2.10
+
+# Optional IBM hardware path, not required for any local experiment:
+# qiskit-ibm-runtime==0.48.0
+# GPU-enabled Aer is environment/platform-specific; see README.md.

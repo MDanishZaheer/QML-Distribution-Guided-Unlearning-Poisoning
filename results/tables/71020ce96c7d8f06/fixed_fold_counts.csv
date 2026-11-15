@@ -1,0 +1,16 @@
+fold,partition,total,digit_0,digit_1,digit_2
+0,train,192,64,64,64
+0,validation,48,16,16,16
+0,test,60,20,20,20
+1,train,192,64,64,64
+1,validation,48,16,16,16
+1,test,60,20,20,20
+2,train,192,64,64,64
+2,validation,48,16,16,16
+2,test,60,20,20,20
+3,train,192,64,64,64
+3,validation,48,16,16,16
+3,test,60,20,20,20
+4,train,192,64,64,64
+4,validation,48,16,16,16
+4,test,60,20,20,20

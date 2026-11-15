@@ -1,0 +1,8 @@
+variant,digit_0,digit_1,digit_2
+clean,64,64,64
+pixel_patch_5pct,64,64,64
+pixel_patch_10pct,64,64,64
+pixel_patch_20pct,64,64,64
+label_flip_5pct,61,64,67
+label_flip_10pct,58,64,70
+label_flip_20pct,52,64,76

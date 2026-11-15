@@ -1,0 +1,10 @@
+{
+  "description": "Clean baseline: quantum circuit; selected fold 0.",
+  "files": [
+    "quantum_circuit.png",
+    "quantum_circuit.pdf"
+  ],
+  "source_run_ids": [
+    "results/runs/classical_cv/none_p0_seed0_fold0_ca2692cea566223d"
+  ]
+}
