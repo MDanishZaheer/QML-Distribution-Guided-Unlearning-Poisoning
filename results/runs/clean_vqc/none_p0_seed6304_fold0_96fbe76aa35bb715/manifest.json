@@ -18,6 +18,13 @@
   },
   "best_step": 290,
   "best_validation_loss": 0.8162741611239772,
+  "checkpoint_retirement": {
+    "journal": "results/maintenance/mnist420_exact_v1.json",
+    "removed_files": [
+      "checkpoints/clean.npz",
+      "weights.npz"
+    ]
+  },
   "created_utc": "2026-11-14T12:06:20.689638+00:00",
   "finished_utc": "2026-11-14T12:25:32.732405+00:00",
   "identity": {
@@ -95,5 +102,5 @@
     "stage": "clean_vqc"
   },
   "scope": "one clean VQC on one outer fold",
-  "status": "complete"
+  "status": "retired"
 }

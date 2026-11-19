@@ -1,0 +1,96 @@
+{
+  "artifact_sha256": {
+    "config.json": "c2aec1937faccd2c08abdacde52f04d536906f58aa9525a500b81387707c232f",
+    "datasets.json": "ad9ef69af15743333e9f25bf0228fa883c07271e6e2a35a74b671bafc6b6dc2c",
+    "fold_0_features.npz": "90fcdfb3621fcde7913801757cb889104ad88e438db9b617483793e27ac3f8c4",
+    "fold_0_models.joblib": "240627ed5a04af3b8e827c172a1a0ad61c11a28ba39a0aafe5b7055710afe8a3",
+    "fold_0_preprocessing.joblib": "267cde5fc73059fd38c42a9b7681dfc82ac0a2b6dcca918377caab7f29eb173e",
+    "fold_0_preprocessing.json": "3f9f80fe13f971f63651988da295ced39ff4e7e2a5681a9a92f95e622af0f852",
+    "fold_1_features.npz": "79affa082721b341333b95a86856b9da784016ab0169232c3afa7a912a5403d7",
+    "fold_1_models.joblib": "4ead4023a3b8afe816c9be9756bc88a9ef672ca668c77a3dc5bdc3b7722ae4e3",
+    "fold_1_preprocessing.joblib": "ef9b55da5028c0fbdd112a114489da338459c0b53040fd4c793bae6eccf6128a",
+    "fold_1_preprocessing.json": "a23bb49eb7c250e072580144e31e39a93c43e2622af9a865624c72d97757068d",
+    "fold_2_features.npz": "4760ee47b9642bbd2dd0376d2f76c2196e56999551834b6e400024c16dc40473",
+    "fold_2_models.joblib": "09e1d738b79749e2cb02924194072b3e06441cd0c18960f275a9bcfb2eadc806",
+    "fold_2_preprocessing.joblib": "affc69f28afa29e5afe0327967a0970451b6c125e9ab3b021320f93a4d89e3c5",
+    "fold_2_preprocessing.json": "42a8f4cf0574f540d84a1451a0ef2603efd635cc956616062b499af7dcc4e114",
+    "fold_3_features.npz": "dbd5a5975fe01b15795c85c91c608f114391f1815f6ad71d87f58b7b770f57f3",
+    "fold_3_models.joblib": "63eb2b797b32a6755f3a3e56df9e78bb35c79f63b6295bcc18f1015dda327bba",
+    "fold_3_preprocessing.joblib": "dec2fcb2097677101c5b80d7782520a29c0d44b2d5a86c207bb5de848410af4a",
+    "fold_3_preprocessing.json": "7f0e5fec8d580c67adbc946e502ca54018f0cd4bc1d607909866a99df23bc2c5",
+    "fold_4_features.npz": "b65e1a5a413b9f78d6b474f874e294c64f104125824ccd4fc5218d33841be4fe",
+    "fold_4_models.joblib": "4942d2ae6970a798889ecf2df6511f2e84e14c2d9a9b763d73a22b3d736aebb1",
+    "fold_4_preprocessing.joblib": "0aeb1eb0af65e4bc4b58145690e49673f4f80d9ca685c97c18d9eb8f9e3bccb8",
+    "fold_4_preprocessing.json": "551c595c96d80a8a96ddf2a288c37927ce67281396eafa491e3d54890016f211",
+    "history.csv": "4da6bf86f01423f17b2050e021a344bc51742a0e8df101a133bd363daba9a257",
+    "metrics.json": "47a52ca442ba87c478debcb503a390ee5a5eba2afe47260e663e85072eaa0577",
+    "predictions.npz": "51a2792e9b11fc583054f517305317f2de761c2c889fc540f1d15f369886de51",
+    "provenance.json": "11acc14503c5d8063369dc358529a23af1225766a6b30a104f70a554e5faa2e4",
+    "scores.csv": "a3d21047cfe4c3758b805b3569599961c3b3c6c8de5a4b949fab9a6e3a370bfa",
+    "source.zip": "f429898f3a3489ef35231fb4dcfd7b12d6fee18d5c91982cdc57d9f4f8804371",
+    "weights.npz": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
+  },
+  "checkpoint_retirement": {
+    "journal": "results/maintenance/mnist420_exact_v1.json",
+    "removed_files": [
+      "fold_0_models.joblib",
+      "fold_1_models.joblib",
+      "fold_2_models.joblib",
+      "fold_3_models.joblib",
+      "fold_4_models.joblib",
+      "weights.npz"
+    ]
+  },
+  "created_utc": "2026-11-16T11:01:27.444455+00:00",
+  "finished_utc": "2026-11-16T11:01:28.034861+00:00",
+  "identity": {
+    "code_fingerprint": "36366f34dadc8f79f32d578688a66046e2f316911c2250c1f7dd1587f437d011",
+    "config": {
+      "data": {
+        "fold": 0,
+        "n_folds": 5,
+        "preprocessing": "refit",
+        "seed": 6304,
+        "split_strategy": "stratified_kfold",
+        "test_per_class": null,
+        "train_per_class": 100,
+        "validation_fraction": 0.2
+      },
+      "poison": {
+        "kind": "none",
+        "rate": 0.0
+      },
+      "seed": 6304
+    },
+    "environment": {
+      "aer_devices": [
+        "CPU",
+        "GPU"
+      ],
+      "nvidia_gpu": "NVIDIA GeForce RTX 3070 Laptop GPU, 8192 MiB, 595.84",
+      "packages": {
+        "joblib": "1.6.0",
+        "matplotlib": "3.11.1",
+        "numpy": "2.5.2",
+        "pandas": "3.1.0",
+        "qiskit": "2.5.1",
+        "qiskit-aer": null,
+        "qiskit-ibm-runtime": null,
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+      "python": "3.12.3"
+    },
+    "fold_fingerprints": [
+      "00b0f21eb3b592a9c1746a0faa14522bada159fb1d2d896ba77480c110f2b284",
+      "8215c16d0e5b9f8acc06788fbcad3e1149afbd6c08688400be72477a0dc49b1f",
+      "6c9c4f269a864eab391e620ed8c6052da7b1ffe8939862e79cac981e29086f2b",
+      "57ea894e03f79a636ca930cd12adcd7472db8ebbb4b5a215821495fbe9e38afc",
+      "83fca38713ef125d336d2d923bd455de5fe6e1b983378f375de57e4bcfafc27d"
+    ],
+    "stage": "classical_cv"
+  },
+  "scope": "clean classical baselines on fixed folds",
+  "status": "retired"
+}

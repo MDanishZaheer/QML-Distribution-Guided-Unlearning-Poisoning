@@ -30,6 +30,17 @@
     "source.zip": "d045af8a6d6f192144c00766a8e54a1654bb3e18130f86fd42d640ba8e08752d",
     "weights.npz": "8739c76e681f900923b900c9df0ef75cf421d39cabb54650c4b9ad19b6a76d85"
   },
+  "checkpoint_retirement": {
+    "journal": "results/maintenance/mnist420_exact_v1.json",
+    "removed_files": [
+      "fold_0_models.joblib",
+      "fold_1_models.joblib",
+      "fold_2_models.joblib",
+      "fold_3_models.joblib",
+      "fold_4_models.joblib",
+      "weights.npz"
+    ]
+  },
   "created_utc": "2026-11-14T07:44:24.525593+00:00",
   "finished_utc": "2026-11-14T07:44:25.017442+00:00",
   "identity": {
@@ -80,5 +91,5 @@
     "stage": "classical_cv"
   },
   "scope": "clean classical baselines on fixed folds",
-  "status": "complete"
+  "status": "retired"
 }

@@ -1,0 +1,11 @@
+{
+  "description": "Clean baseline: selected fold counts; selected fold 0.",
+  "files": [
+    "selected_fold_counts.png",
+    "selected_fold_counts.pdf"
+  ],
+  "source_run_ids": [
+    "results/runs/classical_cv/none_p0_seed6304_fold0_626a17f05917a9c5",
+    "results/runs/clean_vqc/none_p0_seed6304_fold0_114de5f9cc1aef61"
+  ]
+}

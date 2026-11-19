@@ -1,0 +1,109 @@
+{
+  "artifact_sha256": {
+    "checkpoints/clean.json": "b05212166f3001d235c499223f2f6ed1b7948f2cf623a6bc15104b4d641ba0ab",
+    "checkpoints/clean.npz": "66af4f4bac365c8b27f9453d839e50a51ccb8f03a053b2e761dd12987c922c68",
+    "checkpoints/clean.resume.json": "6cc2cefea553c031c31ec76a82196c3126dc60c920232648203c67fe00f5bf7d",
+    "clean_features.npz": "90fcdfb3621fcde7913801757cb889104ad88e438db9b617483793e27ac3f8c4",
+    "clean_preprocessing.joblib": "267cde5fc73059fd38c42a9b7681dfc82ac0a2b6dcca918377caab7f29eb173e",
+    "clean_preprocessing.json": "3f9f80fe13f971f63651988da295ced39ff4e7e2a5681a9a92f95e622af0f852",
+    "config.json": "d7c424ff1a6cd2c3b0e0a72cd3a0995c51e85a727774167fc5706b5cb88cec68",
+    "datasets.json": "b3c57b8f38f85b55ccaa8d800d1ce2d1e226de405ec9a18d7e4fd5a862da6465",
+    "histories/clean.csv": "5f8e6068a2e2793a0513847a915573bc05d9ebaf5662e3107487169596b63717",
+    "history.csv": "68c36e363e64871b6aec5e8d6283a1b0237aa002e758331e1763b0435bb0a14e",
+    "metrics.json": "ffe0f1cebaf42ce6d4b10ea4de01427ffb2329ad8922a14de9ec5a2ec4b61c92",
+    "predictions.npz": "3c8eaa89baa021ba8979240bc15733c346dcc4084e22e697861d313398a1a247",
+    "provenance.json": "4559f4eeba077846a45d63fe0a42e844f1d222ff7cbced733e489956210770b9",
+    "resources.json": "1a1028ee85776f3ac14a6c4452c04a845c2f0dbdfed9a1a98799c6d8289c0e25",
+    "source.zip": "f429898f3a3489ef35231fb4dcfd7b12d6fee18d5c91982cdc57d9f4f8804371",
+    "weights.npz": "4f3a73384c3ebcdc04f5578a4de4115f8260929fa583962201c54319b0da2964"
+  },
+  "best_step": 290,
+  "best_validation_loss": 0.8162741611239772,
+  "checkpoint_retirement": {
+    "journal": "results/maintenance/mnist420_exact_v1.json",
+    "removed_files": [
+      "checkpoints/clean.npz",
+      "checkpoints/clean.resume.json",
+      "weights.npz"
+    ]
+  },
+  "created_utc": "2026-11-16T11:01:29.488610+00:00",
+  "finished_utc": "2026-11-16T11:13:03.027986+00:00",
+  "identity": {
+    "code_fingerprint": "36366f34dadc8f79f32d578688a66046e2f316911c2250c1f7dd1587f437d011",
+    "config": {
+      "backend": {
+        "allow_cpu_fallback": true,
+        "circuit_batch_size": 128,
+        "device": "auto",
+        "ibm_backend_name": null,
+        "max_memory_mb": 4096,
+        "max_parallel_threads": 4,
+        "method": "statevector",
+        "one_qubit_error": 0.0,
+        "optimization_level": 0,
+        "readout_error": 0.0,
+        "shots": 2048,
+        "two_qubit_error": 0.0,
+        "use_ibm_hardware": false
+      },
+      "circuit": {
+        "ansatz_reps": 3,
+        "entanglement": true,
+        "logit_scale": 1.0,
+        "reuploads": 2
+      },
+      "data": {
+        "fold": 0,
+        "n_folds": 5,
+        "preprocessing": "refit",
+        "seed": 6304,
+        "split_strategy": "stratified_kfold",
+        "test_per_class": null,
+        "train_per_class": 100,
+        "validation_fraction": 0.2
+      },
+      "poison": {
+        "kind": "none",
+        "rate": 0.0
+      },
+      "seed": 6304,
+      "training": {
+        "batch_size": 10,
+        "evaluate_every": 10,
+        "gradient_clip": null,
+        "initialization_std": 0.1,
+        "learning_rate": 0.02,
+        "minimum_learning_rate": 0.001,
+        "patience": null,
+        "steps": 300
+      }
+    },
+    "environment": {
+      "aer_devices": [
+        "CPU",
+        "GPU"
+      ],
+      "nvidia_gpu": "NVIDIA GeForce RTX 3070 Laptop GPU, 8192 MiB, 595.84",
+      "packages": {
+        "joblib": "1.6.0",
+        "matplotlib": "3.11.1",
+        "numpy": "2.5.2",
+        "pandas": "3.1.0",
+        "qiskit": "2.5.1",
+        "qiskit-aer": null,
+        "qiskit-ibm-runtime": null,
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+      "python": "3.12.3"
+    },
+    "fold_fingerprints": [
+      "00b0f21eb3b592a9c1746a0faa14522bada159fb1d2d896ba77480c110f2b284"
+    ],
+    "stage": "clean_vqc"
+  },
+  "scope": "one clean VQC on one outer fold",
+  "status": "retired"
+}

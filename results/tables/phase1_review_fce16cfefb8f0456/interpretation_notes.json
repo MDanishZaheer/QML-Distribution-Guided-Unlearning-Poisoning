@@ -1,0 +1,7 @@
+{
+  "guided_vs_uniform": "Pending interpretation of completed results.",
+  "hypothesis_assessment": "Pending: supported, contradicted, or inconclusive within tested conditions.",
+  "limitations": "Fixed seed 6304; report actual folds, sample counts, and preprocessing policy.",
+  "poisoning_effect_before_unlearning": "Pending interpretation of completed results.",
+  "retained_data_reference_agreement": "Pending interpretation of completed results."
+}

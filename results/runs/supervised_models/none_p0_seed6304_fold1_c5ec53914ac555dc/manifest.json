@@ -1,0 +1,101 @@
+{
+  "artifact_sha256": {
+    "checkpoints/model.json": "8ccd519d033717993c913cb23efb00f43bd879c5f11d0e35487c4fa749f16744",
+    "checkpoints/model.npz": "e8faf34f5a702d828933ce34e3ab4d000b575d715fd34457a0fc9b69ac25a5c1",
+    "checkpoints/model.resume.json": "a8217dd561b84fa83c2c9d042d1c7147c8384557dffa3007de117bb1839319db",
+    "classical_models.joblib": "7b9afbfe3100b7097cd326dab1e41fd4c593eb7f3f9d798b0772d032aa83668e",
+    "config.json": "4ebb10c23fb2e0e3418ae0a6a747bd9b81e4f6502195b9c7861501bfe6a983f8",
+    "features.npz": "e2edb2e2c1dcac58854f9020ff450f24f27e01565848cba44b098e4ed77618f1",
+    "histories/model.csv": "d96e24872af9a861094cc47a9b832c01c122c7a1ba50393d099f53802db547c3",
+    "history.csv": "2f61f25c2a8e093b454f2f2cb6480cb1f49ac5f9d9c2c6b9339b48d106a06a20",
+    "metrics.json": "c8ff9e4209483a7914e9e648a2dab5832cd67bf2dda0e1cfd6fd51fe60d0483d",
+    "predictions.npz": "6cd687db9633e0f79a492c4c7e08c91362d691fc31e8bb70957da012aceedfbc",
+    "preprocessing.joblib": "d7e78a9943360180d3d012a574bc0cad08c1b12eeada971ba79817e3ebcec3d5",
+    "preprocessing.json": "d2e672e35ffe64425a437871c09e39fa4bcf6c3b57b5d0e87674719e603c51bc",
+    "provenance.json": "51d70da2f36804de06825f2f21bec96c6c5b0bfb066658a6c144c70138f904a8",
+    "resources.json": "e8a49a496e6389a33303469fc276805defdd6dde8e57337abf3fde152ee8ccf7",
+    "source.zip": "58bcbbb56504ac549c9dc7e7b5e9c95354428445dc815f4baf7ef405e86b4110",
+    "weights.npz": "7fe72de7e954007073806fcd72564123d842067a4d91a18a1c735a823e88e174"
+  },
+  "created_utc": "2026-11-18T13:20:31.408413+00:00",
+  "finished_utc": "2026-11-18T13:27:59.884584+00:00",
+  "identity": {
+    "code_fingerprint": "07b6f070a9899567386dd122a0bdcbbc8b06ac94e8c5ace11692ddced0acdc25",
+    "config": {
+      "backend": {
+        "allow_cpu_fallback": true,
+        "circuit_batch_size": 128,
+        "device": "auto",
+        "ibm_backend_name": null,
+        "max_memory_mb": 4096,
+        "max_parallel_threads": 4,
+        "method": "statevector",
+        "one_qubit_error": 0.0,
+        "optimization_level": 0,
+        "readout_error": 0.0,
+        "shots": null,
+        "two_qubit_error": 0.0,
+        "use_ibm_hardware": false
+      },
+      "circuit": {
+        "ansatz_reps": 3,
+        "entanglement": true,
+        "logit_scale": 1.0,
+        "reuploads": 2
+      },
+      "classical_baselines": true,
+      "data": {
+        "fold": 1,
+        "n_folds": 5,
+        "preprocessing": "refit",
+        "seed": 6304,
+        "split_strategy": "stratified_kfold",
+        "test_per_class": null,
+        "train_per_class": 140,
+        "validation_fraction": 0.2
+      },
+      "poison": {
+        "kind": "none",
+        "rate": 0.0
+      },
+      "seed": 6304,
+      "training": {
+        "batch_size": 10,
+        "evaluate_every": 10,
+        "gradient_clip": null,
+        "initialization_std": 0.1,
+        "learning_rate": 0.02,
+        "minimum_learning_rate": 0.001,
+        "patience": null,
+        "steps": 300
+      }
+    },
+    "environment": {
+      "aer_devices": [
+        "CPU",
+        "GPU"
+      ],
+      "nvidia_gpu": "NVIDIA GeForce RTX 3070 Laptop GPU, 8192 MiB, 595.84",
+      "packages": {
+        "joblib": "1.6.0",
+        "matplotlib": "3.11.1",
+        "numpy": "2.5.2",
+        "pandas": "3.1.0",
+        "qiskit": "2.5.1",
+        "qiskit-aer": null,
+        "qiskit-ibm-runtime": null,
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+      "python": "3.12.3"
+    },
+    "forget_class": 2,
+    "imported_gold": null,
+    "split_fingerprint": "e42e5951e9ea929333873466944fa16687e5703b1aec15cec83f905eacc09375",
+    "stage": "supervised_model",
+    "train_fingerprint": "99f19acee2ef6d3e9daffb0d3e2bcad2534806f7ef5bb6eca80731b279895f0e",
+    "validation_fingerprint": "983c0b96e7727753b2c2d54c7b2b01cb5700d9d14ddd0b6774e5c97ed11c2fcb"
+  },
+  "status": "complete"
+}

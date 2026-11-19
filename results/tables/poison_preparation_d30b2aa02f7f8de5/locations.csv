@@ -1,0 +1,8 @@
+variant,directory
+clean,data/annotated/clean_p0_79cf5810e3a64fd1
+pixel_patch_5pct,data/annotated/pixel_patch_p5_733de5cbe98f8f5d
+pixel_patch_10pct,data/annotated/pixel_patch_p10_6f461673cde56d10
+pixel_patch_20pct,data/annotated/pixel_patch_p20_45db150a92e816e9
+label_flip_5pct,data/annotated/label_flip_p5_b4cecf833c5eb9e3
+label_flip_10pct,data/annotated/label_flip_p10_e2a4f5980ff1cb78
+label_flip_20pct,data/annotated/label_flip_p20_be9afbd5a981abab

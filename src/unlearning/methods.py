@@ -3,6 +3,7 @@
 import numpy as np
 
 from src.config import DEFAULT_SEED, UnlearningConfig
+from src.checkpoints import training_streams
 from src.training import TrainingResult, optimize
 from src.unlearning.targets import UnlearningReferences, make_forget_target
 
@@ -25,7 +26,7 @@ def unlearning_loss_and_gradient(model, forget_features, anchor_features,
 
 def unlearn(model, training_features, references: UnlearningReferences,
             config: UnlearningConfig | None = None, method: str = "guided",
-            seed: int = DEFAULT_SEED, callback=None) -> tuple[TrainingResult, np.ndarray]:
+            seed: int = DEFAULT_SEED, callback=None, *, checkpoint_path=None) -> tuple[TrainingResult, np.ndarray]:
     """Start each method at the SAME original weights and use fixed teacher targets.
 
     Select by the full training unlearning objective, never by test metrics.
@@ -58,5 +59,11 @@ def unlearn(model, training_features, references: UnlearningReferences,
                 "parameter_distance_squared": distance,
                 "objective": forget_loss + config.alpha * anchor_loss + config.regularization * distance}
 
-    result = optimize(references.original_weights, objective, evaluate, config.training, "objective", callback)
+    capture, restore = training_streams(model, random)
+    identity = {"kind": "unlearning", "seed": seed, "circuit": model.circuit_config,
+                "backend": model.backend_config, "features": features,
+                "references": references, "config": config, "method": method}
+    result = optimize(references.original_weights, objective, evaluate, config.training, "objective", callback,
+                      checkpoint_path=checkpoint_path, checkpoint_identity=identity,
+                      capture_state=capture, restore_state=restore)
     return result, target

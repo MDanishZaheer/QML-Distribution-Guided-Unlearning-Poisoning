@@ -1,4 +1,8 @@
 {
+  "checkpoint_retirement": {
+    "journal": "results/maintenance/mnist420_exact_v1.json",
+    "removed_files": []
+  },
   "created_utc": "2026-11-14T14:19:18.402963+00:00",
   "identity": {
     "code_fingerprint": "e6bc4efd00c9d38bcf74975e23cd7b3957c5f57efb9436e257df93d48ecede3e",
@@ -74,5 +78,5 @@
     ],
     "stage": "clean_vqc"
   },
-  "status": "running"
+  "status": "retired"
 }

@@ -1,0 +1,1712 @@
+{
+  "0454b6a43a1ef854584d67c0": {
+    "identity": "0e5a3973395fc52159436974d01c539307ce4adb0a09113bc05162a5b77c3ff7",
+    "run": "none_p0_seed6304_fold1_0e5a3973395fc521",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "06990e9e433f68aa00a84204": {
+    "identity": "ab14c4434e47babec2aa29ea63e7eeaf11af1dcdc3f762a3e9d45b2ececcf56c",
+    "run": "none_p0_seed6304_fold1_ab14c4434e47babe",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "0bea744f0ff6ce80d5611361": {
+    "identity": "6eb6dc445f1c7930be3c9994dc15c2949c4cb7b19bfefb598c31af23ef9c62ce",
+    "run": "none_p0_seed6304_fold3_6eb6dc445f1c7930",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "0d4093e916e1222127bbb97f": {
+    "identity": "cd7d885d46a29817e64038fa19a67f01822af43e66be52dae5ce063ff6914440",
+    "run": "none_p0_seed6304_fold1_cd7d885d46a29817",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "0f921629f6b453025c8a6824": {
+    "identity": "f5e66a3ae933688cac93fcefed24aebafa76ef34fef8ac033cd4ad268d08ca0e",
+    "run": "none_p0_seed6304_fold0_f5e66a3ae933688c",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "114540707a9df2bd963f2910": {
+    "identity": "7544900defdb286938e6b3d36c2e9f445a0ba14f4d1b71c95f3e60da5ddbdea1",
+    "run": "none_p0_seed6304_fold0_7544900defdb2869",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "12ca0cb3f540425cbf53a5eb": {
+    "identity": "3c1d83d6f0a8871ad54d3b3f39a6912cca97fd1e6ac4da1a3505278ca403e447",
+    "run": "none_p0_seed6304_fold3_3c1d83d6f0a8871a",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "131884ce0d7e17cfe765e998": {
+    "identity": "b8bbf605b91b5dae3edf0d1c948c84b67c76439659024303ebf7489b406c466b",
+    "run": "none_p0_seed6304_fold0_b8bbf605b91b5dae",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "1336f41a4e510374e53f4037": {
+    "identity": "8d0b303e1011943925276ebd93206016b5e361a7727fd1b6f13fe6cda2a1ec21",
+    "run": "none_p0_seed6304_fold4_8d0b303e10119439",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "1369ecb7efcf0000fd02b55b": {
+    "identity": "e01204eb7ab0fb17dc47b9934aff070349c48c4271d5af9728edff03f0d496a8",
+    "run": "none_p0_seed6304_fold1_e01204eb7ab0fb17",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "19411d7cb34f6b05f24bd69a": {
+    "identity": "9904775ba532ad249f93b895bf7c4948788ae782178252fe5eb6cc44642e207d",
+    "run": "none_p0_seed6304_fold3_9904775ba532ad24",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "1bb6873140ed8f62235b934c": {
+    "identity": "0a68bb98c9c9bc6bc556778d8952d2f560261d1b388026a3f6db175c2d7a5655",
+    "run": "none_p0_seed6304_fold0_0a68bb98c9c9bc6b",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "1db98126b004163e84ce8aed": {
+    "identity": "070780aa5585ae8133ba863020bd6a828ab857c5f39dbe5ef03ba4e5dfdb8281",
+    "run": "none_p0_seed6304_fold1_070780aa5585ae81",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "2058ae70b7b2edd644949de8": {
+    "identity": "aedf23ea42df0f0d4546a39787f83cf3eb4af6ebf5b3f150bbfcbc752c61c252",
+    "run": "none_p0_seed6304_fold0_aedf23ea42df0f0d",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "268f04bba54d42e1023020dc": {
+    "identity": "0af6287e36ea86d973f78cba7c0222b575229e5c5353cf5c11a497ac27def938",
+    "run": "none_p0_seed6304_fold4_0af6287e36ea86d9",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "269af0b900d2d83662eb10d9": {
+    "identity": "59a225304259fdf9b17dc67064faa74f9e5bc7afd282d6ecb97d335226070c1a",
+    "run": "none_p0_seed6304_fold4_59a225304259fdf9",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "2827942c96ff0656378cf153": {
+    "identity": "cb3a7e76e91157817a256191a6689ecf6e10b288a3aa3b55135993ac56a5a4d7",
+    "run": "none_p0_seed6304_fold3_cb3a7e76e9115781",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "28f449f80429644f45b6d174": {
+    "identity": "dadf501617cafdba21c61cd9c4f61352b824719c8043c31925849300b500681e",
+    "run": "none_p0_seed6304_fold1_dadf501617cafdba",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "2a376e1fc34687acad48317b": {
+    "identity": "6c5813278f2ab601aff2cf883b65c28e5ee012f248af3300285480b351fc7b6d",
+    "run": "none_p0_seed6304_fold0_6c5813278f2ab601",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "2bdd414ff431edd2d199c97c": {
+    "identity": "e5f5d17c14d4ba1b18e9c67dbbcd7e670e2427c38c71e5610cf4e628dcaa4763",
+    "run": "none_p0_seed6304_fold4_e5f5d17c14d4ba1b",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "2c1419da24fcdd1aa2107270": {
+    "identity": "468fd9edc70050a08b34223d981a8158e5f85286cde757a3f07c550a5648ba73",
+    "run": "none_p0_seed6304_fold0_468fd9edc70050a0",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "2f01d70b467bfef133f211d8": {
+    "identity": "0e29bfb03c1270b75d89bdadec08bb1e9e746a55c38f77fead005d20c797fbfb",
+    "run": "none_p0_seed6304_fold2_0e29bfb03c1270b7",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "2f7bb7f1236303a750ad060a": {
+    "identity": "71a64e4e671952873fafacf158d2cd34371956dc6ff40b30ee636178650b5af6",
+    "run": "none_p0_seed6304_fold2_71a64e4e67195287",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "318de9a8d925b6acb30a648e": {
+    "identity": "f0c3c8ea08537ec4c5eae39184382a6237798f56e9eadde2f937f2c30f45bfb4",
+    "run": "none_p0_seed6304_fold3_f0c3c8ea08537ec4",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "330c35aa1903fa03c35e1e97": {
+    "identity": "dec0b5d4cc941ef6aab9d4f0a091659ff0c7ade5bc03a07dfed48e4ac3c96465",
+    "run": "none_p0_seed6304_fold2_dec0b5d4cc941ef6",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "33b38506da2656546157675f": {
+    "identity": "5887a9fec2e84bb04d56160f72dc1b3cec4edaa41c1d004e10bf9cd1bfb6e0b8",
+    "run": "none_p0_seed6304_fold0_5887a9fec2e84bb0",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "33d0696626c0bdf43f085949": {
+    "identity": "fce3286f289de3d6edcf72b561d2c2e72969e28773b8c85f17db2508dd6b40ff",
+    "run": "none_p0_seed6304_fold4_fce3286f289de3d6",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "350205ec4d07d679267ea119": {
+    "identity": "e51647cf2528208608c278cbe6b10467352f677447b84d0e18e94bd196027ad6",
+    "run": "none_p0_seed6304_fold4_e51647cf25282086",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "37d1dc0bc35c98f8840bb2c3": {
+    "identity": "2ba2ba246d32bf61a999e2f1a6ac9b66e224d9d8507a89c3693d70dde96413e0",
+    "run": "none_p0_seed6304_fold4_2ba2ba246d32bf61",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "39d351d42ac421be60a2e7f0": {
+    "identity": "9d3ace5e614d496d3165c4cc721f4ea947827dc94d929f6d8fe175789f50af0a",
+    "run": "none_p0_seed6304_fold4_9d3ace5e614d496d",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "3a6d900d8a9f36223f0b28c1": {
+    "identity": "335da6e40507ca77a8fd44c9d9cb666ac08caa8cf0d2a688d89ffac6bc78b4e4",
+    "run": "none_p0_seed6304_fold0_335da6e40507ca77",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "3b9a4a1bcd0ca6c14a68ead5": {
+    "identity": "4d5f4b069d16b754682b21196b3f0b1636a345d1755b1b9ff3e18f577ca00f7e",
+    "run": "none_p0_seed6304_fold2_4d5f4b069d16b754",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "3d3bb86c2353898d23201122": {
+    "identity": "2177ce582d8962379ebcd110a86bfc381290934ccbbfe65dfde546db222c7fab",
+    "run": "none_p0_seed6304_fold1_2177ce582d896237",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "407194c643b7dcc23e303b4e": {
+    "identity": "e9ef77b78e1b3f9362f422d3606a1242f3c9109c53634692abbac3bb448a3a13",
+    "run": "none_p0_seed6304_fold2_e9ef77b78e1b3f93",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "426367c0165f74fdd40af3cf": {
+    "identity": "c3e172dcd1c5d7c5e3fe7c638ed58cd8204ca62fd8ca231058778e87b31a96de",
+    "run": "none_p0_seed6304_fold4_c3e172dcd1c5d7c5",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "4479ab5005d3fbf6e20c89cb": {
+    "identity": "5eecbbb919c483ff447956c389e6daf046619a8a24c47514a3259dd0d2750889",
+    "run": "none_p0_seed6304_fold0_5eecbbb919c483ff",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "4d8f22691a90d3d6e91c681d": {
+    "identity": "e88e262f0baff226a82a993ea8021ff96dd90f4920b222a3368df66f9a30e760",
+    "run": "none_p0_seed6304_fold2_e88e262f0baff226",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "4effb47bc60ec880e429e183": {
+    "identity": "6fd9b58101afa5d8bc715360ae0da97cf4885d506929b060d102cefe006d047b",
+    "run": "none_p0_seed6304_fold2_6fd9b58101afa5d8",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "564652d75060477fc25db4e2": {
+    "identity": "7ca95080661f614a5e110a0f5f08e7fb26bfbbbe28f422ce976f0061ab2b0f1a",
+    "run": "none_p0_seed6304_fold1_7ca95080661f614a",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "58462e80d484cb82d5e053a1": {
+    "identity": "07510ce2574e46cfccad35617e62d78fb38805df46d0559ccc8e087cd6b76a02",
+    "run": "none_p0_seed6304_fold4_07510ce2574e46cf",
+    "slot": {
+      "fold": 4,
+      "poison": null,
+      "role": "clean"
+    }
+  },
+  "584873f53c32b1b3aafc8cc1": {
+    "identity": "c5ec53914ac555dc216f7d39b262c46d2095afea4fa5ab365db50eabab4fb5be",
+    "run": "none_p0_seed6304_fold1_c5ec53914ac555dc",
+    "slot": {
+      "fold": 1,
+      "poison": null,
+      "role": "clean"
+    }
+  },
+  "58fe8dd97b568825c57f082b": {
+    "identity": "5c49e7a982949d212d7cec5723f46d0f610653905a57b1cbad78c7c673e7224e",
+    "run": "none_p0_seed6304_fold3_5c49e7a982949d21",
+    "slot": {
+      "fold": 3,
+      "poison": null,
+      "role": "clean"
+    }
+  },
+  "5d9953a52bfa394d3931b13e": {
+    "identity": "e479f447f2a451d2a35db3dd2a69a3484950a42ea354ffe8eda6474ce6b24dc8",
+    "run": "none_p0_seed6304_fold3_e479f447f2a451d2",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "5e88ccd164693acae18811a1": {
+    "identity": "516273b4737f6f297e12a33ac1aa29d4b9aaeabd4d9301a611cfdf6dba083138",
+    "run": "none_p0_seed6304_fold0_516273b4737f6f29",
+    "slot": {
+      "fold": 0,
+      "poison": null,
+      "role": "clean"
+    }
+  },
+  "5f83380b48f6b6f54b1cd6dc": {
+    "identity": "3467f4a52c116a689356e7f86d558b8f7a6143e157a92b2888e8f25df98151c3",
+    "run": "none_p0_seed6304_fold2_3467f4a52c116a68",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "6094fee2c4063ac81b307cd8": {
+    "identity": "8b941a8f56ee2159ea9e6d8b3e224fa3e7ae30500d60dad5e9917d95d3e858e0",
+    "run": "none_p0_seed6304_fold3_8b941a8f56ee2159",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "60a1d6ac3aec2ac133fca904": {
+    "identity": "fd09645cd1c4432262d130d83d44f4b57a424ec0161ee31b27427df84a805a0a",
+    "run": "none_p0_seed6304_fold4_fd09645cd1c44322",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "69afa5346c307d9eb32b5a3e": {
+    "identity": "101c1bbc174265da5114634fafa246ba9d034829b5863d86320edb505cae8fb7",
+    "run": "none_p0_seed6304_fold2_101c1bbc174265da",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "6e9a5734dad14ef362f512e3": {
+    "identity": "d13b1d287f85418bd6848b4cdc33c6ef651691468e0ef717c963c4b89a0b85fa",
+    "run": "none_p0_seed6304_fold3_d13b1d287f85418b",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "6eebe4a89c8d4ea69631ee84": {
+    "identity": "e52bf0be753a4a79b2fae59c863267927735f962eaa76baa2ca63917b2f027b1",
+    "run": "none_p0_seed6304_fold1_e52bf0be753a4a79",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "7c1b05c743ec12dd9d5c0181": {
+    "identity": "77090d7e168ef7e56a01897c28dfc65501f9a914c907f276572bd3709c3e08a5",
+    "run": "none_p0_seed6304_fold1_77090d7e168ef7e5",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "7dda4fd234c8e6cf70845d41": {
+    "identity": "a6bdf8b74e16dc65a483c5078f6d3cffb60634f691dfa4df039e40209b43ca66",
+    "run": "none_p0_seed6304_fold0_a6bdf8b74e16dc65",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "81880c0cc317caad9979f6c6": {
+    "identity": "10f618f6dfa3fdedcd193c2b2abc4a77db5aa604aa91409b13c9618e09872882",
+    "run": "none_p0_seed6304_fold1_10f618f6dfa3fded",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "81ef4893bfd8233da8b4af91": {
+    "identity": "4461ed3984148dc5eabacde98e485e957a9cc3ca784115fd8eb329d5b662fe84",
+    "run": "none_p0_seed6304_fold2_4461ed3984148dc5",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "8410447863e4cbfa718896a1": {
+    "identity": "c265e1f33eb9eec2046ca9898b3bae35dc4bb9fe5b3d2c96d8cbf55514867aaf",
+    "run": "none_p0_seed6304_fold2_c265e1f33eb9eec2",
+    "slot": {
+      "fold": 2,
+      "poison": null,
+      "role": "retrained_clean"
+    }
+  },
+  "888a8b020a52956e06ae3ec8": {
+    "identity": "86560ae3e44ce6b9e1388d2494f05abb2585de64f25649a49c3738b9759fbf3a",
+    "run": "none_p0_seed6304_fold2_86560ae3e44ce6b9",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "893d2b4887f113e47bb7da72": {
+    "identity": "728faf6fe2ad69e87c141856ff62b5a1b2c356d388e6d10b00e5dde4d4ea0df8",
+    "run": "none_p0_seed6304_fold3_728faf6fe2ad69e8",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "89e4f10d963e951a4fb503f8": {
+    "identity": "883127365e355e54fa0d46964426eb89ba26fb6ba006f433cc108ebbdea2d50e",
+    "run": "none_p0_seed6304_fold0_883127365e355e54",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "8ac7154186c8478fc4280983": {
+    "identity": "70826ed4b2b99aacb8a7972e47a0f2ce6d3c2d75bb8828ba808b1a9a7e3dc6f0",
+    "run": "none_p0_seed6304_fold2_70826ed4b2b99aac",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "8b1dc772b894afb4aee0ed13": {
+    "identity": "bdaf1c7738b263c4bf04fee6b0624d43dc170ae2ce780a4d6f304a1e6eaa4774",
+    "run": "none_p0_seed6304_fold1_bdaf1c7738b263c4",
+    "slot": {
+      "fold": 1,
+      "poison": null,
+      "role": "retrained_clean"
+    }
+  },
+  "8c183b61b672949a8d76185a": {
+    "identity": "10e6a2c1946a5c5d779d2e699d9ec57be37a3490a957eeac729d2064b3a53d25",
+    "run": "none_p0_seed6304_fold4_10e6a2c1946a5c5d",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "8f54f03b4cc6bb5e7bcc2124": {
+    "identity": "caf7b8b27f0ff7b24bd790e6a42410c5e5b23d61a63040c9ca4b63efdcc0d4d6",
+    "run": "none_p0_seed6304_fold4_caf7b8b27f0ff7b2",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "90ae6afa9a99323e6243b840": {
+    "identity": "10b7d09366abe851c0822484ea04cd09c80aaf2158ef9f151591dfcb9651154b",
+    "run": "none_p0_seed6304_fold1_10b7d09366abe851",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "9109a1e3010767b2e665e22a": {
+    "identity": "b234434310766dea96fdabe46eed86d42e4f89738d4ae24b82b92c5af88d009e",
+    "run": "none_p0_seed6304_fold1_b234434310766dea",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "94f880e62949f9988c1e20b4": {
+    "identity": "03048db87f603eedc6bc3c361b2fa5071a0bb58ef70af0305a64c6f2369a09b1",
+    "run": "none_p0_seed6304_fold0_03048db87f603eed",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "9b3c970e9d0eb3400e9f3d7d": {
+    "identity": "88907c37c4fd1e4c0bb046ae7627cd8e5e76795c4dbb15b2682c87b5de6abe73",
+    "run": "none_p0_seed6304_fold0_88907c37c4fd1e4c",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "9c8eff43a7167c32db1be223": {
+    "identity": "2bf6a3cac6d66e4800df1b7259130f3d0437f08b4b03c1cf10993bb29cbebb0f",
+    "run": "none_p0_seed6304_fold4_2bf6a3cac6d66e48",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "9c9e2e473a8967885cb19237": {
+    "identity": "bef51e8151385804f71b1ade33c13c023fdeb5e81814615a8a323e8a408e89cd",
+    "run": "none_p0_seed6304_fold3_bef51e8151385804",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "9e1ac50aac335f8b6eec8e05": {
+    "identity": "05ff5b5b691c7573f5b5ad3a1878a6625b33c08c33e924bca4ac4e662ac92226",
+    "run": "none_p0_seed6304_fold1_05ff5b5b691c7573",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "a21c6af0f8746bd1683137c7": {
+    "identity": "5ba84e221c63e26143f5a409a2d5aefb45700511f19cf22223b200d1333e7f0d",
+    "run": "none_p0_seed6304_fold3_5ba84e221c63e261",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "a702fdf465bcfe327b496ba9": {
+    "identity": "fe7c40ccf1f002b7537323d2184334ea907a6cef67214f0323e3f36e71610258",
+    "run": "none_p0_seed6304_fold4_fe7c40ccf1f002b7",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "aa99c0c9b13b1670c5dac2b2": {
+    "identity": "f6f46490524555b481eaa6e7f4a8d29e776c1477fba7cab5ec050061709531d6",
+    "run": "none_p0_seed6304_fold3_f6f46490524555b4",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "acbae7bfd443327ed79b6731": {
+    "identity": "110d57a0eac8917145df2925fec4836ce110df8beecdf16a98414418ba04bf44",
+    "run": "none_p0_seed6304_fold1_110d57a0eac89171",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "b0e5bdfc0e716ca4ca2896a4": {
+    "identity": "b162634e298d5388f03460f254076060dbda93f47f6d94d1567a46b53f78fb06",
+    "run": "none_p0_seed6304_fold2_b162634e298d5388",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "b350b01ab7388bd29c64e233": {
+    "identity": "1ee9e695656f6215efa6c5f7de5dc8d6a2814756370edca8eba4ebf1212f48a0",
+    "run": "none_p0_seed6304_fold3_1ee9e695656f6215",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "b5093cb92379265e53beb68c": {
+    "identity": "d9392efbf542be96bddf1b70112b24dcaa289023042bb470a00d3eb273790883",
+    "run": "none_p0_seed6304_fold3_d9392efbf542be96",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "b5edd4a09bf6439ab757a263": {
+    "identity": "0754839b7503108065fa85d7316a3e5045faf01e8cc0be4d3aae8438fcdc1da5",
+    "run": "none_p0_seed6304_fold4_0754839b75031080",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "b66f54e3566a81571e446104": {
+    "identity": "1434525a22daed77dbe44832ec1cd619ede4641cf86c9aef075e880bfb42c510",
+    "run": "none_p0_seed6304_fold2_1434525a22daed77",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "bab761b535e3833c060bc2bd": {
+    "identity": "d7b5ba41ec6a555b67647cc93907074963146e07d4d3b496f01f221e1b87717c",
+    "run": "none_p0_seed6304_fold0_d7b5ba41ec6a555b",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.4,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "bcf3eab3fb7a57aa8d2182ce": {
+    "identity": "dbd5b57c44e38aecdfb912bc801e197b1d37bb6bca5ad56dc852b74bf46420bc",
+    "run": "none_p0_seed6304_fold0_dbd5b57c44e38aec",
+    "slot": {
+      "fold": 0,
+      "poison": null,
+      "role": "retrained_clean"
+    }
+  },
+  "bd437a38b17fe4aa01abf6f4": {
+    "identity": "5d74af7dd1c7f439631097ba43b8e705c6945ebb6dbb32e30b18754ccd03d78e",
+    "run": "none_p0_seed6304_fold2_5d74af7dd1c7f439",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "bd5167169ce331557fe6dd38": {
+    "identity": "637648593d4b94864a704d2e356cd90f579a230961363c5cead5c745abb53677",
+    "run": "none_p0_seed6304_fold1_637648593d4b9486",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "be33e0e03089540a0e8d706a": {
+    "identity": "1f2c910b1b04bae59d236b220639590af578716fe3d9d255c811a7439a57c4ef",
+    "run": "none_p0_seed6304_fold3_1f2c910b1b04bae5",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "c2b74cba3b5ed7bc3ff9e3ab": {
+    "identity": "b3b59fd0d9795e740aeb880b5d2767859daee1502eb35508220bb5ddd72b8722",
+    "run": "none_p0_seed6304_fold2_b3b59fd0d9795e74",
+    "slot": {
+      "fold": 2,
+      "poison": null,
+      "role": "clean"
+    }
+  },
+  "cbda49d738913771c401e498": {
+    "identity": "06f14d60f12470da9d16429ea862915d8b246851ff0175312e2d7dbbceb78b06",
+    "run": "none_p0_seed6304_fold2_06f14d60f12470da",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "ce75ab6adfd4d6a3022ea774": {
+    "identity": "82e656a66811f4503e956c49fd3f2262e8513ac57a279a35ce82adad59996079",
+    "run": "none_p0_seed6304_fold4_82e656a66811f450",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "ce9a8af2b67e0c53b08ab081": {
+    "identity": "fab59ea607fcb28cdc4b975053f5e5a1d7b444500f65f0fd33d5c38b28a6f6fa",
+    "run": "none_p0_seed6304_fold1_fab59ea607fcb28c",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "d3c956fc247d372fa554ceb0": {
+    "identity": "ef617de79ecb62023e9c2c34984495cce8c0387e0252e7f57e55d6b2f4318018",
+    "run": "none_p0_seed6304_fold4_ef617de79ecb6202",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "d3e3d9b81c229f97cee7fa64": {
+    "identity": "60406bbc5012f0397b74604cbc6cd62f1dec28ef1dd638c5057d6f3e00d0d324",
+    "run": "none_p0_seed6304_fold0_60406bbc5012f039",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "df2daefe8fce4b495ed25494": {
+    "identity": "d2eb4fa773cbbc010e9590908ffce2ac57f8b8496fdec28ac2d2c156c053b348",
+    "run": "none_p0_seed6304_fold4_d2eb4fa773cbbc01",
+    "slot": {
+      "fold": 4,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "e18d13f46a9d74a799126f28": {
+    "identity": "2b8e1a045c21c59bb3313453be94b9e78c002bbeabe4a2e0c9fbeb588d18ce6f",
+    "run": "none_p0_seed6304_fold0_2b8e1a045c21c59b",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "e1a27718c8724ca236575492": {
+    "identity": "07d234a28d50a810d7bd5bdc3ecd344115b52831c2e2b57dfdbff8d72d4535fd",
+    "run": "none_p0_seed6304_fold1_07d234a28d50a810",
+    "slot": {
+      "fold": 1,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "e3b556e35fdb31d24e712e56": {
+    "identity": "84a94de1b93c1d4626f2d07e7526e9668202ec9c1d68a745fd492630ac1d5307",
+    "run": "none_p0_seed6304_fold2_84a94de1b93c1d46",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "e81e226595b909cfd241501c": {
+    "identity": "e7d0931d0c1e99d61e418ad1a0c10e9e9a7e4c845c770ec12504d95b3a87b159",
+    "run": "none_p0_seed6304_fold2_e7d0931d0c1e99d6",
+    "slot": {
+      "fold": 2,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "retrained_poisoned"
+    }
+  },
+  "e81f799c5d52dd301aecfc13": {
+    "identity": "f329aea653f69fbc64a69fbe36118ace8394f0990ad63be9968221ec3e411faa",
+    "run": "none_p0_seed6304_fold0_f329aea653f69fbc",
+    "slot": {
+      "fold": 0,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "ebc9d3768a215e249eedb893": {
+    "identity": "e87afc589ae276aa85db38704100105995641c527514831cb4caed25f74fcb7a",
+    "run": "none_p0_seed6304_fold3_e87afc589ae276aa",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.05,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "f40bb9082a757a830e1ba64e": {
+    "identity": "21f6b39f1b2b1c526fd34c0eb07b04427a1da85716c75660d7fd773aeb5f2f0a",
+    "run": "none_p0_seed6304_fold3_21f6b39f1b2b1c52",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "pixel_patch",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.1,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  },
+  "f6865799ded93b9eaf6ef38d": {
+    "identity": "ce0ef4f6d0d948fe8f7b61891b7049781c250b6a0db9da00cc746e6f68f6bfd9",
+    "run": "none_p0_seed6304_fold3_ce0ef4f6d0d948fe",
+    "slot": {
+      "fold": 3,
+      "poison": null,
+      "role": "retrained_clean"
+    }
+  },
+  "f77ed2ed4cc2c542ca69f796": {
+    "identity": "734e5fac6be641de6c0dfd844976e51d6278b1538663a27a2e47fcc1505922ac",
+    "run": "none_p0_seed6304_fold4_734e5fac6be641de",
+    "slot": {
+      "fold": 4,
+      "poison": null,
+      "role": "retrained_clean"
+    }
+  },
+  "f9ff562bb2fff9a7348291e9": {
+    "identity": "a0093c97619ea8d4d2f95b7575ff3de478110195053480173c2466417efdd8aa",
+    "run": "none_p0_seed6304_fold3_a0093c97619ea8d4",
+    "slot": {
+      "fold": 3,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.2,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "role": "poisoned"
+    }
+  }
+}

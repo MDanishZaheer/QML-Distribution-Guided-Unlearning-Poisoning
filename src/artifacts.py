@@ -233,8 +233,8 @@ def load_run(directory: Path | str) -> dict:
 
 def find_completed_run(directory, identity):
     """Reuse only an identical, completed run with verified artifact hashes."""
-    for file in sorted(directory.glob("*/manifest.json"), reverse=True):
-        manifest = load_json(file)
+    manifests = [(file, load_json(file)) for file in Path(directory).glob("*/manifest.json")]
+    for file, manifest in sorted(manifests, key=lambda item: item[1]["created_utc"], reverse=True):
         if manifest.get("status") == "complete" and manifest.get("identity") == json_value(identity):
             return load_run(file.parent)
     return None

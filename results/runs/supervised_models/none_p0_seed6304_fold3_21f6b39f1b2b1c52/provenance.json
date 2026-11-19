@@ -1,0 +1,29 @@
+{
+  "code_fingerprint": "07b6f070a9899567386dd122a0bdcbbc8b06ac94e8c5ace11692ddced0acdc25",
+  "environment": {
+    "aer_devices": [
+      "CPU",
+      "GPU"
+    ],
+    "nvidia_gpu": "NVIDIA GeForce RTX 3070 Laptop GPU, 8192 MiB, 595.84",
+    "packages": {
+      "joblib": "1.6.0",
+      "matplotlib": "3.11.1",
+      "numpy": "2.5.2",
+      "pandas": "3.1.0",
+      "qiskit": "2.5.1",
+      "qiskit-aer": null,
+      "qiskit-ibm-runtime": null,
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1"
+    },
+    "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+    "python": "3.12.3"
+  },
+  "forget_class": 2,
+  "imported_gold": null,
+  "split_fingerprint": "373f949ee97d2d1fa3b0eb30175fb8777f76c8371d01c5e63df897f0a497b8c9",
+  "stage": "supervised_model",
+  "train_fingerprint": "152636409880f1ecabab1585095a8c8e39334ad3ef00d92a7cb2fe3a3a39f808",
+  "validation_fingerprint": "1d2b5d9bdc49dc83ee2dc655a1bc5881ffde8f33a572ff87ecfc61bfe057e851"
+}

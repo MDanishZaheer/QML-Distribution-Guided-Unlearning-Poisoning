@@ -1,0 +1,68 @@
+{
+  "condition_manifests": [
+    "results/conditions/condition_26232f6150c772ed.json",
+    "results/conditions/condition_2c23d6447a643d26.json",
+    "results/conditions/condition_5fc28e4789cffaec.json",
+    "results/conditions/condition_6322ead340a69095.json",
+    "results/conditions/condition_774ebe88361b6cbf.json",
+    "results/conditions/condition_d97c6afbce90903c.json",
+    "results/conditions/condition_e52859e7ec00ab98.json"
+  ],
+  "empty_tables": [
+    "shuffle_metrics",
+    "noise",
+    "shots",
+    "hardware"
+  ],
+  "feature_diagnostic_training_fingerprint": "8614e2777b7ee0facad9f2c2a5339f3407abb19e5e991eeb0810a7cf0d206c4d",
+  "inspected_condition": "label_flip_20pct",
+  "noise_levels": [
+    0.0,
+    0.001,
+    0.005,
+    0.01
+  ],
+  "optional_execution": {
+    "ablations": false,
+    "folds": false,
+    "hardware": false,
+    "noise": false,
+    "shots": false,
+    "shuffle": false
+  },
+  "seed": 6304,
+  "selected_fold": 0,
+  "shot_budgets": [
+    512,
+    2048,
+    8192
+  ],
+  "source_fingerprint": "36366f34dadc8f79f32d578688a66046e2f316911c2250c1f7dd1587f437d011",
+  "source_run_ids": [
+    "none_p0_seed6304_fold0_15ca750586944c66",
+    "none_p0_seed6304_fold0_17bcd553a924d65c",
+    "none_p0_seed6304_fold0_2b96842c97822709",
+    "none_p0_seed6304_fold0_4131756ed4c4df17",
+    "none_p0_seed6304_fold0_497ac5d63fbb187a",
+    "none_p0_seed6304_fold0_4d54709c511ea795",
+    "none_p0_seed6304_fold0_57bbcf8bda10f2d9",
+    "none_p0_seed6304_fold0_764a4acb19d18f33",
+    "none_p0_seed6304_fold0_7cdbff4721f68b0f",
+    "none_p0_seed6304_fold0_7d32e987215b7ac8",
+    "none_p0_seed6304_fold0_8a104bd0ee07fd0a",
+    "none_p0_seed6304_fold0_91074a3667d6e33a",
+    "none_p0_seed6304_fold0_961e38a9e159b8e8",
+    "none_p0_seed6304_fold0_99a83e3235532bed",
+    "none_p0_seed6304_fold0_9f5517b45af73a75",
+    "none_p0_seed6304_fold0_a0bd26b1593b4136",
+    "none_p0_seed6304_fold0_a89371bf4ad1dee6",
+    "none_p0_seed6304_fold0_be48106a0168ac48",
+    "none_p0_seed6304_fold0_c51ef4a2ec0598bc",
+    "none_p0_seed6304_fold0_c986e2ad2cb88006",
+    "none_p0_seed6304_fold0_db4a26d05e58dd20",
+    "none_p0_seed6304_fold0_e074ba49df05bdc0",
+    "none_p0_seed6304_fold0_ea110dce9d4fc55b",
+    "none_p0_seed6304_fold0_fc3c1b988f9dca52",
+    "none_p0_seed6304_fold0_ff850aa348ebddcd"
+  ]
+}

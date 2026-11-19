@@ -1,0 +1,14 @@
+variant,original_digit_2_records,observed_digit_2_records,relabeled_0_in_observed_digit_2
+clean,89,89,0
+pixel_patch_5pct,89,89,0
+pixel_patch_10pct,89,89,0
+pixel_patch_20pct,89,89,0
+pixel_patch_30pct,89,89,0
+pixel_patch_40pct,89,89,0
+pixel_patch_50pct,89,89,0
+label_flip_5pct,89,93,4
+label_flip_10pct,89,98,9
+label_flip_20pct,89,107,18
+label_flip_30pct,89,116,27
+label_flip_40pct,89,125,36
+label_flip_50pct,89,134,45

@@ -207,6 +207,58 @@ def draw_circuit(circuit, fold: int = 30):
     return circuit.draw(output="mpl", fold=fold)
 
 
+def plot_condition_curves(table, metric, title=None):
+    """Single-fold curves for the two attacks, with the zero-poison control.
+
+    Use one protocol/fold at a time. No uncertainty bands are invented from a
+    single seed; fold summaries are displayed separately in the notebook.
+    """
+    if table.empty or table["fold"].nunique() != 1 or table["seed"].nunique() != 1:
+        raise ValueError("Select a nonempty single-fold, single-seed table.")
+    roles = [role for role in ("poisoned", "poisoned_guided", "poisoned_uniform", "retrained_poisoned")
+             if role in set(table["model"])]
+    figure, axes = plt.subplots(1, 2, figsize=(11, 4), layout="constrained")
+    for axis, attack in zip(axes, ("pixel_patch", "label_flip")):
+        for role in roles:
+            rows = table.loc[(table["model"] == role) & table["attack"].isin(["none", attack])].sort_values("poison_rate")
+            if rows["poison_rate"].duplicated().any():
+                raise ValueError("Filter duplicate rates/ablation protocols before plotting.")
+            axis.plot(100 * rows["poison_rate"], rows[metric], "o-", label=role.replace("_", " "))
+        axis.set(xlabel="Requested eligible-class poisoning (%)", ylabel=metric.replace("_", " "),
+                 title=attack.replace("_", " "), ylim=(0, 1))
+        axis.legend(fontsize=8)
+    figure.suptitle(title or f"{metric.replace('_', ' ')}: one fold, seed {table['seed'].iloc[0]}")
+    return figure
+
+
+def plot_fold_summary(summary, metric):
+    """Across-fold mean +/- descriptive SD; absent folds remain visibly counted."""
+    table = summary.loc[summary["metric"] == metric].copy()
+    if table.empty or table["seed"].nunique() != 1:
+        raise ValueError("Select one seed and an available fold-summary metric.")
+    if table.duplicated(["attack", "poison_rate", "model"]).any():
+        raise ValueError("Separate protocols before plotting fold summaries.")
+    roles = ("poisoned", "poisoned_guided", "poisoned_uniform", "retrained_poisoned")
+    figure, axes = plt.subplots(1, 2, figsize=(11, 4), layout="constrained")
+    for axis, attack in zip(axes, ("pixel_patch", "label_flip")):
+        for role in roles:
+            rows = table.loc[(table["model"] == role) & table["attack"].isin(["none", attack])]
+            rows = rows.sort_values("poison_rate")
+            if rows.empty:
+                continue
+            line, = axis.plot(100 * rows["poison_rate"], rows["mean"], "o-", label=role.replace("_", " "))
+            defined = rows.dropna(subset=["fold_sd"])
+            axis.errorbar(100 * defined["poison_rate"], defined["mean"], yerr=defined["fold_sd"],
+                          fmt="none", capsize=3, color=line.get_color())
+        axis.set(xlabel="Requested eligible-class poisoning (%)", ylabel=metric.replace("_", " "),
+                 title=attack.replace("_", " "))
+        axis.legend(fontsize=8)
+    counts = f"{table['n_folds'].min()}-{table['n_folds'].max()}"
+    figure.suptitle(f"Fold mean and SD: {metric.replace('_', ' ')}; folds per point {counts}; "
+                   f"seed {table['seed'].iloc[0]} (SD is not a confidence interval)")
+    return figure
+
+
 def save_figure(figure, path: Path | str, *, source_run_ids, description: str,
                 formats=("png", "pdf"), dpi: int = 300):
     """Export a figure plus its provenance. path is a filename stem, without extension."""

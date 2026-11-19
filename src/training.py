@@ -1,12 +1,15 @@
 """Readable NumPy Adam training with cosine learning rates and saved best weights."""
 
 from dataclasses import dataclass
+from pathlib import Path
 from time import perf_counter
 from typing import Callable
 
 import numpy as np
 import pandas as pd
 
+from src.artifacts import fingerprint, load_json, save_json
+from src.checkpoints import training_streams
 from src.config import DEFAULT_SEED, TrainingConfig
 from src.models.vqc import VQC, one_hot
 
@@ -30,18 +33,51 @@ def cosine_learning_rate(step: int, config: TrainingConfig) -> float:
 
 def optimize(initial_weights, objective: Callable, evaluate: Callable,
              config: TrainingConfig, selection_metric: str,
-             callback: Callable | None = None) -> TrainingResult:
+             callback: Callable | None = None, *, checkpoint_path=None,
+             checkpoint_identity=None, capture_state=None, restore_state=None) -> TrainingResult:
     """objective(weights) returns a mini-batch loss/gradient; evaluate uses no test data.
 
     One step is one mini-batch update, NOT one epoch. The best checkpoint includes
-    the initial weights. Callbacks receive a dictionary at each evaluation point.
+    the initial weights. Atomically save after every complete update. Resume
+    from last weights with Adam/RNG state, while retaining the best weights.
+    An interrupted update is repeated from the preceding complete checkpoint.
     """
     weights = np.asarray(initial_weights, dtype=float).copy()
     first_moment = np.zeros_like(weights)
     second_moment = np.zeros_like(weights)
     best_weights, best_step, best_score = weights.copy(), 0, np.inf
     history, stale_checks = [], 0
+    step, elapsed_offset, stopped = 0, 0.0, False
+    checkpoint_path = Path(checkpoint_path) if checkpoint_path is not None else None
+    identity = fingerprint({"version": 1, "training": config, "metric": selection_metric,
+                            "initial_weights": weights, "problem": checkpoint_identity})
+    resumed = checkpoint_path is not None and checkpoint_path.exists()
+    if resumed:
+        saved = load_json(checkpoint_path)
+        if saved["identity"] != identity:
+            raise ValueError("Incompatible optimizer checkpoint; start a fresh run.")
+        weights, first_moment, second_moment, best_weights = (
+            np.asarray(saved[name], float) for name in
+            ("weights", "first_moment", "second_moment", "best_weights"))
+        step, best_step, best_score = saved["step"], saved["best_step"], saved["best_score"]
+        history, stale_checks = saved["history"], saved["stale_checks"]
+        elapsed_offset, stopped = saved["elapsed_seconds"], saved["stopped"]
+        if restore_state is not None:
+            restore_state(saved["streams"])
     started = perf_counter()
+
+    def save_progress():
+        if checkpoint_path is not None:
+            save_json(checkpoint_path, {
+                "version": 1, "identity": identity, "step": step,
+                "weights": weights, "first_moment": first_moment,
+                "second_moment": second_moment, "best_weights": best_weights,
+                "best_step": best_step, "best_score": best_score,
+                "selection_metric": selection_metric, "history": history,
+                "stale_checks": stale_checks, "stopped": stopped,
+                "elapsed_seconds": elapsed_offset + perf_counter() - started,
+                "streams": capture_state() if capture_state is not None else None,
+            })
 
     def record(step, learning_rate, gradient_norm):
         nonlocal best_weights, best_step, best_score, stale_checks
@@ -55,14 +91,17 @@ def optimize(initial_weights, objective: Callable, evaluate: Callable,
         else:
             stale_checks += 1
         row = {"step": step, "learning_rate": learning_rate,
-               "gradient_norm": gradient_norm, "elapsed_seconds": perf_counter() - started,
+               "gradient_norm": gradient_norm, "elapsed_seconds": elapsed_offset + perf_counter() - started,
                **values}
         history.append(row)
+        return row
+
+    if not resumed:
+        row = record(0, 0.0, 0.0)
+        save_progress()
         if callback is not None:
             callback(dict(row))
-
-    record(0, 0.0, 0.0)
-    for step in range(1, config.steps + 1):
+    for step in range(step + 1, config.steps + 1) if not stopped else ():
         loss, gradient = objective(weights)
         gradient = np.asarray(gradient, dtype=float)
         if gradient.shape != weights.shape or not np.isfinite(gradient).all() or not np.isfinite(loss):
@@ -76,17 +115,22 @@ def optimize(initial_weights, objective: Callable, evaluate: Callable,
         corrected_second = second_moment / (1 - 0.999**step)
         learning_rate = cosine_learning_rate(step, config)
         weights -= learning_rate * corrected_first / (np.sqrt(corrected_second) + 1e-8)
+        row = None
         if step % config.evaluate_every == 0 or step == config.steps:
-            record(step, learning_rate, norm)
-            if config.patience is not None and stale_checks >= config.patience:
-                break
+            row = record(step, learning_rate, norm)
+            stopped = config.patience is not None and stale_checks >= config.patience
+        save_progress()  # Save BEFORE a progress callback can interrupt execution.
+        if callback is not None and row is not None:
+            callback(dict(row))
+        if stopped:
+            break
     return TrainingResult(best_weights, weights.copy(), pd.DataFrame(history),
                           best_step, selection_metric, best_score)
 
 
 def fit_vqc(model: VQC, train_features, train_labels, validation_features,
             validation_labels, config: TrainingConfig | None = None, seed: int = DEFAULT_SEED,
-            initial_weights=None, callback=None) -> TrainingResult:
+            initial_weights=None, callback=None, *, checkpoint_path=None) -> TrainingResult:
     """Supervised training; select checkpoints using validation cross-entropy only."""
     config = config or TrainingConfig()
     features = np.asarray(train_features, float)
@@ -107,4 +151,10 @@ def fit_vqc(model: VQC, train_features, train_labels, validation_features,
         return {"train_loss": model.loss(features, targets, weights),
                 "validation_loss": model.loss(validation_features, validation_targets, weights)}
 
-    return optimize(initial_weights, objective, evaluate, config, "validation_loss", callback)
+    capture, restore = training_streams(model, random)
+    identity = {"kind": "supervised", "seed": seed, "circuit": model.circuit_config,
+                "backend": model.backend_config, "train": features, "labels": train_labels,
+                "validation": validation_features, "validation_labels": validation_labels}
+    return optimize(initial_weights, objective, evaluate, config, "validation_loss", callback,
+                    checkpoint_path=checkpoint_path, checkpoint_identity=identity,
+                    capture_state=capture, restore_state=restore)

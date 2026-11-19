@@ -1,0 +1,13 @@
+condition,n_selected,mean_pixel_l2,mean_pca_l2,mean_angle_l2,mean_projected_energy_fraction,unchanged_angle_records
+pixel_patch_5pct,4,3.0,0.0,0.0,0.0,4
+pixel_patch_10pct,8,3.0,0.0,0.0,0.0,8
+pixel_patch_20pct,17,3.0,0.0,0.0,0.0,17
+pixel_patch_30pct,26,3.0,0.0,0.0,0.0,26
+pixel_patch_40pct,35,3.0,0.0,0.0,0.0,35
+pixel_patch_50pct,44,3.0,0.0,0.0,0.0,44
+label_flip_5pct,4,0.0,0.0,0.0,,4
+label_flip_10pct,9,0.0,0.0,0.0,,9
+label_flip_20pct,18,0.0,0.0,0.0,,18
+label_flip_30pct,27,0.0,0.0,0.0,,27
+label_flip_40pct,36,0.0,0.0,0.0,,36
+label_flip_50pct,45,0.0,0.0,0.0,,45

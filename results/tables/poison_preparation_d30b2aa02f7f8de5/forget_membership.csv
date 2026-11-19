@@ -1,0 +1,8 @@
+variant,original_digit_2_records,observed_digit_2_records,relabeled_0_in_observed_digit_2
+clean,64,64,0
+pixel_patch_5pct,64,64,0
+pixel_patch_10pct,64,64,0
+pixel_patch_20pct,64,64,0
+label_flip_5pct,64,67,3
+label_flip_10pct,64,70,6
+label_flip_20pct,64,76,12

@@ -1,0 +1,110 @@
+{
+  "artifact_sha256": {
+    "checkpoints/model.json": "a3abef48401ccaab499a2374a9b8570d23f3d7c2e60a88ed213f5a11554e3368",
+    "checkpoints/model.npz": "eb78470f5c9414c8dd5d2da59875c79811806cf070eb457fc4498c265d15b117",
+    "checkpoints/model.resume.json": "574dacb669bf1544de82a2a80cf4bdfa693eace2f6a57e491195b8a6a5b01a79",
+    "classical_models.joblib": "80e175b6f62297b808a50a2e21ba92fa4c23feed20e0573ac2a067a5658ae5f9",
+    "config.json": "139f21a5f4dfdb41dbf77f7590b545a3fb931e989f5cfc4f26b72a9ad75c5d8f",
+    "features.npz": "bf735257ad1a7446d92b1b97d369e887269899e1c67b4c2ba190c75b2c09ad80",
+    "histories/model.csv": "f27b9405f810bda1e5ac18aa1439ce61be6f752cad9e25ab0694c9c3b7ba72db",
+    "history.csv": "0dc5cdc18754735d82e8d2fcd845c6f51d65cfb001d9decf1b24cf9dcc223cf3",
+    "metrics.json": "a198505f4726c1245e8a57093a6c6b610e25b073e1514f6e81252bbb184b10f2",
+    "predictions.npz": "f8405d318b2cb6ee37452c5bf9dc851b680e089227f605ef92d2dd5ccd84f432",
+    "preprocessing.joblib": "267cde5fc73059fd38c42a9b7681dfc82ac0a2b6dcca918377caab7f29eb173e",
+    "preprocessing.json": "3f9f80fe13f971f63651988da295ced39ff4e7e2a5681a9a92f95e622af0f852",
+    "provenance.json": "990cf4cf2ca9afeab7847673bdad9ad2452fceb042e00867f25b5a24e11c665b",
+    "resources.json": "755da7155ba2fb186337594cac47588f731c85d2edf5d53b43c9d0da5ad4fab6",
+    "source.zip": "f429898f3a3489ef35231fb4dcfd7b12d6fee18d5c91982cdc57d9f4f8804371",
+    "weights.npz": "a27c34f1d317bd9b3cd1f28920aae513087d3da893d5442a1ae889ba2b49cb59"
+  },
+  "checkpoint_retirement": {
+    "journal": "results/maintenance/mnist420_exact_v1.json",
+    "removed_files": [
+      "checkpoints/model.npz",
+      "checkpoints/model.resume.json",
+      "classical_models.joblib",
+      "weights.npz"
+    ]
+  },
+  "created_utc": "2026-11-16T12:22:56.790985+00:00",
+  "finished_utc": "2026-11-16T12:34:04.872430+00:00",
+  "identity": {
+    "code_fingerprint": "36366f34dadc8f79f32d578688a66046e2f316911c2250c1f7dd1587f437d011",
+    "config": {
+      "backend": {
+        "allow_cpu_fallback": true,
+        "circuit_batch_size": 128,
+        "device": "auto",
+        "ibm_backend_name": null,
+        "max_memory_mb": 4096,
+        "max_parallel_threads": 4,
+        "method": "statevector",
+        "one_qubit_error": 0.0,
+        "optimization_level": 0,
+        "readout_error": 0.0,
+        "shots": 2048,
+        "two_qubit_error": 0.0,
+        "use_ibm_hardware": false
+      },
+      "circuit": {
+        "ansatz_reps": 3,
+        "entanglement": true,
+        "logit_scale": 1.0,
+        "reuploads": 2
+      },
+      "classical_baselines": true,
+      "data": {
+        "fold": 0,
+        "n_folds": 5,
+        "preprocessing": "refit",
+        "seed": 6304,
+        "split_strategy": "stratified_kfold",
+        "test_per_class": null,
+        "train_per_class": 100,
+        "validation_fraction": 0.2
+      },
+      "poison": {
+        "kind": "none",
+        "rate": 0.0
+      },
+      "seed": 6304,
+      "training": {
+        "batch_size": 10,
+        "evaluate_every": 10,
+        "gradient_clip": null,
+        "initialization_std": 0.1,
+        "learning_rate": 0.02,
+        "minimum_learning_rate": 0.001,
+        "patience": null,
+        "steps": 300
+      }
+    },
+    "environment": {
+      "aer_devices": [
+        "CPU",
+        "GPU"
+      ],
+      "nvidia_gpu": "NVIDIA GeForce RTX 3070 Laptop GPU, 8192 MiB, 595.84",
+      "packages": {
+        "joblib": "1.6.0",
+        "matplotlib": "3.11.1",
+        "numpy": "2.5.2",
+        "pandas": "3.1.0",
+        "qiskit": "2.5.1",
+        "qiskit-aer": null,
+        "qiskit-ibm-runtime": null,
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-7.0.0-31-generic-x86_64-with-glibc2.39",
+      "python": "3.12.3"
+    },
+    "forget_class": 2,
+    "imported_gold": null,
+    "split_fingerprint": "00b0f21eb3b592a9c1746a0faa14522bada159fb1d2d896ba77480c110f2b284",
+    "stage": "supervised_model",
+    "train_fingerprint": "b376370d7ccda392ad6aa3b891fa5880bef41c19a7293c4627c29290b4983824",
+    "validation_fingerprint": "1b4b593bce4d3aef3fe946eb9b9700f399b7b2725d3534045ae85da6ad531acf"
+  },
+  "status": "retired"
+}

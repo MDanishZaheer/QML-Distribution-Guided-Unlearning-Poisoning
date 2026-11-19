@@ -1,0 +1,116 @@
+{
+  "annotated_dataset": "data/annotated/label_flip_p5_a05ed2a64b7e915a",
+  "config": {
+    "backend": {
+      "allow_cpu_fallback": true,
+      "circuit_batch_size": 128,
+      "device": "auto",
+      "ibm_backend_name": null,
+      "max_memory_mb": 4096,
+      "max_parallel_threads": 4,
+      "method": "statevector",
+      "one_qubit_error": 0.0,
+      "optimization_level": 0,
+      "readout_error": 0.0,
+      "shots": null,
+      "two_qubit_error": 0.0,
+      "use_ibm_hardware": false
+    },
+    "circuit": {
+      "ansatz_reps": 3,
+      "entanglement": true,
+      "logit_scale": 1.0,
+      "reuploads": 2
+    },
+    "classical_baselines": true,
+    "data": {
+      "fold": 0,
+      "n_folds": 5,
+      "preprocessing": "refit",
+      "seed": 6304,
+      "split_strategy": "stratified_kfold",
+      "test_per_class": null,
+      "train_per_class": 140,
+      "validation_fraction": 0.2
+    },
+    "label_shuffle_control": false,
+    "poison": {
+      "denominator": "eligible",
+      "kind": "label_flip",
+      "patch_size": 3,
+      "patch_value": 255.0,
+      "rate": 0.05,
+      "seed": 6304,
+      "source_class": 0,
+      "target_class": 2
+    },
+    "seed": 6304,
+    "training": {
+      "batch_size": 10,
+      "evaluate_every": 10,
+      "gradient_clip": null,
+      "initialization_std": 0.1,
+      "learning_rate": 0.02,
+      "minimum_learning_rate": 0.001,
+      "patience": null,
+      "steps": 300
+    },
+    "unlearning": {
+      "alpha": 1.0,
+      "anchor_fraction": 0.25,
+      "beta": 1.0,
+      "calibration_size": 32,
+      "forget_class": 2,
+      "forget_definition": "observed",
+      "methods": [
+        "guided",
+        "uniform"
+      ],
+      "regularization": 0.01,
+      "training": {
+        "batch_size": 10,
+        "evaluate_every": 10,
+        "gradient_clip": null,
+        "initialization_std": 0.1,
+        "learning_rate": 0.02,
+        "minimum_learning_rate": 0.001,
+        "patience": null,
+        "steps": 100
+      }
+    }
+  },
+  "models": {
+    "clean": "results/runs/supervised_models/none_p0_seed6304_fold0_516273b4737f6f29",
+    "poisoned": "results/runs/supervised_models/none_p0_seed6304_fold0_2b8e1a045c21c59b",
+    "retrained_clean": "results/runs/supervised_models/none_p0_seed6304_fold0_dbd5b57c44e38aec",
+    "retrained_poisoned": "results/runs/supervised_models/none_p0_seed6304_fold0_7544900defdb2869"
+  },
+  "poisoning": {
+    "actual_fraction_all_training": 0.014925373134328358,
+    "actual_fraction_eligible": 0.044444444444444446,
+    "config": {
+      "denominator": "eligible",
+      "kind": "label_flip",
+      "patch_size": 3,
+      "patch_value": 255.0,
+      "rate": 0.05,
+      "seed": 6304,
+      "source_class": 0,
+      "target_class": 2
+    },
+    "eligible_count": 90,
+    "n_training": 268,
+    "observed_fingerprint": "becae43ba5eb52b372b23aeb50f353cc63fedc818aa9eb7038ea69c3fa12a61c",
+    "original_fingerprint": "d0f1ae5762906ddb6fe92163cdeb63a52a327f47e9630db0895bf9bb8b9a9831",
+    "poisoned_count": 4,
+    "rounding": "floor"
+  },
+  "split_fingerprint": "6111a0f4615453815e0082f1e6318aa4582881a9d55ddacca6d580073d45420a",
+  "split_manifest": "data/splits/split_6111a0f461545381.json",
+  "unlearned": {
+    "clean_guided": "results/runs/unlearning/none_p0_seed6304_fold0_3c4e1feeb84b0715",
+    "clean_uniform": "results/runs/unlearning/none_p0_seed6304_fold0_3f33e1a7f3bd60e5",
+    "poisoned_guided": "results/runs/unlearning/none_p0_seed6304_fold0_a7cec4855f35b0a9",
+    "poisoned_uniform": "results/runs/unlearning/none_p0_seed6304_fold0_de853bcf8f3252d3"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "errors": 0,
+  "failures": 0,
+  "independent_numerical_errors": {
+    "max_full_gradient_error_alpha0.8_lambda0.2": 3.5233401265988284e-11,
+    "max_full_gradient_error_alpha1.0_lambda0.01": 4.878562527912966e-11,
+    "max_independent_expectation_error": 3.885780586188048e-16
+  },
+  "research_training_executed": false,
+  "source_fingerprint": "07b6f070a9899567386dd122a0bdcbbc8b06ac94e8c5ace11692ddced0acdc25",
+  "successful": true,
+  "tests_run": 41
+}
