@@ -1,0 +1,128 @@
+{
+  "annotated_dataset": "data/annotated/label_flip_p25_e363baf108e125e2",
+  "config": {
+    "backend": {
+      "allow_cpu_fallback": true,
+      "circuit_batch_size": 128,
+      "device": "auto",
+      "ibm_backend_name": null,
+      "max_memory_mb": 4096,
+      "max_parallel_threads": 4,
+      "method": "statevector",
+      "one_qubit_error": 0.0,
+      "optimization_level": 0,
+      "readout_error": 0.0,
+      "shots": null,
+      "two_qubit_error": 0.0,
+      "use_ibm_hardware": false
+    },
+    "circuit": {
+      "ansatz_reps": 3,
+      "entanglement": true,
+      "logit_scale": 1.0,
+      "reuploads": 2
+    },
+    "classical_baselines": true,
+    "data": {
+      "fold": 4,
+      "n_folds": 5,
+      "preprocessing": "refit",
+      "seed": 6304,
+      "split_strategy": "stratified_kfold",
+      "test_per_class": null,
+      "train_per_class": 140,
+      "validation_fraction": 0.2
+    },
+    "label_shuffle_control": false,
+    "poison": {
+      "denominator": "eligible",
+      "kind": "label_flip",
+      "patch_size": 3,
+      "patch_value": 255.0,
+      "rate": 0.25,
+      "seed": 6304,
+      "source_class": 0,
+      "target_class": 2
+    },
+    "seed": 6304,
+    "training": {
+      "batch_size": 10,
+      "evaluate_every": 10,
+      "gradient_clip": null,
+      "initialization_std": 0.1,
+      "learning_rate": 0.02,
+      "minimum_learning_rate": 0.001,
+      "patience": null,
+      "steps": 300
+    },
+    "unlearning": {
+      "alpha": 1.0,
+      "anchor_fraction": 0.25,
+      "beta": 1.0,
+      "calibration_size": 32,
+      "forget_class": 2,
+      "forget_definition": "observed",
+      "methods": [
+        "guided",
+        "uniform"
+      ],
+      "regularization": 0.01,
+      "training": {
+        "batch_size": 10,
+        "evaluate_every": 10,
+        "gradient_clip": null,
+        "initialization_std": 0.1,
+        "learning_rate": 0.02,
+        "minimum_learning_rate": 0.001,
+        "patience": null,
+        "steps": 100
+      }
+    }
+  },
+  "input_policy": {
+    "adaptation": "Malik six-qubit angle circuit and class-level forgetting; not amplitude encoding or binary sampling",
+    "angle_scaling": "training-fitted MinMaxScaler [0, pi], clip=True",
+    "eligible_class": 2,
+    "labels_preserved": true,
+    "normalization": "all clean/corrupt inputs divided by 255 then per-record L2 normalized before PCA",
+    "pca": "four components; fit on the model's training records only; original refit policy",
+    "replacement": "full 784-vector, real N(0, 0.1**2), then unit L2 norm",
+    "source": "https://github.com/yutuer21/quantum-machine-unlearning/blob/main/src/datar.py",
+    "version": "real_gaussian_unit_input_v1",
+    "zero_input": "leave a zero vector unchanged"
+  },
+  "models": {
+    "clean": "results/runs/fresh_supervised/none_p0_seed6304_fold4_18adb3d7ee4ae6e9",
+    "poisoned": "results/runs/fresh_supervised/none_p0_seed6304_fold4_9427a3c02da572da",
+    "retrained_clean": "results/runs/fresh_supervised/none_p0_seed6304_fold4_4ee634d97ff4ce0e",
+    "retrained_poisoned": "results/runs/fresh_supervised/none_p0_seed6304_fold4_eb4f64d17a2763b3"
+  },
+  "poisoning": {
+    "actual_fraction_all_training": 0.08208955223880597,
+    "actual_fraction_eligible": 0.24444444444444444,
+    "config": {
+      "denominator": "eligible",
+      "kind": "label_flip",
+      "patch_size": 3,
+      "patch_value": 255.0,
+      "rate": 0.25,
+      "seed": 6304,
+      "source_class": 0,
+      "target_class": 2
+    },
+    "eligible_count": 90,
+    "n_training": 268,
+    "observed_fingerprint": "9f5f4b8d06fc07b84e6b724d4afce0ceb7211e977cb4404dcfd84be82eae73f5",
+    "original_fingerprint": "2b589980ac265758e6bd0661f2b85308ff09e121625bf2077813dadb485088a3",
+    "poisoned_count": 22,
+    "rounding": "floor"
+  },
+  "split_fingerprint": "dda800d8fac9e152a08df7b328b6ccccd0305c18c6851d7d29ae5e83ded04672",
+  "split_manifest": "data/splits/split_dda800d8fac9e152.json",
+  "unlearned": {
+    "clean_guided": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_8bbb73ed0284de75",
+    "clean_uniform": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_5118abadbb734a8d",
+    "poisoned_guided": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_83e30a6bdff88cb9",
+    "poisoned_uniform": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_cc809e07f5115200"
+  }
+}

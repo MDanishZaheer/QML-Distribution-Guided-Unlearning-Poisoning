@@ -1,0 +1,147 @@
+{
+  "318bf0ab5cf36cff6a7b8432": {
+    "identity": "379406bdf0fb074f1c195ed11c6b1aa3a64be8f37e25ebeab064824e2cb355da",
+    "run": "label_flip_p25_seed6304_fold0_379406bdf0fb074f",
+    "slot": {
+      "problem": "fold_0_label_flip_25pct",
+      "unlearning": {
+        "alpha": 1.0,
+        "anchor_fraction": 0.25,
+        "beta": 1.0,
+        "calibration_size": 32,
+        "forget_class": 2,
+        "forget_definition": "observed",
+        "methods": [
+          "guided"
+        ],
+        "regularization": 0.01,
+        "training": {
+          "batch_size": 10,
+          "evaluate_every": 10,
+          "gradient_clip": null,
+          "initialization_std": 0.1,
+          "learning_rate": 0.02,
+          "minimum_learning_rate": 0.001,
+          "patience": null,
+          "steps": 100
+        }
+      }
+    }
+  },
+  "664945713c6db05f66911998": {
+    "identity": "78d21f8c399bce5a73a94c3bb61ada15ad06d3399b5233b8b423467232d1a4ac",
+    "run": "feature_randomization_p50_seed6304_fold0_78d21f8c399bce5a",
+    "slot": {
+      "problem": "fold_0_feature_randomization_50pct",
+      "unlearning": {
+        "alpha": 1.0,
+        "anchor_fraction": 0.25,
+        "beta": 1.0,
+        "calibration_size": 32,
+        "forget_class": 2,
+        "forget_definition": "observed",
+        "methods": [
+          "guided"
+        ],
+        "regularization": 0.01,
+        "training": {
+          "batch_size": 10,
+          "evaluate_every": 10,
+          "gradient_clip": null,
+          "initialization_std": 0.1,
+          "learning_rate": 0.02,
+          "minimum_learning_rate": 0.001,
+          "patience": null,
+          "steps": 100
+        }
+      }
+    }
+  },
+  "713f4284b3a71fc30dd7eb3d": {
+    "identity": "86629f360cf45ddc17be2c13a2f0c0f7ef8493c8e8a4f355cad5454a44b641df",
+    "run": "label_flip_p50_seed6304_fold0_86629f360cf45ddc",
+    "slot": {
+      "problem": "fold_0_label_flip_50pct",
+      "unlearning": {
+        "alpha": 1.0,
+        "anchor_fraction": 0.25,
+        "beta": 1.0,
+        "calibration_size": 32,
+        "forget_class": 2,
+        "forget_definition": "observed",
+        "methods": [
+          "guided"
+        ],
+        "regularization": 0.01,
+        "training": {
+          "batch_size": 10,
+          "evaluate_every": 10,
+          "gradient_clip": null,
+          "initialization_std": 0.1,
+          "learning_rate": 0.02,
+          "minimum_learning_rate": 0.001,
+          "patience": null,
+          "steps": 100
+        }
+      }
+    }
+  },
+  "b74aff3eaacb2d9d18da2b6e": {
+    "identity": "aa54d66dd693874e3262f42e7229349ab2a0cfb298376d14be5ba37d6d6e0de7",
+    "run": "none_p0_seed6304_fold0_aa54d66dd693874e",
+    "slot": {
+      "problem": "fold_0_clean",
+      "unlearning": {
+        "alpha": 1.0,
+        "anchor_fraction": 0.25,
+        "beta": 1.0,
+        "calibration_size": 32,
+        "forget_class": 2,
+        "forget_definition": "observed",
+        "methods": [
+          "guided"
+        ],
+        "regularization": 0.01,
+        "training": {
+          "batch_size": 10,
+          "evaluate_every": 10,
+          "gradient_clip": null,
+          "initialization_std": 0.1,
+          "learning_rate": 0.02,
+          "minimum_learning_rate": 0.001,
+          "patience": null,
+          "steps": 100
+        }
+      }
+    }
+  },
+  "e7bcca9c019cfba170f83940": {
+    "identity": "62c34b65ef6355cc2b087c394602766c39711f72555f2b7a4c050a41c29fa352",
+    "run": "feature_randomization_p25_seed6304_fold0_62c34b65ef6355cc",
+    "slot": {
+      "problem": "fold_0_feature_randomization_25pct",
+      "unlearning": {
+        "alpha": 1.0,
+        "anchor_fraction": 0.25,
+        "beta": 1.0,
+        "calibration_size": 32,
+        "forget_class": 2,
+        "forget_definition": "observed",
+        "methods": [
+          "guided"
+        ],
+        "regularization": 0.01,
+        "training": {
+          "batch_size": 10,
+          "evaluate_every": 10,
+          "gradient_clip": null,
+          "initialization_std": 0.1,
+          "learning_rate": 0.02,
+          "minimum_learning_rate": 0.001,
+          "patience": null,
+          "steps": 100
+        }
+      }
+    }
+  }
+}

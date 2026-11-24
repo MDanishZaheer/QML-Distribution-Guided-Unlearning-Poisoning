@@ -1,8 +1,0 @@
-{
-  "description": "Data preparation: label_flip_20pct_examples; collection 5f8a383cdde3051a; fold 0.",
-  "files": [
-    "label_flip_20pct_examples.png",
-    "label_flip_20pct_examples.pdf"
-  ],
-  "source_run_ids": []
-}

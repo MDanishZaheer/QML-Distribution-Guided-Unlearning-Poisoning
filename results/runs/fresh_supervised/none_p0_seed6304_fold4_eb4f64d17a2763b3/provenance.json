@@ -1,0 +1,78 @@
+{
+  "code_fingerprint": "9ee43bb2d743ea089d853663cca11b0377911e525a25682861d9318b46529bdf",
+  "environment": {
+    "aer_devices": [
+      "CPU",
+      "GPU"
+    ],
+    "aer_runtime_version": "0.18.4",
+    "nvidia_gpu": "NVIDIA L4, 23034 MiB, 580.82.07",
+    "packages": {
+      "joblib": "1.6.0",
+      "matplotlib": "3.11.1",
+      "numpy": "2.5.2",
+      "pandas": "3.1.0",
+      "qiskit": "2.5.1",
+      "qiskit-aer": null,
+      "qiskit-ibm-runtime": null,
+      "scikit-learn": "1.9.1",
+      "scipy": "1.18.1"
+    },
+    "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+    "python": "3.13.16",
+    "qiskit_aer_gpu": "0.18.4"
+  },
+  "forget_class": 2,
+  "fresh_protocol": {
+    "environment": {
+      "aer_devices": [
+        "CPU",
+        "GPU"
+      ],
+      "aer_runtime_version": "0.18.4",
+      "nvidia_gpu": "NVIDIA L4, 23034 MiB, 580.82.07",
+      "packages": {
+        "joblib": "1.6.0",
+        "matplotlib": "3.11.1",
+        "numpy": "2.5.2",
+        "pandas": "3.1.0",
+        "qiskit": "2.5.1",
+        "qiskit-aer": null,
+        "qiskit-ibm-runtime": null,
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+      "python": "3.13.16",
+      "qiskit_aer_gpu": "0.18.4"
+    },
+    "execution": {
+      "circuit_batch_size": 32768,
+      "device": "GPU",
+      "gather_ms": 2.0,
+      "gpu_parameter_batching": true,
+      "memory_mb": 18427,
+      "runtime_binding": true,
+      "threads": 1,
+      "workers": 5
+    },
+    "input_policy": {
+      "adaptation": "Malik six-qubit angle circuit and class-level forgetting; not amplitude encoding or binary sampling",
+      "angle_scaling": "training-fitted MinMaxScaler [0, pi], clip=True",
+      "eligible_class": 2,
+      "labels_preserved": true,
+      "normalization": "all clean/corrupt inputs divided by 255 then per-record L2 normalized before PCA",
+      "pca": "four components; fit on the model's training records only; original refit policy",
+      "replacement": "full 784-vector, real N(0, 0.1**2), then unit L2 norm",
+      "source": "https://github.com/yutuer21/quantum-machine-unlearning/blob/main/src/datar.py",
+      "version": "real_gaussian_unit_input_v1",
+      "zero_input": "leave a zero vector unchanged"
+    },
+    "protocol_label": "feature_randomization_v1"
+  },
+  "imported_gold": null,
+  "split_fingerprint": "dda800d8fac9e152a08df7b328b6ccccd0305c18c6851d7d29ae5e83ded04672",
+  "stage": "supervised_model",
+  "train_fingerprint": "d2e8a428240e7f7c8ee1b1d6276bbd645d1c7dfccfaa86f2106d74e56a0dbb6e",
+  "validation_fingerprint": "0960f5c911eae658e10f481944e9a56215f73c25b50e56e69d95d7ef624c5be9"
+}

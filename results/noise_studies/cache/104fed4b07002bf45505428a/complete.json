@@ -1,0 +1,71 @@
+{
+  "identity": {
+    "environment": {
+      "aer_devices": [
+        "CPU",
+        "GPU"
+      ],
+      "aer_runtime_version": "0.18.4",
+      "nvidia_gpu": "NVIDIA L4, 23034 MiB, 580.82.07",
+      "packages": {
+        "joblib": "1.6.0",
+        "matplotlib": "3.11.1",
+        "numpy": "2.5.2",
+        "pandas": "3.1.0",
+        "qiskit": "2.5.1",
+        "qiskit-aer": null,
+        "qiskit-ibm-runtime": null,
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+      "python": "3.13.16",
+      "qiskit_aer_gpu": "0.18.4"
+    },
+    "execution": {
+      "circuit_batch_size": 2048,
+      "device": "GPU",
+      "memory_mb": 18427,
+      "threads": 4
+    },
+    "gate_noise": {
+      "family": "phase_flip",
+      "level": 0.005
+    },
+    "input": {
+      "artifacts": {
+        "checkpoints/model.json": "3cf643f76cc8aa5ed983738318c33d5d1d7ed901f9bcb2ab76e9652bbd3e8051",
+        "checkpoints/model.npz": "35f20b0a562c3a88a1b7517f540acd73bf7b54e111dd38234b0c08c1556eb527",
+        "checkpoints/model.resume.json": "b1c5332591d1c246abb4a1a6dfaaa4a3590ce7a4280fd87c0741d04cee6ebaf3",
+        "checkpoints/model.resume.json.previous": "bb2196f7821b0c90b49d32149fdb08a803639203a6254071f5cedbdb59e144bc",
+        "checkpoints/model.resume.json.previous.receipt.json": "921c2f155852d330d5446bc1108f7fddd7d5206ae64c8520ad7c0b4e45dfcae6",
+        "checkpoints/model.resume.json.receipt.json": "ab1955a3f9e951e3982c4dee040cdde8ddf16c114572e7f590d6655a90bc19cf",
+        "classical_models.joblib": "cb7eca53cc623ff7af9b482b61f27375c1ebf45ecf609c47bdf2e595de14e5b1",
+        "config.json": "92dd62c0258a4c9e09117fb108f0586d4584e8ea682a17a5c948f58761b17278",
+        "features.npz": "33a382de77866af3ff80c935c0e160e21320252031a78b15f3a4e76e61ee1162",
+        "histories/model.csv": "f61330f73db61c0a2fda873c6ad6021147158d3eb948b7b38e9afaee27d2f3de",
+        "history.csv": "25d6d8cd28f0a571c36c08512ffc93e977f8f8b1ab11896b9177692f8c0bd540",
+        "metrics.json": "43fe25d8f0862f0f8b9b7e415b5b5e33a04d29443e180d35ebe3889dd46bd726",
+        "predictions.npz": "4d09aefad606ad0fff0b013c0ba1b3d66d5e9428c591f9104f18d5c5a35a6a32",
+        "preprocessing.joblib": "754d0574ab6b4a38a5f62ed77b8af3509f4a702b6ded47b2910d65b6ff01ec9b",
+        "preprocessing.json": "fc4004ae69bb50d95862c081599d11a29989363fa75abb442a80300494d270fc",
+        "provenance.json": "96927c86bde10612dc35bc396476a5632f59acc548f2a32c0156c9cef7bc78ac",
+        "resources.json": "e795cbfa9aaf82eb0e6ee4c51bd282cf3d27fe888fb298d4a7e08cdc85d1c4e6",
+        "source.zip": "19637f886af429fdf6bd4caf3a774563cfc8ffdaca4bd5500700bcdfe93899e0",
+        "weights.npz": "4bc73a8173c1d69c5f2f00556d7e0ee1ea3bf943cb9875535695467cb65011d1"
+      },
+      "circuit": {
+        "ansatz_reps": 3,
+        "entanglement": true,
+        "logit_scale": 1.0,
+        "reuploads": 2
+      },
+      "feature_run": "results/runs/fresh_supervised/none_p0_seed6304_fold4_c8fe3dfde80337c3",
+      "numeric_inputs": "f29104ebcdc481f98facfd21529eb7df8e22773b02159ec5c20697d1396d5da0",
+      "run": "results/runs/fresh_supervised/none_p0_seed6304_fold4_c8fe3dfde80337c3"
+    },
+    "seed": 6304,
+    "source": "9ee43bb2d743ea089d853663cca11b0377911e525a25682861d9318b46529bdf"
+  },
+  "sha256": "a82a85b9ff7db2d2fd777297cba4b4bc9bf9fd3d3d5b0ac41cc002a645e4b51a"
+}

@@ -1,7 +1,0 @@
-condition,n_selected,mean_pixel_l2,mean_pca_l2,mean_angle_l2,mean_projected_energy_fraction,unchanged_angle_records
-pixel_patch_5pct,3,3.0,0.0,0.0,0.0,3
-pixel_patch_10pct,6,3.0,0.0,0.0,0.0,6
-pixel_patch_20pct,12,3.0,0.0,0.0,0.0,12
-label_flip_5pct,3,0.0,0.0,0.0,,3
-label_flip_10pct,6,0.0,0.0,0.0,,6
-label_flip_20pct,12,0.0,0.0,0.0,,12

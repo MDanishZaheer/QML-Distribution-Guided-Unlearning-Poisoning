@@ -1,0 +1,68 @@
+{
+  "ablation_execution": {
+    "circuit_batch_size": 32768,
+    "device": "GPU",
+    "gather_ms": 2.0,
+    "gpu_parameter_batching": true,
+    "memory_mb": 18427,
+    "runtime_binding": true,
+    "threads": 1,
+    "workers": 5
+  },
+  "actual_device": "GPU",
+  "actual_method": "statevector",
+  "available_aer_devices": [
+    "CPU",
+    "GPU"
+  ],
+  "compiled_circuit": {
+    "depth": 66,
+    "operations": {
+      "cx": 48,
+      "ry": 44,
+      "rz": 42,
+      "save_expval": 3
+    },
+    "parameters": 76,
+    "qubits": 6,
+    "two_qubit_gates": 48
+  },
+  "expectation_mode": "exact",
+  "fallback_reason": null,
+  "ibm_job_ids": [],
+  "logit_scale": 1.0,
+  "nominal_trainable_parameters": 72,
+  "original_circuit": {
+    "depth": 66,
+    "operations": {
+      "cx": 48,
+      "ry": 44,
+      "rz": 42
+    },
+    "parameters": 76,
+    "qubits": 6,
+    "two_qubit_gates": 48
+  },
+  "requested": {
+    "allow_cpu_fallback": false,
+    "circuit_batch_size": 32768,
+    "device": "GPU",
+    "ibm_backend_name": null,
+    "max_memory_mb": 18427,
+    "max_parallel_threads": 1,
+    "method": "statevector",
+    "one_qubit_error": 0.0,
+    "optimization_level": 0,
+    "readout_error": 0.0,
+    "shots": null,
+    "two_qubit_error": 0.0,
+    "use_ibm_hardware": false
+  },
+  "resource_scope": "per-model logical requests; physical jobs recorded at study level",
+  "resources": {
+    "circuit_evaluations": 291785,
+    "jobs": 225,
+    "shots": 0
+  },
+  "training_seconds": 200.86047662099918
+}

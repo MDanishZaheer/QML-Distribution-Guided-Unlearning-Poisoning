@@ -1,0 +1,5 @@
+{
+  "features": "features.npz in parent_run",
+  "parent_run": "results/runs/fresh_supervised/none_p0_seed6304_fold4_6c05401f5f31ed56",
+  "training_features_refitted": false
+}

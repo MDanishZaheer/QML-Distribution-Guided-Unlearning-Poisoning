@@ -1,0 +1,153 @@
+{
+  "artifact_sha256": {
+    "checkpoints/model.json": "9d9796d2f48f01b3f10eac968d243371c98924989c6edd9020bdcd2470da8d63",
+    "checkpoints/model.npz": "72c11758392ae2e42da6424075b20335995c9640366ece7656654bb6c457a46a",
+    "checkpoints/model.resume.json": "e1413ca3a2007494044e7c9166a72eb33109e1eac0ad11e52e3e776b2b2151e7",
+    "checkpoints/model.resume.json.previous": "b784e58056d24c82027c111ba6cb0d94ac68369437c7c7716e866f4c3835dfca",
+    "checkpoints/model.resume.json.previous.receipt.json": "fefb93e95af57fb8952ea2edbce6188229c2ee5db9d70fa5befca21aff58f3cd",
+    "checkpoints/model.resume.json.receipt.json": "cc9a6eb9e9a62eba5c8ca28bd5d1337b950281ce23e7a169d2d4b174cee5efd2",
+    "classical_models.joblib": "7c06155b3f88534245739ddb3800fb66a62f99a52f6ecdb83f6f8244b3d38210",
+    "config.json": "fca5252d9bfb3f8e3c4e94333a97e19cefa164e7ecf45eddcb1726114c8b3e90",
+    "features.npz": "80954223165a6e16e6b3d38ee5973bfe219d17b6efa63c5269fec988ccb80f69",
+    "histories/model.csv": "53c6cfae5bbe3618ca374f66d03b74bc1a7e068916d59b59172fd259a51d3ca7",
+    "history.csv": "04dc93b834c637e2c740727b590b1aa56998e9c885a543ee268cb04b7daf1b61",
+    "metrics.json": "f5fe84e67eddf8e83471fab950776491ed05d5877fe7231e61aa2f8c057c9d88",
+    "predictions.npz": "af87622a62cab88fa0e05ffc80ff03ef59b98331d985a270b52453c67abd4ff0",
+    "preprocessing.joblib": "c97427ab9096c50aa31208be2b72be26ad8607ada44425b68a243bb0e457b3db",
+    "preprocessing.json": "026612c73dd74c5bc471857ac9465776dc13b648406849572803a89ad9a93c77",
+    "provenance.json": "36fe97d32828191884cc965c08d91230a99195785af7df4cb3bb6e572a49bca7",
+    "resources.json": "f3bd2675dca21cf091901d34b58649c7ecd5cc75604e7ea7fd6bcb9603f2d85d",
+    "source.zip": "19637f886af429fdf6bd4caf3a774563cfc8ffdaca4bd5500700bcdfe93899e0",
+    "weights.npz": "6beb6a58f859a3ea2be6cb6d50c34a89845d3058669d0c62b17f9547208d8b7a"
+  },
+  "created_utc": "2026-11-22T23:12:53.759287+00:00",
+  "finished_utc": "2026-11-22T23:18:30.060927+00:00",
+  "identity": {
+    "code_fingerprint": "9ee43bb2d743ea089d853663cca11b0377911e525a25682861d9318b46529bdf",
+    "config": {
+      "backend": {
+        "allow_cpu_fallback": true,
+        "circuit_batch_size": 128,
+        "device": "auto",
+        "ibm_backend_name": null,
+        "max_memory_mb": 4096,
+        "max_parallel_threads": 4,
+        "method": "statevector",
+        "one_qubit_error": 0.0,
+        "optimization_level": 0,
+        "readout_error": 0.0,
+        "shots": null,
+        "two_qubit_error": 0.0,
+        "use_ibm_hardware": false
+      },
+      "circuit": {
+        "ansatz_reps": 3,
+        "entanglement": true,
+        "logit_scale": 1.0,
+        "reuploads": 2
+      },
+      "classical_baselines": true,
+      "data": {
+        "fold": 2,
+        "n_folds": 5,
+        "preprocessing": "refit",
+        "seed": 6304,
+        "split_strategy": "stratified_kfold",
+        "test_per_class": null,
+        "train_per_class": 140,
+        "validation_fraction": 0.2
+      },
+      "poison": {
+        "kind": "none",
+        "rate": 0.0
+      },
+      "seed": 6304,
+      "training": {
+        "batch_size": 10,
+        "evaluate_every": 10,
+        "gradient_clip": null,
+        "initialization_std": 0.1,
+        "learning_rate": 0.02,
+        "minimum_learning_rate": 0.001,
+        "patience": null,
+        "steps": 300
+      }
+    },
+    "environment": {
+      "aer_devices": [
+        "CPU",
+        "GPU"
+      ],
+      "aer_runtime_version": "0.18.4",
+      "nvidia_gpu": "NVIDIA L4, 23034 MiB, 580.82.07",
+      "packages": {
+        "joblib": "1.6.0",
+        "matplotlib": "3.11.1",
+        "numpy": "2.5.2",
+        "pandas": "3.1.0",
+        "qiskit": "2.5.1",
+        "qiskit-aer": null,
+        "qiskit-ibm-runtime": null,
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+      "python": "3.13.16",
+      "qiskit_aer_gpu": "0.18.4"
+    },
+    "forget_class": 2,
+    "fresh_protocol": {
+      "environment": {
+        "aer_devices": [
+          "CPU",
+          "GPU"
+        ],
+        "aer_runtime_version": "0.18.4",
+        "nvidia_gpu": "NVIDIA L4, 23034 MiB, 580.82.07",
+        "packages": {
+          "joblib": "1.6.0",
+          "matplotlib": "3.11.1",
+          "numpy": "2.5.2",
+          "pandas": "3.1.0",
+          "qiskit": "2.5.1",
+          "qiskit-aer": null,
+          "qiskit-ibm-runtime": null,
+          "scikit-learn": "1.9.1",
+          "scipy": "1.18.1"
+        },
+        "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+        "python": "3.13.16",
+        "qiskit_aer_gpu": "0.18.4"
+      },
+      "execution": {
+        "circuit_batch_size": 32768,
+        "device": "GPU",
+        "gather_ms": 2.0,
+        "gpu_parameter_batching": true,
+        "memory_mb": 18427,
+        "runtime_binding": true,
+        "threads": 1,
+        "workers": 5
+      },
+      "input_policy": {
+        "adaptation": "Malik six-qubit angle circuit and class-level forgetting; not amplitude encoding or binary sampling",
+        "angle_scaling": "training-fitted MinMaxScaler [0, pi], clip=True",
+        "eligible_class": 2,
+        "labels_preserved": true,
+        "normalization": "all clean/corrupt inputs divided by 255 then per-record L2 normalized before PCA",
+        "pca": "four components; fit on the model's training records only; original refit policy",
+        "replacement": "full 784-vector, real N(0, 0.1**2), then unit L2 norm",
+        "source": "https://github.com/yutuer21/quantum-machine-unlearning/blob/main/src/datar.py",
+        "version": "real_gaussian_unit_input_v1",
+        "zero_input": "leave a zero vector unchanged"
+      },
+      "protocol_label": "feature_randomization_v1"
+    },
+    "imported_gold": null,
+    "split_fingerprint": "c236a478e642740837832f80ad6bcc3a2d866b59e95e0645509bbaadab4434c8",
+    "stage": "supervised_model",
+    "train_fingerprint": "2c95cabfd4497ffbf9296bd2bc4eeea82c4011c97b73842a5325cc27e88098b7",
+    "validation_fingerprint": "9a3e6df3829bfd1d0cdfc12e885c4625f2f7b468823b725537883df402520683"
+  },
+  "status": "complete"
+}

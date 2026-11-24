@@ -1,4 +1,8 @@
-"""Explicit, serializable settings. Defaults are a starting protocol, not tuned results."""
+"""Serializable settings with legacy-compatible defaults.
+
+Use ``src.fresh_study.base_config()`` for the current registered Phase 1 protocol.
+Saved configurations always record every setting; none are tuned test results.
+"""
 
 from dataclasses import asdict, dataclass, field
 from pathlib import Path

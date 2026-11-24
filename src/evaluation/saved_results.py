@@ -5,7 +5,9 @@ the experiment; current environment matching is deliberately not used for review
 """
 
 from contextlib import ExitStack
+from concurrent.futures import ThreadPoolExecutor, wait, FIRST_COMPLETED
 from pathlib import Path
+from time import monotonic
 from types import SimpleNamespace
 from unittest.mock import patch
 from zipfile import ZipFile
@@ -55,19 +57,33 @@ def protect_review():
 class SavedResultsReview:
     """Strict, read-only loading of one complete, explicitly selected report."""
 
-    def __init__(self, root, report, *, gold_run, classical_run):
+    def __init__(self, root, report, *, gold_run, classical_run,
+                 input_cache=None, io_workers=1, progress=None):
         self.root = Path(root).resolve()
+        self.input_cache = Path(input_cache).resolve() if input_cache is not None else None
+        self.progress = progress
+        self._started = monotonic()
+        self._notify("Reading saved report and condition manifests (no training).")
         self.report_path = self.local_path(report)
-        self.provenance = load_json(self.report_path / "provenance.json")
+        self.provenance = self._read_json(self.report_path / "provenance.json")
         if not self.provenance.get("main_experiment_complete"):
             raise ValueError("Select a complete saved experiment for review.")
         self.source_fingerprint = self.provenance["source_fingerprint"]
         self.runs = {}
         self.conditions = {}
         self.split_paths = {}
+        payloads = {}
+        for number, relative in enumerate(self.provenance["condition_manifests"], start=1):
+            payloads[relative] = self._read_json(self.local_path(relative))
+            if number % 10 == 0:
+                self._notify(f"Read {number}/{len(self.provenance['condition_manifests'])} condition manifests.")
+        links = {link for payload in payloads.values() for group in ("models", "unlearned")
+                 for link in payload[group].values()}
+        self._preload_runs(links, io_workers)
+        self._notify("Validating condition, split, parent and reference links.")
         for relative in self.provenance["condition_manifests"]:
             path = self.local_path(relative)
-            payload = load_json(path)
+            payload = payloads[relative]
             if path.name != f"condition_{fingerprint(payload)[:16]}.json":
                 raise ValueError(f"Condition manifest content changed: {relative}")
             condition = {**payload, "manifest_path": path}
@@ -88,7 +104,7 @@ class SavedResultsReview:
             if fold in self.split_paths and self.split_paths[fold] != split_path:
                 raise ValueError("Conflicting split manifests within one fold.")
             self.split_paths[fold] = split_path
-            if load_json(split_path)["fingerprint"] != payload["split_fingerprint"]:
+            if self._read_json(split_path)["fingerprint"] != payload["split_fingerprint"]:
                 raise ValueError("Condition and saved split fingerprint disagree.")
             for run in condition["models"].values():
                 if run["manifest"]["identity"]["split_fingerprint"] != payload["split_fingerprint"]:
@@ -100,7 +116,7 @@ class SavedResultsReview:
                         or identity["reference_run"] != condition["models"][f"retrained_{case}"]["path"].name
                         or identity["method"] != method):
                     raise ValueError("Unlearning checkpoint has different parent/reference/method links.")
-            saved_test = load_json(split_path)["test"]
+            saved_test = self._read_json(split_path)["test"]
             for run in [*condition["models"].values(), *condition["unlearned"].values()]:
                 np.testing.assert_array_equal(run["predictions"]["test_sample_ids"], saved_test["sample_ids"])
                 np.testing.assert_array_equal(run["predictions"]["test_labels"], saved_test["labels"])
@@ -109,10 +125,74 @@ class SavedResultsReview:
         if sorted(self.split_paths) != sorted(self.provenance["planned_folds"]):
             raise ValueError("Saved report does not cover every planned fold.")
         self.stage_run_count = len(self.runs)
+        self._notify("Verifying saved gold/classical baselines.")
         self.gold = self.load_saved_run(gold_run)
         self.classical = self.load_saved_run(classical_run)
         self._validate_baselines()
+        self._notify("Comparing current original source files with the archived training source.")
         self._check_original_source()
+        self._notify(f"Saved-input verification complete: {self.stage_run_count} model stages, "
+                     f"{len(self.conditions)} conditions.")
+
+    def _notify(self, message):
+        progress = getattr(self, "progress", None)
+        if progress is not None:
+            progress(f"[{monotonic() - self._started:.0f}s] {message}")
+
+    def _read_path(self, path):
+        """Use local input bytes while preserving public project/output paths."""
+        cache = getattr(self, "input_cache", None)
+        if cache is None:
+            return self.local_path(path)
+        # Map logical project paths without stat/readlink calls on the storage file.
+        # The cached bytes are local; resolve and contain that local path instead.
+        logical = self.root / path
+        try:
+            relative = logical.relative_to(self.root)
+        except ValueError:
+            raise ValueError("Saved artifact path leaves the project root.") from None
+        if ".." in relative.parts:
+            raise ValueError("Saved artifact path leaves the project root.")
+        local = (cache / relative).resolve()
+        if not local.is_relative_to(cache):
+            raise ValueError("Saved input path leaves the local cache.")
+        return local
+
+    def _read_json(self, path):
+        return load_json(self._read_path(path))
+
+    def _read_run(self, path):
+        run = load_run(self._read_path(path))  # Every original artifact SHA is checked.
+        if run["manifest"]["identity"]["code_fingerprint"] != self.source_fingerprint:
+            raise ValueError("A linked run was produced by a different source version.")
+        run["path"] = path  # Scientific identities and new checkpoints retain storage paths.
+        return run
+
+    def _preload_runs(self, links, workers):
+        if workers < 1:
+            raise ValueError("Review I/O workers must be at least one.")
+        paths = sorted({self.local_path(link) for link in links})
+        total = len(paths)
+        self._notify(f"Checking {total} unique model stages with {workers} file-reader(s).")
+        executor = ThreadPoolExecutor(max_workers=workers, thread_name_prefix="saved-input")
+        pending = {executor.submit(self._read_run, path): path for path in paths}
+        last_update = monotonic()
+        complete = False
+        try:
+            while pending:
+                done, _ = wait(pending, timeout=5, return_when=FIRST_COMPLETED)
+                for future in done:
+                    path = pending.pop(future)
+                    self.runs[path] = future.result()
+                now = monotonic()
+                if not done or now - last_update >= 5 or not pending:
+                    current = next(iter(pending.values()), None)
+                    reading = f" Reading {current.name}." if current is not None else ""
+                    self._notify(f"Verified {total - len(pending)}/{total} model stages.{reading}")
+                    last_update = now
+            complete = True
+        finally:
+            executor.shutdown(wait=complete, cancel_futures=True)
 
     def local_path(self, relative):
         path = (self.root / relative).resolve()
@@ -123,10 +203,7 @@ class SavedResultsReview:
     def load_saved_run(self, relative):
         path = self.local_path(relative)
         if path not in self.runs:
-            run = load_run(path)  # Checks completion and every artifact checksum.
-            if run["manifest"]["identity"]["code_fingerprint"] != self.source_fingerprint:
-                raise ValueError("A linked run was produced by a different source version.")
-            self.runs[path] = run
+            self.runs[path] = self._read_run(path)
         return self.runs[path]
 
     def _validate_baselines(self):
@@ -139,7 +216,7 @@ class SavedResultsReview:
             if identity["config"]["seed"] != self.provenance["seed"]:
                 raise ValueError("Baseline seed differs from the report.")
         folds = sorted(self.split_paths)
-        fingerprints = [load_json(self.split_paths[fold])["fingerprint"] for fold in folds]
+        fingerprints = [self._read_json(self.split_paths[fold])["fingerprint"] for fold in folds]
         selected = self.provenance["selected_fold"]
         if identities[0]["fold_fingerprints"] != [fingerprints[folds.index(selected)]]:
             raise ValueError("Gold model split does not match the selected fold.")
@@ -154,7 +231,7 @@ class SavedResultsReview:
     def _check_original_source(self):
         # New review helpers may be added, but original analysis/training code must
         # still match its archived bytes. Never relabel historical source identities.
-        with ZipFile(self.gold["path"] / "source.zip") as archive:
+        with ZipFile(self._read_path(self.gold["path"] / "source.zip")) as archive:
             for name in archive.namelist():
                 if self.local_path(name).read_bytes() != archive.read(name):
                     raise ValueError(f"Original experiment source changed: {name}")
@@ -163,7 +240,7 @@ class SavedResultsReview:
         lookup = {sample: i for i, sample in enumerate(training_pool.sample_ids)}
         restored = []
         for fold in sorted(self.split_paths):
-            saved = load_json(self.split_paths[fold])
+            saved = self._read_json(self.split_paths[fold])
             parts = {}
             for name in ("train", "validation", "test"):
                 part = training_pool.subset([lookup[sample] for sample in saved[name]["sample_ids"]])
@@ -176,14 +253,14 @@ class SavedResultsReview:
         return restored
 
     def gold_features(self, splits):
-        saved = load_arrays(self.gold["path"] / "clean_features.npz")
+        saved = load_arrays(self._read_path(self.gold["path"] / "clean_features.npz"))
         result = {}
         for name in ("train", "validation", "test"):
             part = getattr(splits, name)
             np.testing.assert_array_equal(saved[f"{name}_sample_ids"], part.sample_ids)
             np.testing.assert_array_equal(saved[f"{name}_labels"], part.labels)
             result[name] = saved[f"{name}_features"]
-        diagnostics = load_json(self.gold["path"] / "clean_preprocessing.json")
+        diagnostics = self._read_json(self.gold["path"] / "clean_preprocessing.json")
         # Only the numeric diagnostics needed by the existing PCA display. This
         # is deliberately not an executable cross-version sklearn transformer.
         result["preprocessing"] = SimpleNamespace(
@@ -215,4 +292,4 @@ class SavedResultsReview:
         return path
 
     def table(self, name):
-        return pd.read_csv(self.local_path(self.report_path / f"{name}.csv"))
+        return pd.read_csv(self._read_path(self.report_path / f"{name}.csv"))

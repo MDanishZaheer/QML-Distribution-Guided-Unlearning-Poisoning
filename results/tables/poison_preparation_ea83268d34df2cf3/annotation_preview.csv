@@ -1,7 +1,0 @@
-sample_id,original_label,observed_label,is_poisoned,poison_type,poison_seed,variant
-mnist_train_07916,2,2,True,pixel_patch,6304,pixel_patch_20pct
-mnist_train_44978,2,2,True,pixel_patch,6304,pixel_patch_20pct
-mnist_train_17729,2,2,True,pixel_patch,6304,pixel_patch_20pct
-mnist_train_51520,0,2,True,label_flip,6304,label_flip_20pct
-mnist_train_55785,0,2,True,label_flip,6304,label_flip_20pct
-mnist_train_37052,0,2,True,label_flip,6304,label_flip_20pct

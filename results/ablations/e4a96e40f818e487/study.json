@@ -1,0 +1,3337 @@
+{
+  "baseline_checks": [
+    {
+      "max_probability_error": 0.0,
+      "passed": true,
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablation_validation/none_p0_seed6304_fold0_aa54d66dd693874e",
+      "status": "loaded",
+      "tolerance": 1e-06
+    },
+    {
+      "max_probability_error": 0.0,
+      "passed": true,
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablation_validation/feature_randomization_p25_seed6304_fold0_62c34b65ef6355cc",
+      "status": "loaded",
+      "tolerance": 1e-06
+    },
+    {
+      "max_probability_error": 0.0,
+      "passed": true,
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablation_validation/feature_randomization_p50_seed6304_fold0_78d21f8c399bce5a",
+      "status": "loaded",
+      "tolerance": 1e-06
+    },
+    {
+      "max_probability_error": 0.0,
+      "passed": true,
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablation_validation/label_flip_p25_seed6304_fold0_379406bdf0fb074f",
+      "status": "loaded",
+      "tolerance": 1e-06
+    },
+    {
+      "max_probability_error": 0.0,
+      "passed": true,
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablation_validation/label_flip_p50_seed6304_fold0_86629f360cf45ddc",
+      "status": "loaded",
+      "tolerance": 1e-06
+    }
+  ],
+  "complete": true,
+  "elapsed_seconds": 162.25045013000272,
+  "performance_directory": "results/ablations/performance/d29c0324d9bd6b19",
+  "protocol": {
+    "code_fingerprint": "9ee43bb2d743ea089d853663cca11b0377911e525a25682861d9318b46529bdf",
+    "environment": {
+      "aer_devices": [
+        "CPU",
+        "GPU"
+      ],
+      "aer_runtime_version": "0.18.4",
+      "nvidia_gpu": "NVIDIA L4, 23034 MiB, 580.82.07",
+      "packages": {
+        "joblib": "1.6.0",
+        "matplotlib": "3.11.1",
+        "numpy": "2.5.2",
+        "pandas": "3.1.0",
+        "qiskit": "2.5.1",
+        "qiskit-aer": null,
+        "qiskit-ibm-runtime": null,
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+      "python": "3.13.16",
+      "qiskit_aer_gpu": "0.18.4"
+    },
+    "execution": {
+      "circuit_batch_size": 32768,
+      "device": "GPU",
+      "gather_ms": 2.0,
+      "gpu_parameter_batching": true,
+      "memory_mb": 18427,
+      "runtime_binding": true,
+      "threads": 1,
+      "workers": 5
+    },
+    "original_report": "results/fresh_studies/fa1604cdd38207d9/study.json",
+    "original_source": "9ee43bb2d743ea089d853663cca11b0377911e525a25682861d9318b46529bdf",
+    "problems": [
+      "fold_0_clean",
+      "fold_0_feature_randomization_25pct",
+      "fold_0_feature_randomization_50pct",
+      "fold_0_label_flip_25pct",
+      "fold_0_label_flip_50pct",
+      "fold_1_clean",
+      "fold_1_feature_randomization_25pct",
+      "fold_1_feature_randomization_50pct",
+      "fold_1_label_flip_25pct",
+      "fold_1_label_flip_50pct",
+      "fold_2_clean",
+      "fold_2_feature_randomization_25pct",
+      "fold_2_feature_randomization_50pct",
+      "fold_2_label_flip_25pct",
+      "fold_2_label_flip_50pct",
+      "fold_3_clean",
+      "fold_3_feature_randomization_25pct",
+      "fold_3_feature_randomization_50pct",
+      "fold_3_label_flip_25pct",
+      "fold_3_label_flip_50pct",
+      "fold_4_clean",
+      "fold_4_feature_randomization_25pct",
+      "fold_4_feature_randomization_50pct",
+      "fold_4_label_flip_25pct",
+      "fold_4_label_flip_50pct"
+    ],
+    "seed": 6304,
+    "sweeps": {
+      "alpha": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "beta": [
+        0.25,
+        0.5,
+        0.75,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "regularization": [
+        0.0,
+        0.001,
+        0.01,
+        0.1
+      ]
+    },
+    "teachers": [
+      "none_p0_seed6304_fold0_70cec1774dedfc31",
+      "none_p0_seed6304_fold0_4d4cc2c3deffeab7",
+      "none_p0_seed6304_fold0_4e516eb14cf47ce1",
+      "none_p0_seed6304_fold0_5bc3c5afd8b484de",
+      "none_p0_seed6304_fold0_a19a56d6303e0426",
+      "none_p0_seed6304_fold1_17b4e2e557225428",
+      "none_p0_seed6304_fold1_b1de7b536ea61da8",
+      "none_p0_seed6304_fold1_4aa8bd241079b50d",
+      "none_p0_seed6304_fold1_c80bd8eddf4cf02f",
+      "none_p0_seed6304_fold1_70f5b59d73a78711",
+      "none_p0_seed6304_fold2_78093033de3419fc",
+      "none_p0_seed6304_fold2_2670a63d19d94576",
+      "none_p0_seed6304_fold2_71b76307de2003b0",
+      "none_p0_seed6304_fold2_5a969cf516ab460a",
+      "none_p0_seed6304_fold2_edb530375f2d90f9",
+      "none_p0_seed6304_fold3_101644f38071c9bc",
+      "none_p0_seed6304_fold3_d7b4ca70619375b2",
+      "none_p0_seed6304_fold3_6638059fe2c476d5",
+      "none_p0_seed6304_fold3_3429ae93fe95da86",
+      "none_p0_seed6304_fold3_efb5f69c45f873c3",
+      "none_p0_seed6304_fold4_8bbb73ed0284de75",
+      "none_p0_seed6304_fold4_a19ca155a876667b",
+      "none_p0_seed6304_fold4_bfbaaa535aeb6901",
+      "none_p0_seed6304_fold4_83e30a6bdff88cb9",
+      "none_p0_seed6304_fold4_c45c7c698f743447"
+    ],
+    "updates": 100,
+    "version": 1
+  },
+  "records": [
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "baseline",
+      "problem": "fold_0_clean",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold0_70cec1774dedfc31",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "uniform",
+      "problem": "fold_0_clean",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold0_a107614cc355fb3e",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "baseline",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold0_4d4cc2c3deffeab7",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "uniform",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold0_6cc8868d80acd69a",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "baseline",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold0_4e516eb14cf47ce1",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "uniform",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold0_3004d0c2bb779aaa",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "baseline",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold0_5bc3c5afd8b484de",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "uniform",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold0_77e5445669405ea2",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "baseline",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold0_a19a56d6303e0426",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "uniform",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold0_7d6f750d52ec5537",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "baseline",
+      "problem": "fold_1_clean",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold1_17b4e2e557225428",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "uniform",
+      "problem": "fold_1_clean",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold1_9248a5a21e1fe22c",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "baseline",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold1_b1de7b536ea61da8",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "uniform",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold1_4c6feba89e7ec73c",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "baseline",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold1_4aa8bd241079b50d",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "uniform",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold1_d7a186982aee466c",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "baseline",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold1_c80bd8eddf4cf02f",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "uniform",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold1_a9b35265f8f3d7e5",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "baseline",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold1_70f5b59d73a78711",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "uniform",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold1_1062fd029e92a13b",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "baseline",
+      "problem": "fold_2_clean",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold2_78093033de3419fc",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "uniform",
+      "problem": "fold_2_clean",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold2_4d5f356c382cc244",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "baseline",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold2_2670a63d19d94576",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "uniform",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold2_7f621cb2909fadd7",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "baseline",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold2_71b76307de2003b0",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "uniform",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold2_5c1f2d2076837078",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "baseline",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold2_5a969cf516ab460a",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "uniform",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold2_a8643bbcae6340e2",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "baseline",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold2_edb530375f2d90f9",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "uniform",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold2_fc1d96cf22090b5a",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "baseline",
+      "problem": "fold_3_clean",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold3_101644f38071c9bc",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "uniform",
+      "problem": "fold_3_clean",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold3_ad17bcb2a8a303cc",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "baseline",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold3_d7b4ca70619375b2",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "uniform",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold3_c20845a550ab42b4",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "baseline",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold3_6638059fe2c476d5",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "uniform",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold3_32745c2d80060ea9",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "baseline",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold3_3429ae93fe95da86",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "uniform",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold3_7e0f9f6fa294521c",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "baseline",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold3_efb5f69c45f873c3",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "uniform",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold3_7e1d494d0bdc8e3a",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "baseline",
+      "problem": "fold_4_clean",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_8bbb73ed0284de75",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "uniform",
+      "problem": "fold_4_clean",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_5118abadbb734a8d",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "baseline",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_a19ca155a876667b",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "uniform",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_ad3055a365204610",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "baseline",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_bfbaaa535aeb6901",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "uniform",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_7302ebb95a76b0d4",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "baseline",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_83e30a6bdff88cb9",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "uniform",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_cc809e07f5115200",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "baseline",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_c45c7c698f743447",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "uniform",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/fresh_unlearning/none_p0_seed6304_fold4_f12ae165fbf97365",
+      "status": "fresh_protocol",
+      "value": null
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold0_d0476c6d048c9710",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold1_ed63ef93d7b20484",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold2_4a5b2d6a24386bdd",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold3_20aea507ab060cac",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold4_18954f40355e92f6",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold0_2b9fc48a11902b9a",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold1_9695c3d7607bc5e0",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold2_0f82d85f6ca61a14",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold3_8bb6eddcff77fffb",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold4_9512a107a9e708f4",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold0_9425e396eaec41af",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold1_c7529b701c72f055",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold2_b27ab31928e424e9",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold3_ae7cfe6813c50b94",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold4_faecbe5de6fa4ba9",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold0_636c98ca1a25b2d6",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold1_797e39c5308c7f8b",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold2_781c23357a9bd4cc",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold3_3ea51ae2746683ef",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold4_db1b9d63c6287619",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold0_9dbdd176dd64249f",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold1_c480aa95a1546e32",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold2_144f0db0ae478087",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold3_488def297fd2caf7",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold4_c3d2721b376099c1",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold0_30828b3f81ab985a",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold1_5059ef953da28d5a",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold2_5856da8d39a7bc29",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold3_7f433d5a4e0b665f",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold4_6a2b8804b0ed6d6e",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold0_2d60566c0019f044",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold1_58cd86c00a5120ba",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold2_679b20094b6de0bf",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold3_b574dda4482084b8",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold4_93e1484bcf1f9877",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold0_4f927a7dae56b4aa",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold1_35d6a0d0ab18f515",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold2_90f17bc728c5896c",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold3_c48447539cdd4e07",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold4_0b2e954d336708b1",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold0_6bcb32809d853662",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold1_0486bd63d69314fd",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold2_724d4de3b745e5cf",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold3_661abccfc0c4ba69",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold4_bec4a79247268a26",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold0_e07be4b5cdca4a52",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold1_10c001d826ca26e3",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold2_4f2dc32df5e5c4f2",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold3_66f6683662dda05c",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold4_d77d0816c63fa644",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold0_4bd1e874b430072d",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold1_4672e5518f48fe08",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold2_1572dbc4cae76061",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold3_e616e5814e8748ea",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold4_11756f99c92fbc2e",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold0_eda551245153978f",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold1_7a7739d5c5191f7d",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold2_5ab659d6ac7fed3f",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold3_d552ed3836683b81",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold4_f24290c4413b23df",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold0_f11aee2d662402af",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold1_54f1ff1a68b2c460",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold2_bccd947d09c8d736",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold3_660554971acb7bd7",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold4_6f6f4f63baa94e2d",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold0_6327215deac5cea7",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold1_50b75c81c5c897b9",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold2_bda1d8ff1179c48d",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold3_a07f7e348d6d4594",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold4_c2771f2ed39ef59a",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold0_62e272316e2e833c",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold1_94980ee162271911",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold2_2f8479f974a8a4d2",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold3_38e1bd266998c7d2",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold4_22f662f431acc08b",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold0_ec6776ee89151051",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold1_4ab26a252211440d",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold2_015de6fe76e55084",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold3_195bf1b6cf87e120",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold4_0496d2aee57b603f",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold0_795e771ac14c8c2d",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold1_b004c8af2f591b8a",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold2_da30d50c9d2b50a0",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold3_33fc965fdfece8bd",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold4_6264ac88a293f7c1",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold0_dd77e6bf86a40745",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold1_e100656f2a40e2e0",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold2_97ff4136dd4ab72d",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold3_01cc4e1d81ee7b25",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold4_4be47dd0a524b10e",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold0_5d7a94a25d27771b",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold1_8773cc4736b14199",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold2_9bb935a3e55a155a",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold3_f9a0cd0314c29a02",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold4_bad35296f9b9da22",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "alpha",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold0_4eaaa59d7a85f6fd",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "alpha",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold1_a885386a7d8128ee",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "alpha",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold2_84ee82b2e235e93d",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "alpha",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold3_6d37de1da750537a",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "alpha",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold4_449b879a307bcb39",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold0_045b53d446997db5",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold1_e88596b48c9adc20",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold2_f1279f4d4d2aff8e",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold3_b5faec52aa61f746",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold4_26751efd08c2b16a",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold0_aa840aa6619a2436",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold1_beccf5765e4070d0",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold2_058f9525ec3ef73a",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold3_3347b443a258c618",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold4_e1cba079ce4e09a8",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold0_512c35ec7417da75",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold1_e9e3b997dd4be257",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold2_0c10c2a97a8877da",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold3_47bb77656a00ec5a",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold4_946a899834568f60",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold0_30bcd6d5739b1e50",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold1_6c7c627f9bb4ea96",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold2_42a03cf1c1faf6ac",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold3_e1759b381c8ceefb",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold4_979e7abb21cb9eca",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold0_ab0f40c8c44c2c14",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold1_26e4b2bff8f40f0a",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold2_d2c68d12dcd3f986",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold3_70dd93e00967ccbd",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold4_8b2edc442a888927",
+      "status": "loaded",
+      "value": 0.0
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold0_791c898857896edc",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold1_4189e5e3ba5a3364",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold2_e04fcba2a0c9d13b",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold3_b285534e3220b366",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold4_9f000620d70b435d",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold0_a800c5fc1b7b4ad1",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold1_af45525e9f2a4d29",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold2_e3e936dd969381cf",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold3_ca2c29b617e8f0e8",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold4_7e386b4c7ae90fe4",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold0_8302221c2b64af05",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold1_291eac137591dc7c",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold2_ea4f9cd12f884527",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold3_36eaa2b854ef4c08",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold4_7ed8b349467dc799",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold0_51da03a50cf998c0",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold1_d1280fc76afa9af8",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold2_2af24a4f44e47387",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold3_6786e1314a5e86b9",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold4_bd88d09c5a21ba01",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold0_2d04c8e2145274ed",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold1_d9d83fb1a485c4c5",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold2_e2937bc904a68264",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold3_a25c8cd293b39639",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold4_99bf69ed9dd6fb91",
+      "status": "loaded",
+      "value": 0.001
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold0_8a74f2c934e5b5e6",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold1_ccd4b1d250286a84",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold2_4c5a1512aaeeda58",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold3_2e1058079d9e9c3f",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold4_77aba80a8e9426a0",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold0_3b6b386999a14a71",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold1_6cc35ec0f425a9b3",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold2_ec78e3dbadfb4757",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold3_bd21de63e60d8058",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold4_cadaef4c62bd70f9",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold0_a9e27e215bb7f902",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold1_85315ba0318e7c8c",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold2_a1959f77382baf08",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold3_9d4d11505830b9ef",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold4_ef651848493cf38a",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold0_3dc319438661e887",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold1_b89bfcb2de3d116f",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold2_6de323faaec9ca85",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold3_4c82214b8fd6ce42",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold4_d1c4ffcc6edf13e1",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "regularization",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold0_fc356786ee2ac929",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "regularization",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold1_30ece15808b98152",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "regularization",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold2_538676d495beff88",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "regularization",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold3_002b181fc7faf153",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "regularization",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold4_264bdb0f45c89e20",
+      "status": "loaded",
+      "value": 0.1
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold0_c9737d33b643283f",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold1_fd08aa84c4aa491d",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold2_5a3dd1b185372573",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold3_8bb43dc3ee3f7484",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold4_798100c1537e8001",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold0_570dc47e98741f76",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold1_277d1016f2e5804d",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold2_9b47cf57a6c3bb5a",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold3_f66be0ba51487b12",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold4_621210a277c5732d",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold0_4846660ea2e99698",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold1_bbbe75e54fd2c2ad",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold2_c84ceb5f84bfef12",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold3_b4905bcf775f86c3",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold4_9e9964212b379ebd",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold0_38cb86de00838f64",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold1_bb1590c8473ea3cb",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold2_5d9fc324d4304c41",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold3_e2dbca25daf74a1d",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold4_c2ebd73f4f793ef6",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold0_66c50f6ddc964643",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold1_8817103b9b656e99",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold2_9409676f37698db2",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold3_507853ff33f110cf",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold4_75e63b31b96bf78e",
+      "status": "loaded",
+      "value": 0.25
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold0_86ba71cd4907d437",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold1_5ac193726d95e517",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold2_32688a884478ace8",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold3_7bd99f1af9a81ddf",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold4_547da196f8fdbeb5",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold0_6bd0c935c610bbd2",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold1_7bde6c39bf1a6a70",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold2_fdda1a2020a329e1",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold3_1cc4ad94a10d5b04",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold4_25d55c72411da6f6",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold0_b92b109337feb620",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold1_3a6176fbd23560b8",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold2_0b698b8f758209eb",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold3_ae6df9e44d89ee6a",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold4_b90798fc09f39edf",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold0_6ea629fd77e94f71",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold1_183f22e777093943",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold2_af4ea2508c00d6a6",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold3_8aee20634dcd9e37",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold4_1b75d3cdd6a69c0c",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold0_a0625b2b5776599b",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold1_024c79c7c70b5dab",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold2_3c8399bdb4f76ec9",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold3_2b2dca5e5de733a9",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold4_fbc05176797325c6",
+      "status": "loaded",
+      "value": 0.5
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold0_b23788ccf51dfa03",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold1_bc157311009e26bc",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold2_ec2ff2c49fa3021b",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold3_1585a1b5614f40e2",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold4_1ef18a8f2d207a8a",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold0_0508cc8868bb2743",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold1_b27e77a041c2c6d1",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold2_84903f2f39a93321",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold3_78f19eed87bdc823",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold4_bb6cc827ba925ada",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold0_519868074481aa02",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold1_f3cb2dad632d24f9",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold2_13ed026055ebfbcc",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold3_0818f1428f0882d1",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold4_c632c5987461bfd1",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold0_7c864cf5165762fe",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold1_1d43e2d6433cc61c",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold2_fc86f39b23df94ee",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold3_a61c5ad8dfa36ff6",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold4_bd308c3c7aee2340",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold0_711bf04fe4e2f632",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold1_bee15224184c52af",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold2_39681f1edfba0285",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold3_4581c1e960b54928",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold4_5a9013b38d211efa",
+      "status": "loaded",
+      "value": 0.75
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold0_256d8069a7be846f",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold1_f7e8a32c9b8eb18f",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold2_e330bfffbcb0f722",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold3_fe8f14cecdf0d742",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold4_dc4a6125cfc58717",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold0_c3ab7d27e2867c30",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold1_6e2969ec7d80be3b",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold2_5ccd55dcba153960",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold3_669b92b4106c1431",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold4_e4b55d6f86b552af",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold0_021337e680f37ed6",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold1_0be92def0207f6d1",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold2_e5caa90fa919dd02",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold3_fd0b0b28d61743f7",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold4_944a15060aed9773",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold0_474b1776639af79b",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold1_c30cdccf843f3db4",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold2_10365dca05a46dd7",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold3_cbaf516a8b9f25ed",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold4_352745961b5f696f",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold0_a1b9e93108ae29f9",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold1_5dbea5f757c3302b",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold2_ffc9a08781eaf91e",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold3_72f468e13c11ea27",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold4_f4e0c11f367349b3",
+      "status": "loaded",
+      "value": 2.0
+    },
+    {
+      "condition": "clean",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold0_04c078ba49c78045",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "clean",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold1_bed475bfc8092b0b",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "clean",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold2_16fd9e95fc3f6f29",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "clean",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold3_c541029b10ee00a6",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "clean",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_clean",
+      "run": "results/runs/ablations/none_p0_seed6304_fold4_208676edef6e439a",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold0_c55ced45b916a594",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold1_5a9abb4c60b7e6f3",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold2_4a6d7aaa3b7be12a",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold3_c681473e866b634a",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_25pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_feature_randomization_25pct",
+      "run": "results/runs/ablations/feature_randomization_p25_seed6304_fold4_f3987c4594dafae4",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold0_e18c549ce9bc8c99",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold1_7eb7059d5fff28e8",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold2_620995dc113d8b8a",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold3_f02fbba96934419b",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "feature_randomization_50pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_feature_randomization_50pct",
+      "run": "results/runs/ablations/feature_randomization_p50_seed6304_fold4_cb91dcc6d75c0a03",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold0_f2a3d9674b2e0a9a",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold1_a27943d48658f7c3",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold2_69b43c7dd7a0463f",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold3_41060bbba8881513",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_25pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_label_flip_25pct",
+      "run": "results/runs/ablations/label_flip_p25_seed6304_fold4_e3188eea08abfe30",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 0,
+      "parameter": "beta",
+      "problem": "fold_0_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold0_2a7dee1d49c83c1a",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 1,
+      "parameter": "beta",
+      "problem": "fold_1_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold1_ac3ca39c65c65fb4",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 2,
+      "parameter": "beta",
+      "problem": "fold_2_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold2_96acb165837669e1",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 3,
+      "parameter": "beta",
+      "problem": "fold_3_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold3_a209a8276d253855",
+      "status": "loaded",
+      "value": 4.0
+    },
+    {
+      "condition": "label_flip_50pct",
+      "fold": 4,
+      "parameter": "beta",
+      "problem": "fold_4_label_flip_50pct",
+      "run": "results/runs/ablations/label_flip_p50_seed6304_fold4_3892f6fad276f8d6",
+      "status": "loaded",
+      "value": 4.0
+    }
+  ],
+  "service_resources": {
+    "execution": {
+      "circuit_batch_size": 32768,
+      "device": "GPU",
+      "gather_ms": 2.0,
+      "gpu_parameter_batching": true,
+      "memory_mb": 18427,
+      "runtime_binding": true,
+      "threads": 1,
+      "workers": 5
+    },
+    "logical_requests": 100,
+    "merged_batches": 100,
+    "physical_aer_resources": {
+      "circuit_evaluations": 18465,
+      "jobs": 100,
+      "shots": 0
+    }
+  },
+  "support_index": null,
+  "support_indexes": []
+}

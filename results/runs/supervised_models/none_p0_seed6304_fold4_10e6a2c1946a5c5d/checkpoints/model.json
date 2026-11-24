@@ -1,5 +1,0 @@
-{
-  "best_score": 0.8774164396508395,
-  "best_step": 300,
-  "selection_metric": "validation_loss"
-}

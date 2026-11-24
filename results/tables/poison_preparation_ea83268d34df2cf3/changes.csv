@@ -1,8 +1,0 @@
-variant,changed_images,changed_labels,selected_without_change
-clean,0,0,0
-pixel_patch_5pct,3,0,0
-pixel_patch_10pct,6,0,0
-pixel_patch_20pct,12,0,0
-label_flip_5pct,0,3,0
-label_flip_10pct,0,6,0
-label_flip_20pct,0,12,0

@@ -1,2 +1,0 @@
-device,method,qubits,compiled_depth,two_qubit_gates,shots_per_circuit,circuit_evaluations,total_shots,training_seconds
-GPU,statevector,6,66,48,,445500,0,485.92886754899996

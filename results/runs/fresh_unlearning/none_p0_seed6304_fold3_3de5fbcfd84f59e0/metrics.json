@@ -1,0 +1,64 @@
+{
+  "changes": {
+    "forget_confidence_delta": -0.20735745199302572,
+    "forget_confidence_reduction": 0.20735745199302572,
+    "forget_recall_delta": -0.9285714285714286,
+    "retained_accuracy_delta": -0.07142857142857151
+  },
+  "models": {
+    "model": {
+      "accuracy": 0.4880952380952381,
+      "confusion_matrix": [
+        [
+          23,
+          4,
+          1
+        ],
+        [
+          4,
+          18,
+          6
+        ],
+        [
+          17,
+          11,
+          0
+        ]
+      ],
+      "forget_confidence": 0.2381035321201249,
+      "forget_recall": 0.0,
+      "forgotten_mass_on_retained": 0.2954960572573336,
+      "n_forget": 28,
+      "n_retained": 56,
+      "n_samples": 84,
+      "recall_by_class": {
+        "0": 0.8214285714285714,
+        "1": 0.6428571428571429,
+        "2": 0.0
+      },
+      "retained_accuracy": 0.7321428571428571
+    }
+  },
+  "reference_audit": {
+    "anchor_accuracy_observed_labels": 0.9347826086956522,
+    "anchor_accuracy_original_labels": 0.9347826086956522,
+    "n_anchors": 46,
+    "n_calibration": 32,
+    "n_forget": 89
+  },
+  "retraining_comparison": {
+    "candidate_forgotten_mass": 0.2954960572573336,
+    "conditional_kl_max": 0.05004169464801539,
+    "conditional_kl_mean": 0.017357216369744074,
+    "conditional_kl_median": 0.01462062784933569,
+    "evaluation_subset": "clean retained test",
+    "full_kl_mean": 0.017845274270015598,
+    "kl_direction": "reference || candidate",
+    "reference_forgotten_mass": 0.27030286554278055
+  },
+  "target": [
+    0.5,
+    0.5,
+    0.0
+  ]
+}

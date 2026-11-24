@@ -1,0 +1,187 @@
+{
+  "artifact_sha256": {
+    "checkpoints/model.json": "98559ee27dded3959eb53015588b7df2feb16525ce67cf3257677f1f75cc7d24",
+    "checkpoints/model.npz": "e9b92c4872beb48d5ea4e0039513ed4c989a696f21be1d6dcdf9744673b915d3",
+    "checkpoints/model.resume.json": "7c463bc85d25b9623a491efbcc82f197f9499438dfab101aee9301d5f96e28fc",
+    "checkpoints/model.resume.json.previous": "414f6ccc76c3145b1d7a3f3d0ed3d3110da09d4bac50779c933891dcd5e91cc4",
+    "checkpoints/model.resume.json.previous.receipt.json": "57c99ad4a8d47351112f431c91240ef98fe140e7927297287e7c06066d414d95",
+    "checkpoints/model.resume.json.receipt.json": "6dfe82d291e60737b24c00efd1086b94f35738818f70ece80801109087f4854e",
+    "config.json": "78f0115c3eeec0ef0ea06ac2be553c2e6eacf2ec585cf7ea2829aaa7ee72db14",
+    "datasets.json": "5a83966ddc9b8bf9eb72106988be8676dbb274c36b3beadcc10124c478484df0",
+    "histories/model.csv": "17a1f2a8ea522a409fd9d8b2012ebd552c57cd13a10fb1551a86b636058bc04f",
+    "history.csv": "73be44fd24c6a6282c3b828cb47061e277f0ee69c497ec73e3d79552783b06fc",
+    "metrics.json": "4e6e8ca3d074461e86e8b10a387369b534b56d79c7dfcdf954907b8d329dc637",
+    "predictions.npz": "96b9417becc0d25c2b8a60337f3ad5f6a6a3f436c02583ccc64ceb7ed28ffc61",
+    "preprocessing.joblib": "992bc80b21fb46e435b841b4326614e274f55454dbaa729de2c881b5bedb3ffa",
+    "preprocessing.json": "e5031157c6d21aa2a6f28b222c23862ce3b9f198a13ff91c11ff6596a6351864",
+    "provenance.json": "524045c62f4e17e8fb09fe8207c198bf33681f7addeed2176e20b9f4a76ed12b",
+    "references.npz": "6f23ffa94b0a49dab9ade2028c0078c46bb68ca77338377b1df04617b6bd0f31",
+    "resources.json": "9e61c8e0302a710965bc0c944758046331fa95a5f9891196e1f289f1c6892b05",
+    "source.zip": "19637f886af429fdf6bd4caf3a774563cfc8ffdaca4bd5500700bcdfe93899e0",
+    "training_references.json": "1bdb28fd28151392917e05dacfc71b99cf752c58c566327165383bf9eb9252a2",
+    "weights.npz": "cdb2c52b8b1efb5cebb838ffd062f202c1937fd3bb1915bd3a8477ce30ac630b"
+  },
+  "created_utc": "2026-11-23T05:21:45.416432+00:00",
+  "finished_utc": "2026-11-23T05:25:13.171231+00:00",
+  "identity": {
+    "code_fingerprint": "9ee43bb2d743ea089d853663cca11b0377911e525a25682861d9318b46529bdf",
+    "config": {
+      "backend": {
+        "allow_cpu_fallback": true,
+        "circuit_batch_size": 128,
+        "device": "auto",
+        "ibm_backend_name": null,
+        "max_memory_mb": 4096,
+        "max_parallel_threads": 4,
+        "method": "statevector",
+        "one_qubit_error": 0.0,
+        "optimization_level": 0,
+        "readout_error": 0.0,
+        "shots": null,
+        "two_qubit_error": 0.0,
+        "use_ibm_hardware": false
+      },
+      "circuit": {
+        "ansatz_reps": 3,
+        "entanglement": true,
+        "logit_scale": 1.0,
+        "reuploads": 2
+      },
+      "classical_baselines": true,
+      "data": {
+        "fold": 0,
+        "n_folds": 5,
+        "preprocessing": "refit",
+        "seed": 6304,
+        "split_strategy": "stratified_kfold",
+        "test_per_class": null,
+        "train_per_class": 140,
+        "validation_fraction": 0.2
+      },
+      "label_shuffle_control": false,
+      "poison": {
+        "denominator": "eligible",
+        "kind": "label_flip",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.5,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "seed": 6304,
+      "training": {
+        "batch_size": 10,
+        "evaluate_every": 10,
+        "gradient_clip": null,
+        "initialization_std": 0.1,
+        "learning_rate": 0.02,
+        "minimum_learning_rate": 0.001,
+        "patience": null,
+        "steps": 300
+      },
+      "unlearning": {
+        "alpha": 1.0,
+        "anchor_fraction": 0.25,
+        "beta": 0.25,
+        "calibration_size": 32,
+        "forget_class": 2,
+        "forget_definition": "observed",
+        "methods": [
+          "guided"
+        ],
+        "regularization": 0.01,
+        "training": {
+          "batch_size": 10,
+          "evaluate_every": 10,
+          "gradient_clip": null,
+          "initialization_std": 0.1,
+          "learning_rate": 0.02,
+          "minimum_learning_rate": 0.001,
+          "patience": null,
+          "steps": 100
+        }
+      }
+    },
+    "environment": {
+      "aer_devices": [
+        "CPU",
+        "GPU"
+      ],
+      "aer_runtime_version": "0.18.4",
+      "nvidia_gpu": "NVIDIA L4, 23034 MiB, 580.82.07",
+      "packages": {
+        "joblib": "1.6.0",
+        "matplotlib": "3.11.1",
+        "numpy": "2.5.2",
+        "pandas": "3.1.0",
+        "qiskit": "2.5.1",
+        "qiskit-aer": null,
+        "qiskit-ibm-runtime": null,
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+      "python": "3.13.16",
+      "qiskit_aer_gpu": "0.18.4"
+    },
+    "execution": {
+      "circuit_batch_size": 32768,
+      "device": "GPU",
+      "gather_ms": 2.0,
+      "gpu_parameter_batching": true,
+      "memory_mb": 18427,
+      "runtime_binding": true,
+      "threads": 1,
+      "workers": 5
+    },
+    "method": "guided",
+    "parent_artifacts": {
+      "checkpoints/model.json": "6201516758a3459f8e53cb6fb91d04df74e50ba50e4dfb2721723df68a5f7fa3",
+      "checkpoints/model.npz": "7bfb31f5b499a03859e32e9b9070ca82c08f4abbcc6b55848c1ce03007cbef5e",
+      "checkpoints/model.resume.json": "ca87b3769e16618718a643b2d200ec714dcdb4f2c222e8fd67b4fb580baefb09",
+      "checkpoints/model.resume.json.previous": "fcdc89fd0d1e7dc4c9c691d59d229033a9e32d6c8d546f70bb09befd3a44eb3a",
+      "checkpoints/model.resume.json.previous.receipt.json": "5f10e649ea36b7fecc3a8db84235eccfdcc9d7bc5bd0f7b8ee17db36cce10ee8",
+      "checkpoints/model.resume.json.receipt.json": "02ec1b8f691c56dd3b63c9f54b22fe61c41125b222e4945b9ddc1a2a7b3be299",
+      "classical_models.joblib": "72b9c09016bb98edb04a3fdc0fc7c8529a68fcf52b73573ed5e4cdf8c246e725",
+      "config.json": "93db701d6f31d6adf8076c114f1c179e88e07370e16d001854ce7d7a539571a9",
+      "features.npz": "4fd5e8cfdca74dd48c7e88c2a0fff11ba456588cec086df1eb99f7dd89e2cd74",
+      "histories/model.csv": "522fb3789b5e2b18576b4a85e5c42f085257fa044b3f48f91405cccdb102c4f9",
+      "history.csv": "c7c11d6468406443cf3e1b3f36a7426d6a63dd3529a889782a2512749e46e5e4",
+      "metrics.json": "b8a3c1594d56b60d3251dbd313da07c507fa824cca6d6a8f5efc3b0ccd75a6b1",
+      "predictions.npz": "f7167e62b24b166dca0c0aa0008ae5c47bee8991323c649c3d6fd03ce56b71d9",
+      "preprocessing.joblib": "992bc80b21fb46e435b841b4326614e274f55454dbaa729de2c881b5bedb3ffa",
+      "preprocessing.json": "e5031157c6d21aa2a6f28b222c23862ce3b9f198a13ff91c11ff6596a6351864",
+      "provenance.json": "d8c5574e51da2872000176488ca04c080c9c46153b4e0bd1e5bf198a694784fc",
+      "resources.json": "44cadb88fa821d8e8730014af69f486e93536902df3b8856a9281e674747a348",
+      "source.zip": "19637f886af429fdf6bd4caf3a774563cfc8ffdaca4bd5500700bcdfe93899e0",
+      "weights.npz": "3fe0c338aa5a74435c6e273a2d1ae6377c28f93bf4d68d9c973637de4c32d63a"
+    },
+    "parent_run": "none_p0_seed6304_fold0_1898cbd228c592a7",
+    "reference_run": "none_p0_seed6304_fold0_5c9249ab3d534cb5",
+    "stage": "focused_guided_ablation",
+    "teacher_artifacts": {
+      "checkpoints/model.json": "3d3bfeb81fbe3e0f5caaff288638cdf306bad69cc0493d0e1d96f9c40f25328d",
+      "checkpoints/model.npz": "afe06aa413adc48d0e91e222da8a0883e2798afb63deadd144948b52cb3e67fd",
+      "checkpoints/model.resume.json": "e33874006a3a460a60ba51dfe30ff1fc864e247f43c0c898e3c67d842c3616f0",
+      "checkpoints/model.resume.json.previous": "48a21eea5490a45c89baab16598818a0590fe2eb15e24f68e3be0ceaf3c63758",
+      "checkpoints/model.resume.json.previous.receipt.json": "660dcfea5222a81b5303395c8ab31b777c7d5e5a27584c1472e5f070cfa29b08",
+      "checkpoints/model.resume.json.receipt.json": "81f94fa0de79d83e84c03f35edfa3108e47c5a212182fb85b2131b1630d15e63",
+      "config.json": "f12f15089e04ea3c1856cdb419e7e22b2e576753d750f06f5a6e3b01915ea83c",
+      "histories/model.csv": "ca345b649be38695a34d4368e6a26f38baac015958383ffa5b203724c45ffe08",
+      "history.csv": "576e91db57f7e4f072582ea0d033b8441ece3e61c1bd5198173ed363dc47bfbe",
+      "metrics.json": "5d64ad2bfbe756c5aeb6938b10abb837e16219ca559903315ef6c2aa620f52cf",
+      "predictions.npz": "222dcf8481c06a41b3ebdd8fdee939243ff428cc61278b8ac95b258a68066c81",
+      "preprocessing.joblib": "336860bf056cc764d687b9ab39a2f2acc99e5708c2574b4a02a738dfb73058ef",
+      "preprocessing.json": "e5031157c6d21aa2a6f28b222c23862ce3b9f198a13ff91c11ff6596a6351864",
+      "provenance.json": "42ae17c46abefadd421bd2d097e3e589189678ccf8c5dcf24e5e9bbba1cb2719",
+      "references.npz": "0604bf188c0cc8ecd7a0b61190234b7017b5155dd5e62f3fcc6b00dffe29a23e",
+      "resources.json": "e152634141b64cb891ddddd3e467abea0da6c498136d00bc118c8cfc13a754b4",
+      "source.zip": "19637f886af429fdf6bd4caf3a774563cfc8ffdaca4bd5500700bcdfe93899e0",
+      "training_references.json": "69265371d28ef9a6d90d57a9a3f51a88cb0531b12c07e9f1e4ce1a895abb8766",
+      "weights.npz": "c88aa58c9b851d8fcc6504a90ee6b9c6bf0cf33d4c5806fb245cc4d7ddc0f64a"
+    },
+    "teacher_run": "none_p0_seed6304_fold0_a19a56d6303e0426"
+  },
+  "status": "complete"
+}
