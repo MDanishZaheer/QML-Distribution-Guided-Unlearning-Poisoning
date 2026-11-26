@@ -1,0 +1,29 @@
+{
+  "active": [],
+  "aer_services": [
+    {
+      "closed": false,
+      "device": "torch:cuda:0",
+      "engine": "torch_exact_density_autograd_v1",
+      "largest_concurrent_gradient_batch": 10,
+      "merged_batches": 13799,
+      "physical_jobs": 20310,
+      "queued_requests": 0,
+      "worker_thread_alive": true
+    },
+    {
+      "closed": false,
+      "device": "torch:cuda:0",
+      "engine": "torch_exact_density_autograd_v1",
+      "largest_concurrent_gradient_batch": 0,
+      "merged_batches": 189,
+      "physical_jobs": 189,
+      "queued_requests": 0,
+      "worker_thread_alive": true
+    }
+  ],
+  "completed_fits": 230,
+  "elapsed_seconds": 7354.286997245001,
+  "phase": "deployment evaluation: noisy_trained_ideal_label_flip_p20_seed6304_fold4_a25f3a873e4a9849.npz",
+  "seconds_without_observed_progress": 5.310002961778082e-07
+}

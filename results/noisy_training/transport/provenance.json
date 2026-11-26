@@ -1,0 +1,26 @@
+{
+  "backup_interval_seconds": 5,
+  "durable_root": "/content/drive/MyDrive/collab/torch",
+  "helper_sha256": {
+    "benchmark_torch_noise.py": "c386064345609bed921d3435693ad86c81c930fdac5d9dfd36ec114d012cb2c6",
+    "build_inputs.py": "9914476fdbf88b653866c13a41bf0c88f8a95ac06f5d37d24e9d136d204c2a1e",
+    "build_notebook.py": "b3e261984f2c6a5c8b7e3abd415b4fe124facba25eed1409e735853491449399",
+    "build_parallel_notebooks.py": "8edd0236237d38fdf0c58eff2dd668108bf943553cf7e32daa826eb5c709e2dc",
+    "build_torch_probe_notebook.py": "53420c9768a55cda67327890d971ff59c0249a648fa235e8aaf256722646aabf",
+    "build_torch_training_notebook.py": "0c1a9e243d4da9deaa8f4cb5c4786404d47dcbbc0f4240f0271998c5cda1168b",
+    "colab_bootstrap.py": "2471d4c4f6c6c49b3767821828a4dec8ce5ec9e295d3fd7d15b41c3f198294ee",
+    "cpu_folds.py": "1c5678f9bfec0be4fa602b39d8bda703db98496fa77f78e6a0e6e87e81af5ed9",
+    "noisy_drive.py": "39e3c44d3632419fbba27f6ce1935a2c7dbb058463055c95f70f6b520fee33aa",
+    "noisy_training_runtime.py": "b8bc58edbbb376143a42d4d98c42cc5a84d8c0c128926961cb0673aa7a881d62",
+    "noisy_workflow.py": "ef9a212d67f2a5a16c581d73f9064654548f76135ffdad2b9d5ced98bb2b5d33",
+    "parallel_folds.py": "30616ed5d61148ddddae54ac20cae5a5aa2fa5b5d6ee94f98f97c115cd78e801",
+    "torch_density_probe.py": "af428e47bf5f5b2df3e38954687d8c087e899d31decc2ba268e9d8ac4e6276e4",
+    "torch_noisy_service.py": "042a6432197566a253bbed9e08caba5ee045e736df8e4d04377f886a2c6e07d1",
+    "torch_noisy_worker.py": "e3b69361497a8b73c6d704336fee3a06e7e6baa331abc23f8374c9e1b777d627",
+    "torch_noisy_workflow.py": "d1568fbd727f434497a7abc8afaa7b0a79264c08e7a0c87ee7a50f5392e28a02"
+  },
+  "metadata_transport": "coalesced background snapshots; optimizer-start and completion durability barriers",
+  "runtime_root": "/content/qml_torch_noisy/88d6319ecb61e485",
+  "scope": "Storage transport only; no change to gradients, optimizer budgets or RNG streams.",
+  "source_fingerprint": "f0f2e41486c52bf955cc9a6cb753267361b806d60fc35566096c787fbe0d6a0a"
+}

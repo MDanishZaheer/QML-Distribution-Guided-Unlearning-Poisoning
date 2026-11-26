@@ -265,7 +265,7 @@ def _supervised(source, arrays, service, session, lock, root, common, cancellati
         mirror = CheckpointMirror(path / "checkpoints/model.resume.json")
         with mirror as progress:
             outcome = training.fit_vqc(model, arrays["train"], arrays["train_labels"], arrays["validation"],
-                arrays["validation_labels"], ExperimentConfig.from_dict(source["config"]).training, DEFAULT_SEED,
+                arrays["validation_labels"], experiment_config(source["config"]).training, DEFAULT_SEED,
                 callback=_cancel_callback(cancellation, mirror), checkpoint_path=progress)
         return _save_fit(path, source, arrays, model, outcome), "resumed" if resumed else "trained"
     except BaseException as error:

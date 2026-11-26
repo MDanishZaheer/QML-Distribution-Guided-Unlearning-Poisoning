@@ -1,0 +1,148 @@
+{
+  "artifact_sha256": {
+    "checkpoints/model.json": "6645e4ad0d35baa39c82540ad9146a1992ff37e312405cdff9f24c752f51a439",
+    "checkpoints/model.npz": "8f86f6da390e09c32dbe5fd13851ec787e853abcecd9a79d3f4738b6966fcb59",
+    "checkpoints/model.resume.json": "6f6e2a782c4378a870b49a0882d7987b28c9664f69a164898ff7bf8202075d2b",
+    "config.json": "0ef292ac0a97a16e8ddb87eed5dba6db8b801948121634b0af207c59a86a1890",
+    "features.npz": "24c139c27d8c21c05360ba9442ef8a26f192792711ae35275f4bbfa4ed5ea41a",
+    "histories/model.csv": "b844ad2f962b848fc6635513c1e11bff0236ba925f9c39bce856ffba1711375b",
+    "history.csv": "71c3b3c3ca77d16ff537d0a564ca81a55822688fb13a6a449b2b96efb7986d7a",
+    "metrics.json": "8ee82fa42e6b531a20aacb133d1b858f984bbf9907e17df76d765f5c2fb125b9",
+    "predictions.npz": "f82c566122cccf4927267c44496ac818db2ec6a5e155bdffcdfaae147a5a1f88",
+    "preprocessing.joblib": "74dc9df4a3ecb31fbb5bae2d22f4a9db4b6c3e5af62fa7fc8ef468383ce5044f",
+    "preprocessing.json": "c8d55aa0a0506ea0418541551fec55a07277d4e3d85b915695d16dfaeaf7612e",
+    "provenance.json": "3a640f3f2565c94af4bfcc1eeeaa4c421b0594516c9d48530ae7f4bfdcbb024d",
+    "resources.json": "d71411f1d1077bb2686a17c4270166a2fbf19e2d0dc5bfde0f0eef49f4b71cbf",
+    "source.zip": "aaaa796296c8e96cdd7e823585f4136f7fc77a7bd11413b089ebc2be8ece7e1f",
+    "training_references.json": "0c706f374636609dee86ebfcb13e7561af5c27fcd3e6cc2f5d828177b425b231",
+    "weights.npz": "d81ea2d0a2b565e431d911bf92b9ca89cd66234ec9dbf078c1e849b2685bf22b"
+  },
+  "created_utc": "2026-11-26T19:20:37.631253+00:00",
+  "finished_utc": "2026-11-26T19:24:09.902767+00:00",
+  "identity": {
+    "code_fingerprint": "f0f2e41486c52bf955cc9a6cb753267361b806d60fc35566096c787fbe0d6a0a",
+    "config": {
+      "backend": {
+        "allow_cpu_fallback": false,
+        "circuit_batch_size": 128,
+        "device": "GPU",
+        "ibm_backend_name": null,
+        "max_memory_mb": 4096,
+        "max_parallel_threads": 2,
+        "method": "density_matrix",
+        "one_qubit_error": 0.0,
+        "optimization_level": 0,
+        "readout_error": 0.0,
+        "shots": null,
+        "two_qubit_error": 0.0,
+        "use_ibm_hardware": false
+      },
+      "circuit": {
+        "ansatz_reps": 3,
+        "entanglement": true,
+        "logit_scale": 1.0,
+        "reuploads": 2
+      },
+      "classical_baselines": false,
+      "data": {
+        "fold": 1,
+        "n_folds": 5,
+        "preprocessing": "refit",
+        "seed": 6304,
+        "split_strategy": "stratified_kfold",
+        "test_per_class": null,
+        "train_per_class": 140,
+        "validation_fraction": 0.2
+      },
+      "label_shuffle_control": false,
+      "poison": {
+        "denominator": "eligible",
+        "gaussian_std": 0.1,
+        "kind": "feature_randomization",
+        "patch_size": 3,
+        "patch_value": 255.0,
+        "rate": 0.3,
+        "seed": 6304,
+        "source_class": 0,
+        "target_class": 2
+      },
+      "seed": 6304,
+      "training": {
+        "batch_size": 10,
+        "evaluate_every": 10,
+        "gradient_clip": null,
+        "initialization_std": 0.1,
+        "learning_rate": 0.02,
+        "minimum_learning_rate": 0.001,
+        "patience": null,
+        "steps": 300
+      },
+      "unlearning": {
+        "alpha": 1.0,
+        "anchor_fraction": 0.25,
+        "beta": 1.0,
+        "calibration_size": 32,
+        "forget_class": 2,
+        "forget_definition": "observed",
+        "methods": [
+          "guided",
+          "uniform"
+        ],
+        "regularization": 0.01,
+        "training": {
+          "batch_size": 10,
+          "evaluate_every": 10,
+          "gradient_clip": null,
+          "initialization_std": 0.1,
+          "learning_rate": 0.02,
+          "minimum_learning_rate": 0.001,
+          "patience": null,
+          "steps": 100
+        }
+      }
+    },
+    "environment": {
+      "aer_devices": [
+        "CPU"
+      ],
+      "aer_runtime_version": "0.18.4",
+      "nvidia_gpu": "Tesla T4, 15360 MiB, 580.82.07",
+      "packages": {
+        "joblib": "1.6.0",
+        "matplotlib": "3.11.1",
+        "numpy": "2.5.2",
+        "pandas": "3.1.0",
+        "qiskit": "2.5.1",
+        "qiskit-aer": "0.18.4",
+        "qiskit-ibm-runtime": null,
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+      "python": "3.13.16",
+      "qiskit_aer_gpu": null
+    },
+    "execution": {
+      "device": "GPU",
+      "engine": "torch_exact_density_autograd_v1",
+      "gather_ms": 5.0,
+      "max_models": 10,
+      "oom_policy": "split independent models, preserve logical update",
+      "prediction_rows": 128,
+      "runtime_fingerprint": "c13023c2a31aec8ee776ada8ba52a77de89082e2a37ac6ae8c8f0ea3aac8662e",
+      "workers": 10
+    },
+    "fixed_teacher": "3f8a6aa52983448ea720d4207f5f31390c8b1e694e7b950b4de9daab3b95af38",
+    "method": "uniform",
+    "parent_run": "none_p0_seed6304_fold1_652c89beb7e1eb9a",
+    "problem": "fold_1_feature_randomization_30pct",
+    "reference_run": "none_p0_seed6304_fold1_7d6f155d301066cf",
+    "seed": 6304,
+    "stage": "noisy_unlearning",
+    "training_noise": {
+      "family": "combined",
+      "level": 0.01
+    }
+  },
+  "status": "complete"
+}

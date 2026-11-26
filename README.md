@@ -11,7 +11,7 @@ main_project.ipynb             Run and analyze the research
 README.md                     Setup, protocol, and execution guidance
 requirements.txt              Python dependencies
 src/
-  project_workflow.py          Local execution and portable review helpers
+  project_workflow.py         Local execution and portable review helpers
   fresh_study.py              Current normalized-input protocol and orchestration
   experiment_stages.py        Shared supervised/unlearning stage implementation
   config.py                  Dataclasses and DEFAULT_SEED = 6304
@@ -31,7 +31,13 @@ tests/                       Synthetic software checks, not research results
 data/raw/                    Original verified MNIST archive
 data/splits/                 Exact memberships, created on demand
 data/annotated/              Poisoned arrays, labels, IDs, metadata, created on demand
-results/                     Model artifacts and analysis, created on demand
+results/
+  runs/                      Trained weights, checkpoints, predictions and run metadata
+  fresh_studies/             Primary study indexes, conditions and analysis
+  ablations/                 Guided parameter ablations
+  noise_studies/             Fixed-weight synthetic noise evaluation
+  noisy_training/            Training and unlearning under synthetic noise
+  reviews/                   Rebuilt analysis tables, figures and review provenance
 Relevant_Papers/              Local reading material
 report/                      Report material
 ```
@@ -50,15 +56,28 @@ The default is `SAVED_RESULTS_ONLY=True`, with all fitting, download, force, noi
 
 Restart Kernel and Run All loads saved numeric metrics, predictions, histories, and features. It verifies hashes, folds, labels, and parent/reference links. It does not unpickle trained estimators, refit PCA, simulate predictions, resume optimizers, or train on a cache miss. Missing or incompatible required artifacts stop review. Original source/environment/device metadata is preserved; the current review is recorded separately under `results/reviews/<id>/`.
 
-**Current saved results:** The completed primary study (265 model fits across five folds), all 300 nondefault OFAT fits, five compatibility fits, and fixed-weight noise evaluation (9,660 prediction files) were verified and imported under their original relative paths. The unfinished 230-fit noisy-training experiment was excluded in full, including its eight completed fits. The original download remains available; no research training or quantum prediction was executed during import.
+The notebook selects these completed experiments, each covering five folds:
 
-The notebook pins the three verified completed indexes and disables noisy-training analysis. Restart Kernel and Run All reviews the imported results with fitting disabled. Poison previews load the exact saved arrays: regenerating normalized random vectors on another platform can differ in the last floating-point bits. The original training provenance remains unchanged. The import audit and per-file checksums are in `results/maintenance/import_3172935abb9609ab`.
+| Experiment | Completed coverage | Study index |
+|---|---|---|
+| Primary poisoning and unlearning | 265 VQC fits, including ablation support | [Primary study](results/fresh_studies/fa1604cdd38207d9/study.json) |
+| Guided parameter ablations | 300 nondefault fits and five compatibility fits | [Ablation study](results/ablations/e4a96e40f818e487/study.json) |
+| Fixed-weight noise evaluation | 9,660 prediction files | [Noise evaluation](results/noise_studies/11aa94ebc456b91d/study.json) |
+| Training and unlearning under noise | 100 supervised and 130 unlearning fits | [Noisy training](results/noisy_training/9b54f30ef300facf/study.json) |
+
+Restart Kernel and Run All reviews all four studies with fitting disabled. Poison previews load the exact saved arrays: regenerating normalized random vectors on another platform can differ in the last floating-point bits. Per-run manifests retain artifact checksums, settings, source snapshots, training environments and parent/reference links. Analysis exports stay under `results/reviews/<id>/`.
+
+The completed noisy study includes 65 frozen teachers and 460 matched deployment-prediction files. Its recorded training backend was PyTorch exact density-matrix evolution/autodiff on a Tesla T4, numerically validated against Aer. The recorded training-cell duration was approximately 2 hours 3 minutes.
+
+Saved review and the active execution code require no PyTorch installation. Future noisy-model fitting uses Qiskit Aer, exact density matrices and expectation-level parameter shifts. Forced Aer fits create separate model/study identities. Original implementation files are preserved with the saved study, including `execution_source.zip`.
 
 ## Execute a new local study
 
 Restart the kernel, set `SAVED_RESULTS_ONLY=False`, and enable `RUN_PRIMARY_STUDY=True`. Enable `DOWNLOAD_MNIST=True` only when the verified raw archive is missing. Keep force flags False for normal continuation. Clean gold originals are prepared first; the full pipeline reuses them and completes remaining originals, retained-data references, and default guided/uniform fits.
 
 Enable extensions deliberately with `RUN_ABLATIONS`, `RUN_FIXED_WEIGHT_NOISE`, and `RUN_NOISY_TRAINING`. They use completed primary inputs. Each stage saves its own index and artifacts. Analysis flags can be disabled to skip expensive saved-prediction reads while running another stage. A full recursive checkpoint inventory is optional and disabled by default.
+
+For a new Aer noisy experiment, restart the kernel and set `SAVED_RESULTS_ONLY=False`, `RUN_NOISY_TRAINING=True` and `FORCE_NOISY_TRAINING=True`. `FORCE_RETRAIN=True` also forces noisy fitting when its run flag is enabled. With force flags False, the selected completed noisy study is reviewed without retraining. After creating a new Aer attempt, select its printed relative `NOISY_TRAINING_INDEX` and turn force flags False to resume an interruption with its matching source/environment/execution. An imported partial optimizer from another backend cannot resume as Aer.
 
 Completed compatible models are reused. Interrupted quantum fits continue from their last committed Adam/RNG checkpoint, not the last evaluation checkpoint. Each complete update is saved atomically. Changes in data, settings, scientific source, runtime, or execution prevent incompatible continuation. Completed results remain portable for review across environments. An imported unfinished optimizer needs its matching source/environment; it is never silently converted to a new experiment. Force flags deliberately create new attempts and retain distinct completed artifacts.
 
@@ -76,7 +95,7 @@ Direct project-path checkpoint saves are the default. Optionally set `QML_RUNTIM
 - The **gold reference** is clean three-class training. **Retained-data retraining** removes exact observed-label-2 records, including flipped zeros, and refits its own preprocessing. Unlearning freezes its parent's features.
 - Guided defaults: alpha=1, lambda=0.01, beta=1, anchor fraction=0.25. The global forget target and original soft-anchor predictions are frozen before fitting. Uniform uses `(0.5, 0.5, 0)`. Gradients shift expectations before the classical chain rule.
 - OFAT: alpha `[0, .5, 1, 2, 4]`; lambda `[0, .001, .01, .1]`; beta `[.25, .5, .75, 1, 2, 4]`. Reuse the default: 12 nondefault settings × five conditions (clean and both attacks at 25%/50%) × five folds = **300 fits**. Five optional first-fold compatibility checks are separate.
-- Primary plus support pipeline: **265 distinct VQC fits**. Combined gate/readout p=0.01 noisy optimization: **230 planned fits** across all primary conditions/folds. These are plans, not evidence of completion.
+- Primary plus support pipeline: **265 distinct VQC fits**. Separate combined gate/readout p=0.01 noisy optimization: **230 fits** across all primary conditions/folds, comprising 100 supervised and 130 unlearning fits.
 - Fixed-weight noise uses zero plus five channel families at four nonzero levels, exact density probabilities, and separate 2048-shot readouts. Noisy optimization instead uses exact noisy expectations and new frozen noisy teachers.
 
 Report retained accuracy, digit-wise recall, forgotten confidence, full and retained-conditional KL, targets, paired poisoning effects, resources, and coverage. Fold SD is descriptive; reused clean references are not independent seeds. Noise inference and noisy training answer different questions. Phase 1 does not claim certified deletion or require quantum superiority.

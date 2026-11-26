@@ -1,0 +1,22 @@
+{
+  "code_fingerprint": "f0f2e41486c52bf955cc9a6cb753267361b806d60fc35566096c787fbe0d6a0a",
+  "engine": "torch_exact_density_autograd_v1",
+  "folds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "historical_inputs_fingerprint": "ab519a8f7095a737a6c357f1e9ba250822f40e3b55b7186326efeb504d3b6809",
+  "imported_completed": {},
+  "original_source": "9ee43bb2d743ea089d853663cca11b0377911e525a25682861d9318b46529bdf",
+  "policy": "Completed artifacts retain actual source/device. No partial Aer optimizer state is converted.",
+  "preserved_unfinished": [],
+  "seed": 6304,
+  "source_provenance": [],
+  "training_noise": {
+    "family": "combined",
+    "level": 0.01
+  }
+}

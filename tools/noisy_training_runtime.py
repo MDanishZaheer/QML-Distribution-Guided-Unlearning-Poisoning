@@ -213,12 +213,15 @@ class _Progress:
             mirror = entry.pop("mirror")
             step = entry["step"]
             if mirror is not None:
-                # Runtime-local atomic progress files: no repeated storage scans.
-                try:
-                    saved = json.loads(mirror.local.read_text(encoding="utf-8"))
-                    step = saved["step"]
-                except (OSError, ValueError, KeyError):
-                    pass
+                # On Windows a concurrent reader can block atomic replacement
+                # of the optimizer file. Observe committed callback steps there;
+                # POSIX permits the finer per-update runtime-local read below.
+                if os.name != "nt":
+                    try:
+                        saved = json.loads(mirror.local.read_text(encoding="utf-8"))
+                        step = saved["step"]
+                    except (OSError, ValueError, KeyError):
+                        pass
                 entry["checkpoint"] = mirror.durable.relative_to(self.root).as_posix()
                 entry["backup_error"] = None if mirror.error is None else str(mirror.error)
             started = entry.pop("started")

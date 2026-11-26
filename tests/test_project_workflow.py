@@ -160,7 +160,7 @@ class ProjectWorkflowTests(unittest.TestCase):
             self.assertEqual(execution.device, "GPU")
             self.assertLess(execution.memory_mb, 6144)
 
-    def test_current_notebook_is_unexecuted_ordered_and_uses_local_paths(self):
+    def test_current_notebook_preserves_review_outputs_and_safe_local_controls(self):
         root = Path(__file__).resolve().parents[1]
         notebook = json.loads((root / "main_project.ipynb").read_text(encoding="utf-8"))
         sections, sources = [], []
@@ -168,8 +168,8 @@ class ProjectWorkflowTests(unittest.TestCase):
             source = "".join(cell["source"])
             sources.append(source)
             if cell["cell_type"] == "code":
-                self.assertIsNone(cell["execution_count"])
-                self.assertEqual(cell["outputs"], [])
+                self.assertTrue(cell["execution_count"] is None or isinstance(cell["execution_count"], int))
+                self.assertIsInstance(cell["outputs"], list)
                 ast.parse(source)
                 self.assertLessEqual(len(source.splitlines()), 28)
             elif source.startswith("## "):
@@ -180,6 +180,8 @@ class ProjectWorkflowTests(unittest.TestCase):
         self.assertNotIn("/content/", text)
         self.assertNotIn("colab", text.lower())
         self.assertIn("SAVED_RESULTS_ONLY = True", text)
+        self.assertIn("SHOW_NOISY_TRAINING_ANALYSIS = True", text)
+        self.assertIn("prepare_aer_noisy_execution", text)
         for flag in ("RUN_PRIMARY_STUDY", "RUN_ABLATIONS", "RUN_FIXED_WEIGHT_NOISE", "RUN_NOISY_TRAINING",
                      "FORCE_RETRAIN", "DOWNLOAD_MNIST", "USE_IBM_HARDWARE"):
             self.assertIn(flag + " = False", text)

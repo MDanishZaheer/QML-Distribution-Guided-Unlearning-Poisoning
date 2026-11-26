@@ -1,0 +1,36 @@
+{
+  "models": {
+    "model": {
+      "accuracy": 0.8928571428571429,
+      "confusion_matrix": [
+        [
+          26,
+          0,
+          2
+        ],
+        [
+          0,
+          21,
+          7
+        ],
+        [
+          0,
+          0,
+          28
+        ]
+      ],
+      "forget_confidence": 0.3700693771308289,
+      "forget_recall": 1.0,
+      "forgotten_mass_on_retained": 0.3309722556219307,
+      "n_forget": 28,
+      "n_retained": 56,
+      "n_samples": 84,
+      "recall_by_class": {
+        "0": 0.9285714285714286,
+        "1": 0.75,
+        "2": 1.0
+      },
+      "retained_accuracy": 0.8392857142857143
+    }
+  }
+}

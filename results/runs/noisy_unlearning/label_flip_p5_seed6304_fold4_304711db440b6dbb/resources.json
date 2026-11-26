@@ -1,0 +1,68 @@
+{
+  "ablation_execution": {
+    "device": "GPU",
+    "engine": "torch_exact_density_autograd_v1",
+    "gather_ms": 5.0,
+    "max_models": 10,
+    "oom_policy": "split independent models, preserve logical update",
+    "prediction_rows": 128,
+    "runtime_fingerprint": "c13023c2a31aec8ee776ada8ba52a77de89082e2a37ac6ae8c8f0ea3aac8662e",
+    "workers": 10
+  },
+  "actual_device": "torch:cuda:0",
+  "backend_config": {
+    "allow_cpu_fallback": false,
+    "circuit_batch_size": 128,
+    "device": "GPU",
+    "ibm_backend_name": null,
+    "max_memory_mb": 4096,
+    "max_parallel_threads": 2,
+    "method": "density_matrix",
+    "one_qubit_error": 0.0,
+    "optimization_level": 0,
+    "readout_error": 0.0,
+    "shots": null,
+    "two_qubit_error": 0.0,
+    "use_ibm_hardware": false
+  },
+  "engine": "torch_exact_density_autograd_v1",
+  "gradient": "exact channel automatic differentiation, double precision",
+  "logit_scale": 1.0,
+  "nominal_trainable_parameters": 72,
+  "resource_scope": "per-model logical requests; physical jobs recorded at study level",
+  "resources": {
+    "circuit_evaluations": 3602,
+    "jobs": 223,
+    "shots": 0
+  },
+  "torch_runtime": {
+    "cublas_workspace_config": ":4096:8",
+    "cuda": "13.0",
+    "deterministic_algorithms": true,
+    "device": "cuda:0",
+    "dtype": "complex128/float64",
+    "engine": "torch_exact_density_autograd_v1",
+    "gpu": "Tesla T4",
+    "gpu_total_bytes": 15637086208,
+    "numpy": "2.5.2",
+    "python": "3.13.16",
+    "source": {
+      "cpu_folds.py": "1c5678f9bfec0be4fa602b39d8bda703db98496fa77f78e6a0e6e87e81af5ed9",
+      "torch_density_probe.py": "af428e47bf5f5b2df3e38954687d8c087e899d31decc2ba268e9d8ac4e6276e4",
+      "torch_noisy_service.py": "042a6432197566a253bbed9e08caba5ee045e736df8e4d04377f886a2c6e07d1",
+      "torch_noisy_worker.py": "e3b69361497a8b73c6d704336fee3a06e7e6baa331abc23f8374c9e1b777d627",
+      "torch_noisy_workflow.py": "d1568fbd727f434497a7abc8afaa7b0a79264c08e7a0c87ee7a50f5392e28a02"
+    },
+    "torch": "2.14.1+cu130"
+  },
+  "training_noise": {
+    "family": "combined",
+    "gate_channel": "depolarizing",
+    "level": 0.01,
+    "one_qubit_strength": 0.01,
+    "readout_flip_probability": 0.01,
+    "two_qubit_rule": "joint two-qubit depolarizing channel",
+    "two_qubit_strength": 0.02
+  },
+  "training_seconds": 206.14281582600051
+}

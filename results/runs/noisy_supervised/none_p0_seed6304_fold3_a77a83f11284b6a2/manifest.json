@@ -1,0 +1,134 @@
+{
+  "artifact_sha256": {
+    "checkpoints/model.json": "756583e0019a1a706c9b8897790e40738c61922777c675acd1d4742a72dbc1aa",
+    "checkpoints/model.npz": "f19386629673be464564daad77c2847c6c55740d159cf46ba446379217cf6c09",
+    "checkpoints/model.resume.json": "54e9ce2a2b8c1557469679c5cd14c5a05ed5547535226976ca45f0a829fd8e8d",
+    "config.json": "32bd855690e5558bd40721d1be97e1c4987d416f1528d39d7a75adfafc925405",
+    "features.npz": "e2c924cfc11b16198f0c39af59c6bf581ec0cf419e9fa9a93b920284a42ab20e",
+    "histories/model.csv": "76596db55757c058ab1607807a0731b0a060ed6986a6af519ac649b07b3add85",
+    "history.csv": "9939e2e97b4016965094716940f4b98f0fbf5a5c4adfa4db3f84621d63fc638d",
+    "metrics.json": "695d08aeedced098db6411a467b72d69bdd707eff9471770e09fa9aadf99e4f2",
+    "predictions.npz": "3a8d9cf86d30166be222d45ef18eeca160015d1e837ac519bc9096dff1e587bf",
+    "preprocessing.joblib": "5311982db68aa77c313d71522ebf3e0eb2337cc391b17eec320b4ca8702c8ae0",
+    "preprocessing.json": "7d1d148c1ea90655254aa4829de7900fb4c9ed78d4c3ac10972679eae99ee7df",
+    "provenance.json": "b3d2059c72dd63a375c2d52a9a64395949906f6088b7f4362ca2f1d5c4497107",
+    "resources.json": "49e4fbd7764b07f2d2e75c575d49c74d63ab43ea8fe7daffc0898c0733225446",
+    "source.zip": "aaaa796296c8e96cdd7e823585f4136f7fc77a7bd11413b089ebc2be8ece7e1f",
+    "weights.npz": "ac9e7d99b574736e9040f901fc7f39270f140d0bc9224576020a78d2f4d98e1a"
+  },
+  "created_utc": "2026-11-26T18:03:09.091845+00:00",
+  "finished_utc": "2026-11-26T18:10:47.203687+00:00",
+  "identity": {
+    "code_fingerprint": "f0f2e41486c52bf955cc9a6cb753267361b806d60fc35566096c787fbe0d6a0a",
+    "config": {
+      "backend": {
+        "allow_cpu_fallback": false,
+        "circuit_batch_size": 128,
+        "device": "GPU",
+        "ibm_backend_name": null,
+        "max_memory_mb": 4096,
+        "max_parallel_threads": 2,
+        "method": "density_matrix",
+        "one_qubit_error": 0.0,
+        "optimization_level": 0,
+        "readout_error": 0.0,
+        "shots": null,
+        "two_qubit_error": 0.0,
+        "use_ibm_hardware": false
+      },
+      "circuit": {
+        "ansatz_reps": 3,
+        "entanglement": true,
+        "logit_scale": 1.0,
+        "reuploads": 2
+      },
+      "classical_baselines": false,
+      "data": {
+        "fold": 3,
+        "n_folds": 5,
+        "preprocessing": "refit",
+        "seed": 6304,
+        "split_strategy": "stratified_kfold",
+        "test_per_class": null,
+        "train_per_class": 140,
+        "validation_fraction": 0.2
+      },
+      "poison": {
+        "kind": "none",
+        "rate": 0.0
+      },
+      "seed": 6304,
+      "training": {
+        "batch_size": 10,
+        "evaluate_every": 10,
+        "gradient_clip": null,
+        "initialization_std": 0.1,
+        "learning_rate": 0.02,
+        "minimum_learning_rate": 0.001,
+        "patience": null,
+        "steps": 300
+      }
+    },
+    "environment": {
+      "aer_devices": [
+        "CPU"
+      ],
+      "aer_runtime_version": "0.18.4",
+      "nvidia_gpu": "Tesla T4, 15360 MiB, 580.82.07",
+      "packages": {
+        "joblib": "1.6.0",
+        "matplotlib": "3.11.1",
+        "numpy": "2.5.2",
+        "pandas": "3.1.0",
+        "qiskit": "2.5.1",
+        "qiskit-aer": "0.18.4",
+        "qiskit-ibm-runtime": null,
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+      "python": "3.13.16",
+      "qiskit_aer_gpu": null
+    },
+    "execution": {
+      "device": "GPU",
+      "engine": "torch_exact_density_autograd_v1",
+      "gather_ms": 5.0,
+      "max_models": 10,
+      "oom_policy": "split independent models, preserve logical update",
+      "prediction_rows": 128,
+      "runtime_fingerprint": "c13023c2a31aec8ee776ada8ba52a77de89082e2a37ac6ae8c8f0ea3aac8662e",
+      "workers": 10
+    },
+    "frozen_numeric_features": "3aa20980cfa722f70019fcb8191dc5886193d4ba45df2d5ab2ddd7f97c63972e",
+    "historical_artifacts": {
+      "checkpoints/model.json": "668e532e505d1163f7a37a9ead0d36330e160a21688ba81e181f205228a4c097",
+      "checkpoints/model.npz": "33de20d5ae85a080363aec567b8ada46f5d11c03f21bb50376c86625cc68128f",
+      "checkpoints/model.resume.json": "6f26a3f42948ea0ea52aabd0e73d1789cfb8a03f73303d432e22a08f1be2d846",
+      "checkpoints/model.resume.json.previous": "46cdf0fc531d1ba07e5f50e1ef10ad3bc0be85b8fdcb424563222b742464fd54",
+      "checkpoints/model.resume.json.previous.receipt.json": "ccec0e01a1a0b19019b763a22245dd45bf24a4926016216e542375e781cc0265",
+      "checkpoints/model.resume.json.receipt.json": "8dafea04b6cc023d85da052772b4060440026eee1570d7fdca2bd90352f63c41",
+      "classical_models.joblib": "632fb6e26ba5edb1bf8869f0e07173448a1ab97ffdee5568304200a65e2dcf03",
+      "config.json": "c2cc59dc4da87fc90246b509a141ec4e48fb876a6168c69dcd8a218f12373cfe",
+      "features.npz": "e2c924cfc11b16198f0c39af59c6bf581ec0cf419e9fa9a93b920284a42ab20e",
+      "histories/model.csv": "ca9fc4c57a4b83499cc9adcc9e15477500713c5926bb5e3e42a1ea72226e40b2",
+      "history.csv": "f958f1a0cbd0a6663388cec63d86faf4c552edbb09cbb587f4331e92c9655519",
+      "metrics.json": "2d9db5e219ba1df61f172a88318ee85e66a1b44ce5f5f7ad658145eab502ebab",
+      "predictions.npz": "ec10bd54680ebfda8704683bf22a48f4798afa0759411525131034d756f40acd",
+      "preprocessing.joblib": "5311982db68aa77c313d71522ebf3e0eb2337cc391b17eec320b4ca8702c8ae0",
+      "preprocessing.json": "7d1d148c1ea90655254aa4829de7900fb4c9ed78d4c3ac10972679eae99ee7df",
+      "provenance.json": "f74ddbfc3e87e26391732cd1568c8e7d23b8e471a51ead2ff89db1b678b5418f",
+      "resources.json": "6971f7a0da1a35e876be62330fbf7bd20c5e55f1b300dd040c1aa102a07b3505",
+      "source.zip": "19637f886af429fdf6bd4caf3a774563cfc8ffdaca4bd5500700bcdfe93899e0",
+      "weights.npz": "ec9e0e40ce8ece0bb387cafda6b04f284e68f8449323bb4203ed0141f71fd0c6"
+    },
+    "historical_problem": "none_p0_seed6304_fold3_f211752b968fb950",
+    "seed": 6304,
+    "stage": "noisy_supervised",
+    "training_noise": {
+      "family": "combined",
+      "level": 0.01
+    }
+  },
+  "status": "complete"
+}

@@ -1,0 +1,29 @@
+{
+  "saved_results_only": true,
+  "flags": {
+    "DOWNLOAD_MNIST": false,
+    "RUN_PRIMARY_STUDY": false,
+    "RUN_ABLATIONS": false,
+    "RUN_FIXED_WEIGHT_NOISE": false,
+    "RUN_NOISY_TRAINING": false,
+    "FORCE_RETRAIN": false,
+    "FORCE_ABLATIONS": false,
+    "FORCE_NOISE_EVALUATION": false,
+    "FORCE_NOISY_TRAINING": false,
+    "USE_IBM_HARDWARE": false
+  },
+  "python": "C:\\Users\\DanishZaheer\\anaconda3\\envs\\QML\\python.exe",
+  "completed_utc": "2026-11-26T20:29:40.208313+00:00",
+  "research_training_executed": false,
+  "quantum_predictions_generated": false,
+  "active_pytorch_imported": false,
+  "before_notebook_sha256": "5e58ecbc8d0cb5144edc8fb1b7dcec94c02e6e1191fd8d41a94d7c094f41241d",
+  "audit_outputs": [
+    {
+      "output_type": "stream",
+      "name": "stdout",
+      "text": "GUARDED_SAVED_REVIEW_PASSED\n"
+    }
+  ],
+  "cells": 154
+}

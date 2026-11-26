@@ -290,3 +290,49 @@ def provenance_table(study, environment):
         {"role": "current review", "source": artifacts.source_fingerprint(),
          "environment": environment, "execution": "saved arrays only; no predictions"},
     ])
+
+
+def noisy_fit_required(index, *, run=False, force=False):
+    """Review a completed imported study; fit only an enabled missing/new attempt."""
+    if not run:
+        return False
+    return bool(force or index is None or not artifacts.load_json(index).get("complete"))
+
+
+def prepare_aer_noisy_execution(study, problems, historical, bindings, setting, execution,
+                                *, selected_index=None, force=False):
+    """Explicit Aer execution for future fits, with strict same-backend continuation.
+
+    Completed imported results remain read-only. A forced Aer experiment uses
+    a new study/run identity; a foreign optimizer is never converted to Aer.
+    """
+    from src.noisy_training import benchmark_noisy_training
+    from tools.noisy_training_runtime import prepare_noisy_execution
+    if force:
+        return benchmark_noisy_training(problems[0], setting, study.root,
+            candidates=[execution], minimum_workers=execution.workers,
+            require_gpu_device=execution.device == "GPU", probe_steps=1)
+    if selected_index is not None:
+        record = artifacts.load_json(selected_index)
+        engine = record.get("protocol", {}).get("execution", {}).get("engine", "Aer")
+        if engine != "Aer":
+            raise ValueError("The selected optimizer was produced by another engine. "
+                             "Review its completed results, or enable FORCE_NOISY_TRAINING "
+                             "to create a separate Aer attempt. No state was converted.")
+    return prepare_noisy_execution(study, problems, historical, bindings, setting,
+        selected_index=selected_index, require_gpu_device=execution.device == "GPU")
+
+
+def noisy_provenance(index):
+    """Describe actual archived training separately from the future execution code."""
+    record = artifacts.load_json(index)
+    protocol = record["protocol"]
+    runtime = record.get("service_resources", {}).get("torch_runtime", {})
+    return pd.DataFrame([{
+        "study": Path(index).parent.name, "complete": record["complete"],
+        "supervised_fits": len(record["supervised"]), "unlearning_fits": len(record["unlearned"]),
+        "training_engine": protocol["execution"].get("engine", "Qiskit Aer"),
+        "training_device": runtime.get("gpu", protocol["execution"]["device"]),
+        "training_source": protocol["code_fingerprint"],
+        "future_training_backend": "Qiskit Aer",
+    }])

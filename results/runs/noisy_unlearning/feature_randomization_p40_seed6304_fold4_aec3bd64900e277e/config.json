@@ -1,0 +1,80 @@
+{
+  "backend": {
+    "allow_cpu_fallback": false,
+    "circuit_batch_size": 128,
+    "device": "GPU",
+    "ibm_backend_name": null,
+    "max_memory_mb": 4096,
+    "max_parallel_threads": 2,
+    "method": "density_matrix",
+    "one_qubit_error": 0.0,
+    "optimization_level": 0,
+    "readout_error": 0.0,
+    "shots": null,
+    "two_qubit_error": 0.0,
+    "use_ibm_hardware": false
+  },
+  "circuit": {
+    "ansatz_reps": 3,
+    "entanglement": true,
+    "logit_scale": 1.0,
+    "reuploads": 2
+  },
+  "classical_baselines": false,
+  "data": {
+    "fold": 4,
+    "n_folds": 5,
+    "preprocessing": "refit",
+    "seed": 6304,
+    "split_strategy": "stratified_kfold",
+    "test_per_class": null,
+    "train_per_class": 140,
+    "validation_fraction": 0.2
+  },
+  "label_shuffle_control": false,
+  "poison": {
+    "denominator": "eligible",
+    "gaussian_std": 0.1,
+    "kind": "feature_randomization",
+    "patch_size": 3,
+    "patch_value": 255.0,
+    "rate": 0.4,
+    "seed": 6304,
+    "source_class": 0,
+    "target_class": 2
+  },
+  "seed": 6304,
+  "training": {
+    "batch_size": 10,
+    "evaluate_every": 10,
+    "gradient_clip": null,
+    "initialization_std": 0.1,
+    "learning_rate": 0.02,
+    "minimum_learning_rate": 0.001,
+    "patience": null,
+    "steps": 300
+  },
+  "unlearning": {
+    "alpha": 1.0,
+    "anchor_fraction": 0.25,
+    "beta": 1.0,
+    "calibration_size": 32,
+    "forget_class": 2,
+    "forget_definition": "observed",
+    "methods": [
+      "guided",
+      "uniform"
+    ],
+    "regularization": 0.01,
+    "training": {
+      "batch_size": 10,
+      "evaluate_every": 10,
+      "gradient_clip": null,
+      "initialization_std": 0.1,
+      "learning_rate": 0.02,
+      "minimum_learning_rate": 0.001,
+      "patience": null,
+      "steps": 100
+    }
+  }
+}

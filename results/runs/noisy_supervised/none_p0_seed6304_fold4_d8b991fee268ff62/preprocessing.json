@@ -1,0 +1,27 @@
+{
+  "angle_range": [
+    0.0,
+    3.141592653589793
+  ],
+  "clip": true,
+  "explained_variance_ratio": [
+    0.16405086604937064,
+    0.09052709800839655,
+    0.0778893435321392,
+    0.057241625267172434
+  ],
+  "input_policy": {
+    "adaptation": "Malik six-qubit angle circuit and class-level forgetting; not amplitude encoding or binary sampling",
+    "angle_scaling": "training-fitted MinMaxScaler [0, pi], clip=True",
+    "eligible_class": 2,
+    "labels_preserved": true,
+    "normalization": "all clean/corrupt inputs divided by 255 then per-record L2 normalized before PCA",
+    "pca": "four components; fit on the model's training records only; original refit policy",
+    "replacement": "full 784-vector, real N(0, 0.1**2), then unit L2 norm",
+    "source": "https://github.com/yutuer21/quantum-machine-unlearning/blob/main/src/datar.py",
+    "version": "real_gaussian_unit_input_v1",
+    "zero_input": "leave a zero vector unchanged"
+  },
+  "n_fit_samples": 268,
+  "total_explained_variance": 0.3897089328570788
+}

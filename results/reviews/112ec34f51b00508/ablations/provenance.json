@@ -1,0 +1,132 @@
+{
+  "complete": true,
+  "completed_new_runs": 300,
+  "interpretation": "Report every tested value. Fold variability is descriptive, not independent-seed uncertainty.",
+  "new_condition_input_index": null,
+  "new_condition_input_indexes": [],
+  "original_training_environment_preserved": true,
+  "planned_new_runs": 300,
+  "protocol": {
+    "code_fingerprint": "9ee43bb2d743ea089d853663cca11b0377911e525a25682861d9318b46529bdf",
+    "environment": {
+      "aer_devices": [
+        "CPU",
+        "GPU"
+      ],
+      "aer_runtime_version": "0.18.4",
+      "nvidia_gpu": "NVIDIA L4, 23034 MiB, 580.82.07",
+      "packages": {
+        "joblib": "1.6.0",
+        "matplotlib": "3.11.1",
+        "numpy": "2.5.2",
+        "pandas": "3.1.0",
+        "qiskit": "2.5.1",
+        "qiskit-aer": null,
+        "qiskit-ibm-runtime": null,
+        "scikit-learn": "1.9.1",
+        "scipy": "1.18.1"
+      },
+      "platform": "Linux-6.6.159+-x86_64-with-glibc2.39",
+      "python": "3.13.16",
+      "qiskit_aer_gpu": "0.18.4"
+    },
+    "execution": {
+      "circuit_batch_size": 32768,
+      "device": "GPU",
+      "gather_ms": 2.0,
+      "gpu_parameter_batching": true,
+      "memory_mb": 18427,
+      "runtime_binding": true,
+      "threads": 1,
+      "workers": 5
+    },
+    "original_report": "results/fresh_studies/fa1604cdd38207d9/study.json",
+    "original_source": "9ee43bb2d743ea089d853663cca11b0377911e525a25682861d9318b46529bdf",
+    "problems": [
+      "fold_0_clean",
+      "fold_0_feature_randomization_25pct",
+      "fold_0_feature_randomization_50pct",
+      "fold_0_label_flip_25pct",
+      "fold_0_label_flip_50pct",
+      "fold_1_clean",
+      "fold_1_feature_randomization_25pct",
+      "fold_1_feature_randomization_50pct",
+      "fold_1_label_flip_25pct",
+      "fold_1_label_flip_50pct",
+      "fold_2_clean",
+      "fold_2_feature_randomization_25pct",
+      "fold_2_feature_randomization_50pct",
+      "fold_2_label_flip_25pct",
+      "fold_2_label_flip_50pct",
+      "fold_3_clean",
+      "fold_3_feature_randomization_25pct",
+      "fold_3_feature_randomization_50pct",
+      "fold_3_label_flip_25pct",
+      "fold_3_label_flip_50pct",
+      "fold_4_clean",
+      "fold_4_feature_randomization_25pct",
+      "fold_4_feature_randomization_50pct",
+      "fold_4_label_flip_25pct",
+      "fold_4_label_flip_50pct"
+    ],
+    "seed": 6304,
+    "sweeps": {
+      "alpha": [
+        0.0,
+        0.5,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "beta": [
+        0.25,
+        0.5,
+        0.75,
+        1.0,
+        2.0,
+        4.0
+      ],
+      "regularization": [
+        0.0,
+        0.001,
+        0.01,
+        0.1
+      ]
+    },
+    "teachers": [
+      "none_p0_seed6304_fold0_70cec1774dedfc31",
+      "none_p0_seed6304_fold0_4d4cc2c3deffeab7",
+      "none_p0_seed6304_fold0_4e516eb14cf47ce1",
+      "none_p0_seed6304_fold0_5bc3c5afd8b484de",
+      "none_p0_seed6304_fold0_a19a56d6303e0426",
+      "none_p0_seed6304_fold1_17b4e2e557225428",
+      "none_p0_seed6304_fold1_b1de7b536ea61da8",
+      "none_p0_seed6304_fold1_4aa8bd241079b50d",
+      "none_p0_seed6304_fold1_c80bd8eddf4cf02f",
+      "none_p0_seed6304_fold1_70f5b59d73a78711",
+      "none_p0_seed6304_fold2_78093033de3419fc",
+      "none_p0_seed6304_fold2_2670a63d19d94576",
+      "none_p0_seed6304_fold2_71b76307de2003b0",
+      "none_p0_seed6304_fold2_5a969cf516ab460a",
+      "none_p0_seed6304_fold2_edb530375f2d90f9",
+      "none_p0_seed6304_fold3_101644f38071c9bc",
+      "none_p0_seed6304_fold3_d7b4ca70619375b2",
+      "none_p0_seed6304_fold3_6638059fe2c476d5",
+      "none_p0_seed6304_fold3_3429ae93fe95da86",
+      "none_p0_seed6304_fold3_efb5f69c45f873c3",
+      "none_p0_seed6304_fold4_8bbb73ed0284de75",
+      "none_p0_seed6304_fold4_a19ca155a876667b",
+      "none_p0_seed6304_fold4_bfbaaa535aeb6901",
+      "none_p0_seed6304_fold4_83e30a6bdff88cb9",
+      "none_p0_seed6304_fold4_c45c7c698f743447"
+    ],
+    "updates": 100,
+    "version": 1
+  },
+  "record_status_counts": {
+    "fresh_protocol": 50,
+    "loaded": 300
+  },
+  "study_index": "results/ablations/e4a96e40f818e487/study.json",
+  "supervised_models_fitted_in_parameter_sweep": 0
+}
